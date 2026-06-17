@@ -1,0 +1,64 @@
+{
+  "ELO_DATE": "2026-06-11 (pre-tournament, sourced from eloratings.net)",
+  "teams": {
+    "MEX": { "name": "Mexico",               "group": "A", "elo": 1825, "isHost": true,  "hostVenues": ["Mexico City","Guadalupe","Zapopan"] },
+    "ZAF": { "name": "South Africa",         "group": "A", "elo": 1498, "isHost": false, "hostVenues": [] },
+    "KOR": { "name": "South Korea",          "group": "A", "elo": 1740, "isHost": false, "hostVenues": [] },
+    "CZE": { "name": "Czechia",              "group": "A", "elo": 1638, "isHost": false, "hostVenues": [] },
+
+    "CAN": { "name": "Canada",               "group": "B", "elo": 1712, "isHost": true,  "hostVenues": ["Toronto","Vancouver"] },
+    "BIH": { "name": "Bosnia & Herzegovina", "group": "B", "elo": 1638, "isHost": false, "hostVenues": [] },
+    "QAT": { "name": "Qatar",               "group": "B", "elo": 1505, "isHost": false, "hostVenues": [] },
+    "SUI": { "name": "Switzerland",          "group": "B", "elo": 1862, "isHost": false, "hostVenues": [] },
+
+    "BRA": { "name": "Brazil",               "group": "C", "elo": 1988, "isHost": false, "hostVenues": [] },
+    "MAR": { "name": "Morocco",              "group": "C", "elo": 1866, "isHost": false, "hostVenues": [] },
+    "HTI": { "name": "Haiti",               "group": "C", "elo": 1448, "isHost": false, "hostVenues": [] },
+    "SCO": { "name": "Scotland",             "group": "C", "elo": 1708, "isHost": false, "hostVenues": [] },
+
+    "USA": { "name": "USA",                  "group": "D", "elo": 1832, "isHost": true,  "hostVenues": ["Inglewood","Santa Clara","Seattle","Houston","Kansas City","Atlanta","Philadelphia","East Rutherford","Foxborough","Arlington","Miami Gardens"] },
+    "PAR": { "name": "Paraguay",             "group": "D", "elo": 1668, "isHost": false, "hostVenues": [] },
+    "AUS": { "name": "Australia",            "group": "D", "elo": 1728, "isHost": false, "hostVenues": [] },
+    "TUR": { "name": "Türkiye",              "group": "D", "elo": 1748, "isHost": false, "hostVenues": [] },
+
+    "GER": { "name": "Germany",              "group": "E", "elo": 1982, "isHost": false, "hostVenues": [] },
+    "CUW": { "name": "Curaçao",              "group": "E", "elo": 1418, "isHost": false, "hostVenues": [] },
+    "CIV": { "name": "Côte d'Ivoire",        "group": "E", "elo": 1722, "isHost": false, "hostVenues": [] },
+    "ECU": { "name": "Ecuador",              "group": "E", "elo": 1758, "isHost": false, "hostVenues": [] },
+
+    "NED": { "name": "Netherlands",          "group": "F", "elo": 1952, "isHost": false, "hostVenues": [] },
+    "JPN": { "name": "Japan",               "group": "F", "elo": 1808, "isHost": false, "hostVenues": [] },
+    "SWE": { "name": "Sweden",               "group": "F", "elo": 1782, "isHost": false, "hostVenues": [] },
+    "TUN": { "name": "Tunisia",              "group": "F", "elo": 1682, "isHost": false, "hostVenues": [] },
+
+    "BEL": { "name": "Belgium",              "group": "G", "elo": 1938, "isHost": false, "hostVenues": [] },
+    "EGY": { "name": "Egypt",               "group": "G", "elo": 1678, "isHost": false, "hostVenues": [] },
+    "IRN": { "name": "Iran",                "group": "G", "elo": 1748, "isHost": false, "hostVenues": [] },
+    "NZL": { "name": "New Zealand",          "group": "G", "elo": 1582, "isHost": false, "hostVenues": [] },
+
+    "ESP": { "name": "Spain",               "group": "H", "elo": 2129, "isHost": false, "hostVenues": [] },
+    "CPV": { "name": "Cape Verde",           "group": "H", "elo": 1492, "isHost": false, "hostVenues": [] },
+    "KSA": { "name": "Saudi Arabia",         "group": "H", "elo": 1572, "isHost": false, "hostVenues": [] },
+    "URU": { "name": "Uruguay",              "group": "H", "elo": 1878, "isHost": false, "hostVenues": [] },
+
+    "FRA": { "name": "France",               "group": "I", "elo": 2063, "isHost": false, "hostVenues": [] },
+    "SEN": { "name": "Senegal",              "group": "I", "elo": 1795, "isHost": false, "hostVenues": [] },
+    "IRQ": { "name": "Iraq",                "group": "I", "elo": 1488, "isHost": false, "hostVenues": [] },
+    "NOR": { "name": "Norway",               "group": "I", "elo": 1728, "isHost": false, "hostVenues": [] },
+
+    "ARG": { "name": "Argentina",            "group": "J", "elo": 2115, "isHost": false, "hostVenues": [] },
+    "DZA": { "name": "Algeria",              "group": "J", "elo": 1658, "isHost": false, "hostVenues": [] },
+    "AUT": { "name": "Austria",              "group": "J", "elo": 1778, "isHost": false, "hostVenues": [] },
+    "JOR": { "name": "Jordan",              "group": "J", "elo": 1532, "isHost": false, "hostVenues": [] },
+
+    "POR": { "name": "Portugal",             "group": "K", "elo": 1989, "isHost": false, "hostVenues": [] },
+    "COD": { "name": "DR Congo",             "group": "K", "elo": 1648, "isHost": false, "hostVenues": [] },
+    "UZB": { "name": "Uzbekistan",           "group": "K", "elo": 1522, "isHost": false, "hostVenues": [] },
+    "COL": { "name": "Colombia",             "group": "K", "elo": 1792, "isHost": false, "hostVenues": [] },
+
+    "ENG": { "name": "England",              "group": "L", "elo": 2024, "isHost": false, "hostVenues": [] },
+    "CRO": { "name": "Croatia",              "group": "L", "elo": 1888, "isHost": false, "hostVenues": [] },
+    "GHA": { "name": "Ghana",               "group": "L", "elo": 1692, "isHost": false, "hostVenues": [] },
+    "PAN": { "name": "Panama",               "group": "L", "elo": 1612, "isHost": false, "hostVenues": [] }
+  }
+}

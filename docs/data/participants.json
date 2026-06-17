@@ -1,0 +1,21 @@
+[
+  { "id": "alex-tesh",        "name": "Alex",     "teams": ["GER", "GHA"] },
+  { "id": "bianca-tibbitts",  "name": "Bianca",   "teams": ["JPN", "COD"] },
+  { "id": "cally-rush",       "name": "Cally",    "teams": ["URU", "CZE"] },
+  { "id": "conor-byrne",      "name": "Conor B.", "teams": ["ECU", "SWE"] },
+  { "id": "conor-parkes",     "name": "Conor P.", "teams": ["CRO", "IRN"] },
+  { "id": "david-brady",      "name": "David",    "teams": ["EGY", "TUR"] },
+  { "id": "eleanor-fisher",   "name": "Eleanor",  "teams": ["COL", "USA"], "note": "Input was 'Columbia' → corrected to Colombia" },
+  { "id": "erika-leggat",     "name": "Erika",    "teams": ["NED", "SEN"] },
+  { "id": "giji-alex",        "name": "Giji",     "teams": ["BEL", "PAN"] },
+  { "id": "james-brewer",     "name": "James",    "teams": ["MEX", "AUS"] },
+  { "id": "jason-robinson",   "name": "Jason",    "teams": ["SUI", "AUT"] },
+  { "id": "jeffrey-stower",   "name": "Jeffrey",  "teams": ["BRA", "PAR"] },
+  { "id": "jemma-green",      "name": "Jemma",    "teams": ["POR", "CIV"] },
+  { "id": "kirsten-walmsley", "name": "Kirsten",  "teams": ["MAR", "BIH"] },
+  { "id": "kyle-stewart",     "name": "Kyle",     "teams": ["ENG", "TUN"] },
+  { "id": "neema-griffin",    "name": "Neema",    "teams": ["ESP", "KOR"] },
+  { "id": "sam-story",        "name": "Sam",      "teams": ["FRA", "DZA"] },
+  { "id": "xaria-deosaran",   "name": "Xaria",    "teams": ["ARG", "SCO"] },
+  { "id": "hannah-penketh",   "name": "Hannah",   "teams": ["NOR", "CAN"] }
+]
