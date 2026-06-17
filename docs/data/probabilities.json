@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-06-17T19:50:37.293Z",
+  "updatedUtc": "2026-06-17T21:36:22.893Z",
   "simulations": 20000,
   "pot": {
     "total": 285,
@@ -10,40 +10,40 @@
   "participants": [
     {
       "id": "alex-tesh",
-      "pFinalWinner": 0.0583,
-      "pRunnerUp": 0.111,
-      "pGroupPrize": 0.0633,
-      "expectedWinnings": 21.41,
-      "currentGroupPts": 3,
+      "pFinalWinner": 0.0587,
+      "pRunnerUp": 0.1101,
+      "pGroupPrize": 0.064,
+      "expectedWinnings": 21.43,
+      "currentGroupPts": 4,
       "currentGroupGd": 6,
       "currentGroupGf": 7
     },
     {
       "id": "bianca-tibbitts",
-      "pFinalWinner": 0.0006,
+      "pFinalWinner": 0.0008,
       "pRunnerUp": 0.0057,
-      "pGroupPrize": 0.0073,
-      "expectedWinnings": 0.99,
+      "pGroupPrize": 0.007,
+      "expectedWinnings": 1,
       "currentGroupPts": 2,
       "currentGroupGd": 0,
       "currentGroupGf": 3
     },
     {
       "id": "cally-rush",
-      "pFinalWinner": 0.0055,
-      "pRunnerUp": 0.0134,
-      "pGroupPrize": 0.0009,
-      "expectedWinnings": 1.98,
+      "pFinalWinner": 0.0057,
+      "pRunnerUp": 0.0152,
+      "pGroupPrize": 0.0011,
+      "expectedWinnings": 2.18,
       "currentGroupPts": 1,
       "currentGroupGd": -1,
       "currentGroupGf": 2
     },
     {
       "id": "conor-byrne",
-      "pFinalWinner": 0.0004,
-      "pRunnerUp": 0.0063,
-      "pGroupPrize": 0.0073,
-      "expectedWinnings": 1.01,
+      "pFinalWinner": 0.0006,
+      "pRunnerUp": 0.0058,
+      "pGroupPrize": 0.0069,
+      "expectedWinnings": 0.97,
       "currentGroupPts": 3,
       "currentGroupGd": 3,
       "currentGroupGf": 5
@@ -51,139 +51,139 @@
     {
       "id": "conor-parkes",
       "pFinalWinner": 0.0086,
-      "pRunnerUp": 0.0251,
-      "pGroupPrize": 0.0138,
-      "expectedWinnings": 4.15,
+      "pRunnerUp": 0.0259,
+      "pGroupPrize": 0.0146,
+      "expectedWinnings": 4.27,
       "currentGroupPts": 1,
-      "currentGroupGd": 0,
-      "currentGroupGf": 2
+      "currentGroupGd": -1,
+      "currentGroupGf": 4
     },
     {
       "id": "david-brady",
-      "pFinalWinner": 0.0001,
-      "pRunnerUp": 0.0016,
-      "pGroupPrize": 0.0011,
-      "expectedWinnings": 0.21,
+      "pFinalWinner": 0.0003,
+      "pRunnerUp": 0.0011,
+      "pGroupPrize": 0.0006,
+      "expectedWinnings": 0.16,
       "currentGroupPts": 1,
       "currentGroupGd": -2,
       "currentGroupGf": 1
     },
     {
       "id": "eleanor-fisher",
-      "pFinalWinner": 0.0044,
-      "pRunnerUp": 0.014,
-      "pGroupPrize": 0.1516,
-      "expectedWinnings": 10.46,
-      "currentGroupPts": 3,
+      "pFinalWinner": 0.0037,
+      "pRunnerUp": 0.0135,
+      "pGroupPrize": 0.1541,
+      "expectedWinnings": 10.47,
+      "currentGroupPts": 4,
       "currentGroupGd": 3,
       "currentGroupGf": 4
     },
     {
       "id": "erika-leggat",
-      "pFinalWinner": 0.0216,
-      "pRunnerUp": 0.0536,
-      "pGroupPrize": 0.007,
-      "expectedWinnings": 8.06,
+      "pFinalWinner": 0.0207,
+      "pRunnerUp": 0.0513,
+      "pGroupPrize": 0.0076,
+      "expectedWinnings": 7.77,
       "currentGroupPts": 1,
       "currentGroupGd": -2,
       "currentGroupGf": 3
     },
     {
       "id": "giji-alex",
-      "pFinalWinner": 0.0216,
-      "pRunnerUp": 0.0355,
-      "pGroupPrize": 0.0014,
-      "expectedWinnings": 6.2,
-      "currentGroupPts": 1,
+      "pFinalWinner": 0.0214,
+      "pRunnerUp": 0.0345,
+      "pGroupPrize": 0.0024,
+      "expectedWinnings": 6.14,
+      "currentGroupPts": 2,
       "currentGroupGd": 0,
       "currentGroupGf": 1
     },
     {
       "id": "james-brewer",
-      "pFinalWinner": 0.0028,
-      "pRunnerUp": 0.0146,
-      "pGroupPrize": 0.2187,
-      "expectedWinnings": 14.12,
+      "pFinalWinner": 0.0026,
+      "pRunnerUp": 0.014,
+      "pGroupPrize": 0.2087,
+      "expectedWinnings": 13.46,
       "currentGroupPts": 6,
       "currentGroupGd": 4,
       "currentGroupGf": 4
     },
     {
       "id": "jason-robinson",
-      "pFinalWinner": 0.0039,
-      "pRunnerUp": 0.0181,
-      "pGroupPrize": 0.0336,
-      "expectedWinnings": 4.03,
+      "pFinalWinner": 0.0054,
+      "pRunnerUp": 0.0158,
+      "pGroupPrize": 0.0341,
+      "expectedWinnings": 4.06,
       "currentGroupPts": 4,
       "currentGroupGd": 2,
       "currentGroupGf": 4
     },
     {
       "id": "jeffrey-stower",
-      "pFinalWinner": 0.0473,
-      "pRunnerUp": 0.0879,
+      "pFinalWinner": 0.05,
+      "pRunnerUp": 0.0864,
       "pGroupPrize": 0.0034,
-      "expectedWinnings": 14.45,
+      "expectedWinnings": 14.7,
       "currentGroupPts": 1,
       "currentGroupGd": -3,
       "currentGroupGf": 2
     },
     {
       "id": "jemma-green",
-      "pFinalWinner": 0.0467,
-      "pRunnerUp": 0.0546,
-      "pGroupPrize": 0.0896,
-      "expectedWinnings": 16.43,
+      "pFinalWinner": 0.0415,
+      "pRunnerUp": 0.058,
+      "pGroupPrize": 0.0889,
+      "expectedWinnings": 15.94,
       "currentGroupPts": 4,
       "currentGroupGd": 1,
       "currentGroupGf": 2
     },
     {
       "id": "kirsten-walmsley",
-      "pFinalWinner": 0.0044,
-      "pRunnerUp": 0.0187,
+      "pFinalWinner": 0.0038,
+      "pRunnerUp": 0.0177,
       "pGroupPrize": 0.0113,
-      "expectedWinnings": 2.88,
+      "expectedWinnings": 2.7,
       "currentGroupPts": 2,
       "currentGroupGd": 0,
       "currentGroupGf": 2
     },
     {
       "id": "kyle-stewart",
-      "pFinalWinner": 0.0843,
-      "pRunnerUp": 0.1116,
-      "pGroupPrize": 0.0052,
-      "expectedWinnings": 21.85,
-      "currentGroupPts": 0,
-      "currentGroupGd": -4,
-      "currentGroupGf": 1
+      "pFinalWinner": 0.0886,
+      "pRunnerUp": 0.1115,
+      "pGroupPrize": 0.0061,
+      "expectedWinnings": 22.51,
+      "currentGroupPts": 3,
+      "currentGroupGd": -3,
+      "currentGroupGf": 4
     },
     {
       "id": "neema-griffin",
-      "pFinalWinner": 0.2715,
-      "pRunnerUp": 0.1174,
-      "pGroupPrize": 0.155,
-      "expectedWinnings": 57.56,
+      "pFinalWinner": 0.2686,
+      "pRunnerUp": 0.1205,
+      "pGroupPrize": 0.1557,
+      "expectedWinnings": 57.45,
       "currentGroupPts": 4,
       "currentGroupGd": 1,
       "currentGroupGf": 2
     },
     {
       "id": "sam-story",
-      "pFinalWinner": 0.1703,
-      "pRunnerUp": 0.1895,
-      "pGroupPrize": 0.0498,
-      "expectedWinnings": 43.3,
+      "pFinalWinner": 0.1743,
+      "pRunnerUp": 0.1889,
+      "pGroupPrize": 0.0495,
+      "expectedWinnings": 43.81,
       "currentGroupPts": 3,
       "currentGroupGd": -1,
       "currentGroupGf": 3
     },
     {
       "id": "xaria-deosaran",
-      "pFinalWinner": 0.2473,
-      "pRunnerUp": 0.1183,
-      "pGroupPrize": 0.1711,
-      "expectedWinnings": 55.11,
+      "pFinalWinner": 0.2445,
+      "pRunnerUp": 0.1212,
+      "pGroupPrize": 0.1753,
+      "expectedWinnings": 55.21,
       "currentGroupPts": 6,
       "currentGroupGd": 4,
       "currentGroupGf": 4
@@ -191,9 +191,9 @@
     {
       "id": "hannah-penketh",
       "pFinalWinner": 0.0003,
-      "pRunnerUp": 0.0031,
-      "pGroupPrize": 0.0087,
-      "expectedWinnings": 0.8,
+      "pRunnerUp": 0.0025,
+      "pGroupPrize": 0.0083,
+      "expectedWinnings": 0.74,
       "currentGroupPts": 4,
       "currentGroupGd": 3,
       "currentGroupGf": 5
@@ -243,16 +243,6 @@
     {
       "group": "B",
       "rank": 1,
-      "teamId": "CAN",
-      "pts": 1,
-      "gd": 0,
-      "gf": 1,
-      "ga": 1,
-      "played": 1
-    },
-    {
-      "group": "B",
-      "rank": 2,
       "teamId": "BIH",
       "pts": 1,
       "gd": 0,
@@ -262,8 +252,18 @@
     },
     {
       "group": "B",
+      "rank": 2,
+      "teamId": "CAN",
+      "pts": 1,
+      "gd": 0,
+      "gf": 1,
+      "ga": 1,
+      "played": 1
+    },
+    {
+      "group": "B",
       "rank": 3,
-      "teamId": "QAT",
+      "teamId": "SUI",
       "pts": 1,
       "gd": 0,
       "gf": 1,
@@ -273,7 +273,7 @@
     {
       "group": "B",
       "rank": 4,
-      "teamId": "SUI",
+      "teamId": "QAT",
       "pts": 1,
       "gd": 0,
       "gf": 1,
@@ -413,7 +413,7 @@
     {
       "group": "F",
       "rank": 2,
-      "teamId": "NED",
+      "teamId": "JPN",
       "pts": 1,
       "gd": 0,
       "gf": 2,
@@ -423,7 +423,7 @@
     {
       "group": "F",
       "rank": 3,
-      "teamId": "JPN",
+      "teamId": "NED",
       "pts": 1,
       "gd": 0,
       "gf": 2,
@@ -443,16 +443,6 @@
     {
       "group": "G",
       "rank": 1,
-      "teamId": "IRN",
-      "pts": 1,
-      "gd": 0,
-      "gf": 2,
-      "ga": 2,
-      "played": 1
-    },
-    {
-      "group": "G",
-      "rank": 2,
       "teamId": "NZL",
       "pts": 1,
       "gd": 0,
@@ -462,8 +452,18 @@
     },
     {
       "group": "G",
+      "rank": 2,
+      "teamId": "IRN",
+      "pts": 1,
+      "gd": 0,
+      "gf": 2,
+      "ga": 2,
+      "played": 1
+    },
+    {
+      "group": "G",
       "rank": 3,
-      "teamId": "BEL",
+      "teamId": "EGY",
       "pts": 1,
       "gd": 0,
       "gf": 1,
@@ -473,7 +473,7 @@
     {
       "group": "G",
       "rank": 4,
-      "teamId": "EGY",
+      "teamId": "BEL",
       "pts": 1,
       "gd": 0,
       "gf": 1,
@@ -483,16 +483,6 @@
     {
       "group": "H",
       "rank": 1,
-      "teamId": "URU",
-      "pts": 1,
-      "gd": 0,
-      "gf": 1,
-      "ga": 1,
-      "played": 1
-    },
-    {
-      "group": "H",
-      "rank": 2,
       "teamId": "KSA",
       "pts": 1,
       "gd": 0,
@@ -502,8 +492,18 @@
     },
     {
       "group": "H",
+      "rank": 2,
+      "teamId": "URU",
+      "pts": 1,
+      "gd": 0,
+      "gf": 1,
+      "ga": 1,
+      "played": 1
+    },
+    {
+      "group": "H",
       "rank": 3,
-      "teamId": "CPV",
+      "teamId": "ESP",
       "pts": 1,
       "gd": 0,
       "gf": 0,
@@ -513,7 +513,7 @@
     {
       "group": "H",
       "rank": 4,
-      "teamId": "ESP",
+      "teamId": "CPV",
       "pts": 1,
       "gd": 0,
       "gf": 0,
@@ -603,7 +603,7 @@
     {
       "group": "K",
       "rank": 1,
-      "teamId": "COD",
+      "teamId": "POR",
       "pts": 1,
       "gd": 0,
       "gf": 1,
@@ -613,7 +613,7 @@
     {
       "group": "K",
       "rank": 2,
-      "teamId": "POR",
+      "teamId": "COD",
       "pts": 1,
       "gd": 0,
       "gf": 1,
@@ -624,61 +624,61 @@
       "group": "K",
       "rank": 3,
       "teamId": "COL",
-      "pts": 0,
+      "pts": 1,
       "gd": 0,
       "gf": 0,
       "ga": 0,
-      "played": 0
+      "played": 1
     },
     {
       "group": "K",
       "rank": 4,
       "teamId": "UZB",
-      "pts": 0,
+      "pts": 1,
       "gd": 0,
       "gf": 0,
       "ga": 0,
-      "played": 0
+      "played": 1
     },
     {
       "group": "L",
       "rank": 1,
-      "teamId": "CRO",
-      "pts": 0,
-      "gd": 0,
-      "gf": 0,
-      "ga": 0,
-      "played": 0
+      "teamId": "ENG",
+      "pts": 3,
+      "gd": 1,
+      "gf": 3,
+      "ga": 2,
+      "played": 1
     },
     {
       "group": "L",
       "rank": 2,
       "teamId": "GHA",
-      "pts": 0,
+      "pts": 1,
       "gd": 0,
       "gf": 0,
       "ga": 0,
-      "played": 0
+      "played": 1
     },
     {
       "group": "L",
       "rank": 3,
       "teamId": "PAN",
-      "pts": 0,
+      "pts": 1,
       "gd": 0,
       "gf": 0,
       "ga": 0,
-      "played": 0
+      "played": 1
     },
     {
       "group": "L",
       "rank": 4,
-      "teamId": "ENG",
+      "teamId": "CRO",
       "pts": 0,
-      "gd": 0,
-      "gf": 0,
-      "ga": 0,
-      "played": 0
+      "gd": -1,
+      "gf": 2,
+      "ga": 3,
+      "played": 1
     }
   ]
 }
