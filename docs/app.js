@@ -544,8 +544,8 @@ function renderHeader() {
 // ── Main render ────────────────────────────────────────────────────────────
 function render() {
   renderHeader();
-  if (currentView === 'leaderboard') renderLeaderboard();
-  else renderMatches();
+  renderLeaderboard();
+  renderMatches();
 }
 
 // ── Wire up nav ────────────────────────────────────────────────────────────
