@@ -89,8 +89,26 @@ h1 { font-size: 20px; font-weight: 700; line-height: 1.2; }
 .pot-label  { display: block; font-size: 10px; color: var(--text2); margin-bottom: 2px; font-weight: 600; text-transform: uppercase; letter-spacing: .3px; }
 .pot-amount { display: block; font-size: 15px; font-weight: 700; }
 
-.updated-row { font-size: 11px; color: var(--text2); }
-.separator   { margin: 0 4px; }
+.updated-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  color: var(--text2);
+}
+
+.color-key { display: flex; gap: 4px; }
+.key-pill {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 10px;
+}
+.key-win  { background: #d1f0da; color: #1a7a3a; }
+.key-draw { background: #fff8d6; color: #8a6d00; }
+.key-loss { background: #fde8e8; color: #b30000; }
+
+.separator { margin: 0 4px; }
 
 /* ── Nav ─────────────────────────────────────────────────────────── */
 #nav {
@@ -382,8 +400,57 @@ h1 { font-size: 20px; font-weight: 700; line-height: 1.2; }
 .text-center { text-align: center; }
 .loading-msg { padding: 40px 16px; text-align: center; color: var(--text2); font-size: 15px; }
 
-/* ── Desktop tweaks ──────────────────────────────────────────────── */
-@media (min-width: 540px) {
-  #header, #nav, .view { max-width: 540px; margin-left: auto; margin-right: auto; }
+/* ── Tablet: centre the single column ────────────────────────────── */
+@media (min-width: 540px) and (max-width: 899px) {
+  .header-inner, #nav, .views-wrapper { max-width: 540px; margin-left: auto; margin-right: auto; }
   #header { border-radius: 0 0 var(--radius) var(--radius); }
+}
+
+/* ── View title (hidden on mobile, shown on desktop) ─────────────── */
+.view-title { display: none; }
+
+/* ── Desktop: two-column layout ─────────────────────────────────── */
+@media (min-width: 900px) {
+  #header {
+    border-bottom: 1px solid var(--separator);
+    padding: 20px 32px 16px;
+  }
+  .header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  h1 { font-size: 24px; }
+
+  #nav { display: none; }
+
+  .views-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 32px;
+    align-items: start;
+  }
+
+  /* Both views always visible on desktop */
+  .views-wrapper .view,
+  .views-wrapper .view.hidden {
+    display: block !important;
+    padding: 0;
+  }
+
+  .view-title {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--text);
+  }
+
+  /* Leaderboard cards slightly more compact on desktop */
+  .participant-card { padding: 12px 12px 10px; }
+
+  /* Fixtures column: sticky tabs */
+  .match-tabs { padding-top: 0; }
 }
