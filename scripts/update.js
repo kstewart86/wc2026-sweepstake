@@ -49,10 +49,11 @@ async function main() {
     return m.status === 'finished' && nowMs - kickoffMs < 4 * 60 * 60 * 1000; // finished today-ish
   });
 
-  // Also check if any fixture kicks off in the next 2 hours
+  // Also check if any fixture kicked off in the last 3 hours (could still be in play)
+  // or kicks off in the next 2 hours
   const upcomingSoon = fixtures.matches.some(f => {
     const kickMs = new Date(f.kickoffUtc).getTime();
-    return kickMs > nowMs - windowMs && kickMs < nowMs + 2 * 60 * 60 * 1000;
+    return kickMs > nowMs - 3 * 60 * 60 * 1000 && kickMs < nowMs + 2 * 60 * 60 * 1000;
   });
 
   if (!hasActive && !upcomingSoon) {

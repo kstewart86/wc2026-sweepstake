@@ -56,7 +56,7 @@ function fmtPct(p) {
   return (p * 100).toFixed(1) + '%';
 }
 function fmtDate(iso) {
-  return new Date(iso).toLocaleString([], { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+  return new Date(iso).toLocaleString([], { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false });
 }
 function fmtDateShort(iso) {
   return new Date(iso).toLocaleDateString([], { month: 'short', day: 'numeric' });
@@ -389,7 +389,7 @@ function renderMatchCard(fix, teamToOwner) {
     centreStatus = `<div class="match-status">FT</div>`;
   } else {
     const t = new Date(fix.kickoffUtc);
-    centreScore  = `<div class="match-kickoff">${t.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</div>`;
+    centreScore  = `<div class="match-kickoff">${t.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false })}</div>`;
     centreStatus = `<div class="match-status">${t.toLocaleDateString([], { month: 'short', day: 'numeric' })}</div>`;
   }
 
