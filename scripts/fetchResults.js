@@ -118,8 +118,8 @@ async function fetchFromESPN(fixtures) {
 
       const stateType = comp.status?.type?.name || '';
       let status = 'scheduled';
-      if (stateType === 'STATUS_FINAL') status = 'finished';
-      else if (['STATUS_IN_PROGRESS', 'STATUS_HALFTIME'].includes(stateType)) status = 'live';
+      if (['STATUS_FINAL', 'STATUS_FULL_TIME', 'STATUS_FULL_PEN', 'STATUS_POSTPONED'].includes(stateType)) status = 'finished';
+      else if (['STATUS_IN_PROGRESS', 'STATUS_HALFTIME', 'STATUS_FIRST_HALF', 'STATUS_SECOND_HALF', 'STATUS_EXTRA_TIME', 'STATUS_PENALTY'].includes(stateType)) status = 'live';
 
       const hg = parseInt(home.score, 10);
       const ag = parseInt(away.score, 10);
