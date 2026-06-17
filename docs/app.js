@@ -516,6 +516,7 @@ function renderHeader() {
 
   const live = anyLive();
   document.getElementById('live-badge').classList.toggle('hidden', !live);
+  document.getElementById('live-alert').classList.toggle('hidden', !live);
 
   const updatedAt = DATA.results?.updatedUtc;
   document.getElementById('last-updated').textContent = updatedAt
