@@ -401,7 +401,7 @@ h1 { font-size: 20px; font-weight: 700; line-height: 1.2; }
 .loading-msg { padding: 40px 16px; text-align: center; color: var(--text2); font-size: 15px; }
 
 /* ── Tablet: centre the single column ────────────────────────────── */
-@media (min-width: 540px) and (max-width: 899px) {
+@media (min-width: 540px) and (max-width: 699px) {
   .header-inner, #nav, .views-wrapper { max-width: 540px; margin-left: auto; margin-right: auto; }
   #header { border-radius: 0 0 var(--radius) var(--radius); }
 }
@@ -410,7 +410,7 @@ h1 { font-size: 20px; font-weight: 700; line-height: 1.2; }
 .view-title { display: none; }
 
 /* ── Desktop: two-column layout ─────────────────────────────────── */
-@media (min-width: 900px) {
+@media (min-width: 700px) {
   #header {
     border-bottom: 1px solid var(--separator);
     padding: 20px 32px 16px;
