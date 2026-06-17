@@ -218,7 +218,8 @@ function renderLeaderboard() {
 
   // Sort
   if (currentSort === 'p1st') {
-    participants.sort((a, b) => (b.prob?.pFinalWinner ?? 0) - (a.prob?.pFinalWinner ?? 0));
+    const probKey = groupStageComplete ? 'pFinalWinner' : 'pGroupPrize';
+    participants.sort((a, b) => (b.prob?.[probKey] ?? 0) - (a.prob?.[probKey] ?? 0));
   } else if (currentSort === 'grouppts') {
     participants.sort((a, b) => {
       const ap = a.prob, bp = b.prob;
