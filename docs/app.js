@@ -384,6 +384,14 @@ function renderMatchCard(fix, teamToOwner) {
   const home = sideInfo(fix.homeId);
   const away = sideInfo(fix.awayId);
 
+  // Determine result tint classes for each side
+  let homeClass = 'match-side', awayClass = 'match-side away';
+  if (r && (isLive(r) || isFinished(r))) {
+    if (r.homeGoals > r.awayGoals)       { homeClass += ' side-winning'; awayClass += ' side-losing'; }
+    else if (r.homeGoals < r.awayGoals)  { homeClass += ' side-losing';  awayClass += ' side-winning'; }
+    else                                  { homeClass += ' side-drawing'; awayClass += ' side-drawing'; }
+  }
+
   // Score / time centre
   let centreScore, centreStatus;
   if (r && isLive(r)) {
@@ -401,7 +409,7 @@ function renderMatchCard(fix, teamToOwner) {
   return `
     <div class="match-card">
       <div class="match-row">
-        <div class="match-side">
+        <div class="${homeClass}">
           <div class="match-participant">${home.display}</div>
           ${home.sub ? `<div class="match-country">${home.sub}</div>` : ''}
         </div>
@@ -409,7 +417,7 @@ function renderMatchCard(fix, teamToOwner) {
           ${centreScore}
           ${centreStatus}
         </div>
-        <div class="match-side away">
+        <div class="${awayClass}">
           <div class="match-participant">${away.display}</div>
           ${away.sub ? `<div class="match-country">${away.sub}</div>` : ''}
         </div>
