@@ -191,6 +191,11 @@ h1 { font-size: 20px; font-weight: 700; line-height: 1.2; }
 
 .team-pts   { display: inline-block; margin-top: 4px; font-size: 11px; color: var(--text2); }
 
+/* Match result tints */
+.team-chip.chip-winning { background: #d1f0da; }
+.team-chip.chip-drawing { background: #fff8d6; }
+.team-chip.chip-losing  { background: #fde8e8; }
+
 /* Unconfirmed team warning */
 .team-chip.unconfirmed { border: 1px dashed var(--orange); }
 .team-unconfirmed-label { font-size: 10px; color: var(--orange); font-weight: 600; }

@@ -157,6 +157,7 @@ function renderTeamChip(teamId) {
   const latest = latestMatchForTeam(teamId);
   let scoreHtml = '';
   let teamPtsHtml = '';
+  let chipClass = 'team-chip';
 
   if (latest) {
     const { fixture, result } = latest;
@@ -164,9 +165,13 @@ function renderTeamChip(teamId) {
     const oppName = DATA.teams[opp]?.name || opp;
     if (result && isLive(result)) {
       const sc = scoreFor(fixture, result, teamId);
+      const state = sc.f > sc.a ? 'winning' : sc.f === sc.a ? 'drawing' : 'losing';
+      chipClass += ` chip-${state}`;
       scoreHtml = `<div class="team-score live">vs ${oppName} ${sc.f}–${sc.a} 🔴</div>`;
     } else if (result && isFinished(result)) {
       const sc = scoreFor(fixture, result, teamId);
+      const state = sc.f > sc.a ? 'winning' : sc.f === sc.a ? 'drawing' : 'losing';
+      chipClass += ` chip-${state}`;
       const emoji = sc.f > sc.a ? '✅' : sc.f === sc.a ? '🟡' : '❌';
       scoreHtml = `<div class="team-score finished">${emoji} vs ${oppName} ${sc.f}–${sc.a}</div>`;
     } else {
@@ -183,7 +188,7 @@ function renderTeamChip(teamId) {
   }
 
   return `
-    <div class="team-chip">
+    <div class="${chipClass}">
       <div class="team-name">${team.name}</div>
       <div class="team-group">Group ${team.group}</div>
       ${scoreHtml}
