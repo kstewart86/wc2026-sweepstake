@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-06-17T21:44:13.389Z",
+  "updatedUtc": "2026-06-17T21:45:25.081Z",
   "matches": [
     {
       "matchId": 1,
@@ -135,7 +135,8 @@
       "awayId": "SEN",
       "homeGoals": 3,
       "awayGoals": 1,
-      "status": "finished"
+      "status": "finished",
+      "minute": "90'+10'"
     },
     {
       "matchId": 50,
@@ -143,7 +144,8 @@
       "awayId": "NOR",
       "homeGoals": 1,
       "awayGoals": 4,
-      "status": "finished"
+      "status": "finished",
+      "minute": "90'+8'"
     },
     {
       "matchId": 55,
@@ -151,7 +153,8 @@
       "awayId": "DZA",
       "homeGoals": 3,
       "awayGoals": 0,
-      "status": "finished"
+      "status": "finished",
+      "minute": "90'+6'"
     },
     {
       "matchId": 56,
@@ -159,7 +162,8 @@
       "awayId": "JOR",
       "homeGoals": 3,
       "awayGoals": 1,
-      "status": "finished"
+      "status": "finished",
+      "minute": "90'+14'"
     },
     {
       "matchId": 61,
@@ -167,7 +171,8 @@
       "awayId": "COD",
       "homeGoals": 1,
       "awayGoals": 1,
-      "status": "finished"
+      "status": "finished",
+      "minute": "90'+5'"
     },
     {
       "matchId": 67,
@@ -175,8 +180,8 @@
       "awayId": "CRO",
       "homeGoals": 3,
       "awayGoals": 2,
-      "status": "scheduled",
-      "minute": "80'"
+      "status": "live",
+      "minute": "81'"
     },
     {
       "matchId": 68,
