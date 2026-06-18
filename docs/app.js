@@ -225,7 +225,7 @@ function renderTeamChip(teamId) {
 
   return `
     <div class="${chipClass}">
-      <div class="team-name">${flag(teamId)}${team.name}</div>
+      <div class="team-name">${team.name}</div>
       <div class="team-group">Group ${team.group}</div>
       ${scoreHtml}
       ${teamPtsHtml}
@@ -427,11 +427,10 @@ function renderMatchCard(fix, teamToOwner) {
   function sideInfo(teamId) {
     const owner = teamToOwner[teamId];
     const country = DATA.teams[teamId]?.name || teamId;
-    const f = FLAGS[teamId] ? `<span class="team-flag">${FLAGS[teamId]}</span>` : '';
     if (owner) {
-      return { display: owner, sub: f + country };
+      return { display: owner, sub: country };
     } else {
-      return { display: f + country, sub: null };
+      return { display: country, sub: null };
     }
   }
 
