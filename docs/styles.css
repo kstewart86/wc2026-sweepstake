@@ -285,44 +285,54 @@ h1 { display: flex; align-items: center; }
 .info-trigger {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-  font-size: 11px;
-  font-weight: 600;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  font-size: 9px;
+  font-weight: 700;
+  font-style: normal;
   color: var(--text2);
+  background: var(--surface3);
+  border: 1px solid var(--separator);
+  border-radius: 50%;
   cursor: pointer;
   position: relative;
-  padding: 4px 0;
-  border: none;
-  background: none;
-  font-family: var(--font);
+  margin-left: 5px;
+  vertical-align: middle;
+  flex-shrink: 0;
   user-select: none;
+  line-height: 1;
 }
 .info-trigger:hover,
-.info-trigger:focus { color: var(--accent); outline: none; }
+.info-trigger:focus { color: var(--accent); border-color: var(--accent); outline: none; }
 
 .info-tooltip {
   display: none;
   position: absolute;
   bottom: calc(100% + 8px);
-  left: 0;
-  width: 260px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
   background: var(--surface3);
   border: 1px solid var(--separator);
   border-radius: var(--radius-sm);
-  padding: 10px 12px;
-  font-size: 12px;
+  padding: 8px 10px;
+  font-size: 11px;
   font-weight: 400;
   line-height: 1.5;
   color: var(--text);
   box-shadow: var(--shadow);
   pointer-events: none;
   z-index: 50;
+  text-align: center;
+  font-style: normal;
 }
 .info-tooltip::after {
   content: '';
   position: absolute;
   top: 100%;
-  left: 16px;
+  left: 50%;
+  transform: translateX(-50%);
   border: 6px solid transparent;
   border-top-color: var(--surface3);
 }
@@ -418,12 +428,20 @@ h1 { display: flex; align-items: center; }
 .prob-value { width: 40px; text-align: right; font-weight: 700; font-size: 12px; color: var(--text); }
 
 .card-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   margin-top: 10px;
   padding-top: 10px;
   border-top: 1px solid var(--separator);
+}
+.card-footer-stats {
+  display: flex;
+  gap: 0;
+}
+.footer-stat {
+  flex: 1;
+  text-align: center;
+}
+.footer-stat + .footer-stat {
+  border-left: 1px solid var(--separator);
 }
 .group-pts-label { font-size: 10px; color: var(--text2); font-weight: 500; letter-spacing: .3px; text-transform: uppercase; }
 .group-pts-val   { font-size: 14px; font-weight: 800; color: var(--text); margin-top: 1px; }

@@ -290,18 +290,8 @@ function renderLeaderboard() {
     DATA.rankingsHistory.rankings.forEach((r, i) => { prevRankMap[r.id] = i + 1; });
   }
 
-  // Info tooltip below sort row
   const infoEl = document.getElementById('leaderboard-info');
-  if (infoEl) {
-    const label = groupStageComplete ? 'Final / Runner-up probability' : 'Group Prize probability';
-    infoEl.innerHTML = `
-      <span class="info-trigger" tabindex="0" role="button" aria-describedby="leaderboard-tooltip">
-        ℹ️ What do the bars show?
-        <span class="info-tooltip" id="leaderboard-tooltip" role="tooltip">
-          ${label}: where your teams sit <em>right now</em> combined with how tough their remaining fixtures are — simulated 20,000 times.
-        </span>
-      </span>`;
-  }
+  if (infoEl) infoEl.innerHTML = '';
 
   list.innerHTML = participants.map((p, idx) => {
     const prob = p.prob;
@@ -355,7 +345,11 @@ function renderLeaderboard() {
           </div>
           ` : `
           <div class="prob-row">
-            <span class="prob-label">🏅 Group Prize</span>
+            <span class="prob-label">🏅 Group Prize
+              <span class="info-trigger" tabindex="0" role="button">ℹ
+                <span class="info-tooltip" role="tooltip">Where you sit now against how tough your run-in is</span>
+              </span>
+            </span>
             <div class="prob-bar-wrap"><div class="prob-bar pgrp" style="width:${(pGP/maxPG*100).toFixed(1)}%"></div></div>
             <span class="prob-value">${fmtPct(pGP)}</span>
           </div>
@@ -363,9 +357,10 @@ function renderLeaderboard() {
         </div>
         ` : `<p style="font-size:12px;color:var(--text2);margin-top:6px">Simulation running…</p>`}
         <div class="card-footer">
-          <div>
-            <div class="group-pts-label">Group pts · GD · GF</div>
-            <div class="group-pts-val">${pts} · ${gdStr} · ${gf}</div>
+          <div class="card-footer-stats">
+            <div class="footer-stat"><div class="group-pts-label">PTS</div><div class="group-pts-val">${pts}</div></div>
+            <div class="footer-stat"><div class="group-pts-label">GD</div><div class="group-pts-val">${gdStr}</div></div>
+            <div class="footer-stat"><div class="group-pts-label">GF</div><div class="group-pts-val">${gf}</div></div>
           </div>
         </div>
       </div>`;
