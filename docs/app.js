@@ -512,7 +512,7 @@ function openDetail(participantId) {
 
   let html = `<div class="detail-name">${p.name}</div>`;
 
-  html += `<p class="detail-subtitle">Right then — here's the full picture for their two sides. What's been played, what's still to come.</p>`;
+  html += `<p class="detail-subtitle">Here's the full picture for ${p.name}. What's been played, what's still to come.</p>`;
 
   for (const teamId of p.teams) {
     const team = DATA.teams[teamId];
