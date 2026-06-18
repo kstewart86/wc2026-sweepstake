@@ -27,6 +27,42 @@
   --shadow-sm: 0 2px 8px rgba(0,0,0,0.3);
 }
 
+/* ── Light theme overrides ───────────────────────────────────────── */
+[data-theme="light"] {
+  --bg:        #f0f4f8;
+  --surface:   #ffffff;
+  --surface2:  #eef2f7;
+  --surface3:  #dde4ee;
+  --text:      #0f172a;
+  --text2:     #64748b;
+  --accent:    #2563eb;
+  --accent-lo: rgba(37,99,235,0.1);
+  --green:     #059669;
+  --green-lo:  rgba(5,150,105,0.12);
+  --red:       #dc2626;
+  --red-lo:    rgba(220,38,38,0.1);
+  --orange:    #d97706;
+  --orange-lo: rgba(217,119,6,0.1);
+  --separator: rgba(0,0,0,0.08);
+  --shadow:    0 4px 24px rgba(0,0,0,0.1);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+[data-theme="light"] #header {
+  background: linear-gradient(160deg, #1e3a5f 0%, #1e40af 60%, #1d4ed8 100%);
+}
+[data-theme="light"] h1 {
+  background: linear-gradient(135deg, #ffffff 0%, #bfdbfe 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+[data-theme="light"] .subtitle { color: rgba(255,255,255,0.7); }
+[data-theme="light"] .updated-row { color: rgba(255,255,255,0.6); }
+[data-theme="light"] .pot-card { background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.2); }
+[data-theme="light"] .pot-label { color: rgba(255,255,255,0.7); }
+[data-theme="light"] .pot-amount { color: #fff; }
+[data-theme="light"] #nav { background: var(--surface); border-color: var(--separator); }
+
 html { font-size: 16px; }
 body {
   font-family: var(--font);
@@ -65,6 +101,46 @@ h1 {
   background-clip: text;
 }
 .subtitle { font-size: 12px; color: var(--text2); margin-top: 3px; letter-spacing: .2px; }
+
+/* ── Brand ball image ────────────────────────────────────────────── */
+.brand-ball {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+h1 { display: flex; align-items: center; }
+
+/* ── Theme toggle ────────────────────────────────────────────────── */
+.theme-toggle {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background .2s;
+  line-height: 1;
+}
+.theme-toggle:hover { background: rgba(255,255,255,0.2); }
+
+/* ── Rank arrow badges ───────────────────────────────────────────── */
+.rank-arrow {
+  font-size: 10px;
+  font-weight: 800;
+  padding: 1px 5px;
+  border-radius: 6px;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+.rank-up   { background: var(--green-lo); color: var(--green); }
+.rank-down { background: var(--red-lo);   color: var(--red); }
 
 .live-badge {
   display: flex;
@@ -246,6 +322,7 @@ h1 {
   min-width: 0;
   transition: background .2s, border-color .2s;
 }
+.team-flag  { font-size: 14px; margin-right: 4px; vertical-align: middle; }
 .team-name  { font-size: 13px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--text); }
 .team-group { font-size: 10px; color: var(--text2); font-weight: 500; letter-spacing: .3px; }
 .team-score {

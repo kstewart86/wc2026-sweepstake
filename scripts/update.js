@@ -113,6 +113,26 @@ async function main() {
   if (resultsChanged) { save('results.json', newResults); console.log('[update] Wrote results.json'); }
   if (probsChanged)   { save('probabilities.json', probs); console.log('[update] Wrote probabilities.json'); }
 
+  // ---- RANKINGS SNAPSHOT (every 12 hours) ---------------------------------
+  // Sorted by group pts (desc), then GD, then GF — same order as the leaderboard default.
+  const HISTORY_PATH = 'rankings_history.json';
+  let history = { snapshotUtc: null, rankings: [] };
+  try { history = load(HISTORY_PATH); } catch (_) {}
+  const twelveHoursMs = 12 * 60 * 60 * 1000;
+  const lastSnapshot = history.snapshotUtc ? new Date(history.snapshotUtc).getTime() : 0;
+  if (nowMs - lastSnapshot >= twelveHoursMs) {
+    const sorted = [...probs.participants].sort((a, b) => {
+      if ((b.currentGroupPts ?? 0) !== (a.currentGroupPts ?? 0)) return (b.currentGroupPts ?? 0) - (a.currentGroupPts ?? 0);
+      if ((b.currentGroupGd  ?? 0) !== (a.currentGroupGd  ?? 0)) return (b.currentGroupGd  ?? 0) - (a.currentGroupGd  ?? 0);
+      return (b.currentGroupGf ?? 0) - (a.currentGroupGf ?? 0);
+    });
+    save(HISTORY_PATH, {
+      snapshotUtc: new Date().toISOString(),
+      rankings: sorted.map((p, i) => ({ id: p.id, rank: i + 1 })),
+    });
+    console.log('[update] Wrote rankings_history.json snapshot');
+  }
+
   console.log('[update] Done', new Date().toISOString());
 }
 

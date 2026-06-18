@@ -6,13 +6,46 @@
 
 'use strict';
 
+// ── Country flag emoji lookup ──────────────────────────────────────────────
+const FLAGS = {
+  ARG:'🇦🇷', AUS:'🇦🇺', AUT:'🇦🇹', BEL:'🇧🇪', BIH:'🇧🇦',
+  BRA:'🇧🇷', CAN:'🇨🇦', COD:'🇨🇩', COL:'🇨🇴', CPV:'🇨🇻',
+  CRO:'🇭🇷', CUW:'🇨🇼', CZE:'🇨🇿', DZA:'🇩🇿', ECU:'🇪🇨',
+  EGY:'🇪🇬', ENG:'🏴󠁧󠁢󠁥󠁮󠁧󠁿', ESP:'🇪🇸', FRA:'🇫🇷', GER:'🇩🇪',
+  GHA:'🇬🇭', HTI:'🇭🇹', IRN:'🇮🇷', IRQ:'🇮🇶', CIV:'🇨🇮',
+  JPN:'🇯🇵', JOR:'🇯🇴', KOR:'🇰🇷', KSA:'🇸🇦', MAR:'🇲🇦',
+  MEX:'🇲🇽', NED:'🇳🇱', NOR:'🇳🇴', NZL:'🇳🇿', PAN:'🇵🇦',
+  PAR:'🇵🇾', POR:'🇵🇹', QAT:'🇶🇦', SCO:'🏴󠁧󠁢󠁳󠁣󠁴󠁿', SEN:'🇸🇳',
+  SUI:'🇨🇭', SWE:'🇸🇪', TUN:'🇹🇳', TUR:'🇹🇷', URU:'🇺🇾',
+  USA:'🇺🇸', UZB:'🇺🇿', ZAF:'🇿🇦',
+};
+function flag(teamId) { return FLAGS[teamId] ? `<span class="team-flag">${FLAGS[teamId]}</span>` : ''; }
+
+// ── Theme ──────────────────────────────────────────────────────────────────
+function initTheme() {
+  const saved = localStorage.getItem('twc-theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  applyTheme(saved || (prefersDark ? 'dark' : 'light'));
+}
+function applyTheme(t) {
+  document.documentElement.setAttribute('data-theme', t);
+  const btn = document.getElementById('theme-toggle');
+  if (btn) btn.textContent = t === 'dark' ? '☀️' : '🌙';
+}
+function toggleTheme() {
+  const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  localStorage.setItem('twc-theme', next);
+  applyTheme(next);
+}
+
 // ── State ─────────────────────────────────────────────────────────────────
 let DATA = {
-  fixtures:     null,
-  teams:        null,
-  participants: null,
-  results:      null,
-  probs:        null,
+  fixtures:        null,
+  teams:           null,
+  participants:    null,
+  results:         null,
+  probs:           null,
+  rankingsHistory: null,
 };
 
 let currentView     = 'leaderboard';
@@ -22,26 +55,29 @@ let currentMatchTab = 'today';
 // ── Bootstrap ─────────────────────────────────────────────────────────────
 async function loadAll() {
   const base = window.location.pathname.replace(/\/[^/]*$/, '') + '/data/';
-  const [fixtures, teams, participants, results, probs] = await Promise.all([
+  const [fixtures, teams, participants, results, probs, rankingsHistory] = await Promise.all([
     fetch(base + 'fixtures.json').then(r => r.json()),
     fetch(base + 'teams.json').then(r => r.json()),
     fetch(base + 'participants.json').then(r => r.json()),
     fetch(base + 'results.json').then(r => r.json()),
     fetch(base + 'probabilities.json').then(r => r.json()),
+    fetch(base + 'rankings_history.json?t=' + Date.now()).then(r => r.json()).catch(() => null),
   ]);
-  DATA = { fixtures, teams: teams.teams, participants, results, probs };
+  DATA = { fixtures, teams: teams.teams, participants, results, probs, rankingsHistory };
   render();
 }
 
 async function refreshDynamic() {
   const base = window.location.pathname.replace(/\/[^/]*$/, '') + '/data/';
   try {
-    const [results, probs] = await Promise.all([
+    const [results, probs, rankingsHistory] = await Promise.all([
       fetch(base + 'results.json?t=' + Date.now()).then(r => r.json()),
       fetch(base + 'probabilities.json?t=' + Date.now()).then(r => r.json()),
+      fetch(base + 'rankings_history.json?t=' + Date.now()).then(r => r.json()).catch(() => null),
     ]);
     DATA.results = results;
     DATA.probs   = probs;
+    if (rankingsHistory) DATA.rankingsHistory = rankingsHistory;
     render();
   } catch (e) { console.warn('Refresh failed:', e); }
 }
@@ -189,7 +225,7 @@ function renderTeamChip(teamId) {
 
   return `
     <div class="${chipClass}">
-      <div class="team-name">${team.name}</div>
+      <div class="team-name">${flag(teamId)}${team.name}</div>
       <div class="team-group">Group ${team.group}</div>
       ${scoreHtml}
       ${teamPtsHtml}
@@ -239,6 +275,12 @@ function renderLeaderboard() {
   const maxP2 = Math.max(...participants.map(p => p.prob?.pRunnerUp ?? 0), 0.001);
   const maxPG = Math.max(...participants.map(p => p.prob?.pGroupPrize ?? 0), 0.001);
 
+  // Build previous rank map from history snapshot
+  const prevRankMap = {};
+  if (DATA.rankingsHistory?.rankings?.length) {
+    DATA.rankingsHistory.rankings.forEach((r, i) => { prevRankMap[r.id] = i + 1; });
+  }
+
   list.innerHTML = participants.map((p, idx) => {
     const prob = p.prob;
     const pFW = prob?.pFinalWinner ?? 0;
@@ -249,12 +291,23 @@ function renderLeaderboard() {
     const gf  = prob?.currentGroupGf  ?? 0;
     const gdStr = gd >= 0 ? '+' + gd : '' + gd;
 
+    const currRank = idx + 1;
+    const prevRank = prevRankMap[p.id];
+    let arrowHtml = '';
+    if (prevRank != null && prevRank !== currRank) {
+      if (currRank < prevRank) {
+        arrowHtml = `<span class="rank-arrow rank-up" title="Up ${prevRank - currRank} from 12h ago">▲${prevRank - currRank}</span>`;
+      } else {
+        arrowHtml = `<span class="rank-arrow rank-down" title="Down ${currRank - prevRank} from 12h ago">▼${currRank - prevRank}</span>`;
+      }
+    }
+
     return `
       <div class="participant-card" data-id="${p.id}">
         <div class="card-header">
           <div>
             <span class="card-name">${p.name}</span>
-            <div style="font-size:11px;color:var(--text2);margin-top:1px">#${idx + 1}</div>
+            <div style="font-size:11px;color:var(--text2);margin-top:1px">#${currRank} ${arrowHtml}</div>
           </div>
           <div class="card-pts-badge">
             <span class="card-pts-number">${pts}</span>
@@ -374,10 +427,11 @@ function renderMatchCard(fix, teamToOwner) {
   function sideInfo(teamId) {
     const owner = teamToOwner[teamId];
     const country = DATA.teams[teamId]?.name || teamId;
+    const f = FLAGS[teamId] ? `<span class="team-flag">${FLAGS[teamId]}</span>` : '';
     if (owner) {
-      return { display: owner, sub: country };    // "Kyle" / "England"
+      return { display: owner, sub: f + country };
     } else {
-      return { display: country, sub: null };     // "Panama" / (no sub — name IS country)
+      return { display: f + country, sub: null };
     }
   }
 
@@ -515,7 +569,6 @@ function renderHeader() {
   document.getElementById('pot-grp').textContent   = fmtCurrency(totalPot * 0.20);
 
   const live = anyLive();
-  document.getElementById('live-badge').classList.toggle('hidden', !live);
   document.getElementById('live-alert').classList.toggle('hidden', !live);
 
   const updatedAt = DATA.results?.updatedUtc;
@@ -585,9 +638,12 @@ document.getElementById('modal-close').addEventListener('click', closeDetail);
 document.getElementById('modal-backdrop').addEventListener('click', closeDetail);
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDetail(); });
 
+// ── Wire up theme toggle ──────────────────────────────────────────────────
+document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+
 // ── Init ──────────────────────────────────────────────────────────────────
+initTheme();
 loadAll().then(() => {
-  // Refresh every 60 seconds
   setInterval(refreshDynamic, 60_000);
 }).catch(e => {
   document.body.innerHTML = `<p class="loading-msg">Failed to load data.<br><small>${e.message}</small></p>`;
