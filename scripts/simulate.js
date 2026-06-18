@@ -191,10 +191,15 @@ function compareThirds(a, b) {
 // Returns { finalWinner, finalLoser, groupPrize: {id, pts, gd, gf} }
 // ---------------------------------------------------------------------------
 function runSim(fixtures, results, teams, participants) {
-  // Build finished match lookup
+  // Lock in all matches with known scores (finished + live current score).
+  // Live matches are treated as if the current score is final so that
+  // participants' already-accumulated points count toward the simulation.
   const finished = {};
   for (const r of results.matches) {
-    if (r.status === 'finished') finished[r.matchId] = r;
+    if ((r.status === 'finished' || r.status === 'live')
+        && r.homeGoals !== null && r.awayGoals !== null) {
+      finished[r.matchId] = r;
+    }
   }
 
   // ---- GROUP STAGE --------------------------------------------------------
