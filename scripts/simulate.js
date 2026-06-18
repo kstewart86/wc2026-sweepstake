@@ -314,11 +314,10 @@ function runSim(fixtures, results, teams, participants) {
     return { id: p.id, pts, gd, gf };
   });
 
-  // Rank by pts → gd → gf (ties are NOT broken further in sim; handled in aggregation)
+  // Rank by pts → GD (per sweepstake rules); true ties split in aggregation
   groupPrizeScores.sort((a, b) => {
     if (b.pts !== a.pts) return b.pts - a.pts;
-    if (b.gd  !== a.gd)  return b.gd  - a.gd;
-    return b.gf - a.gf;
+    return b.gd - a.gd;
   });
 
   return { finalWinner, finalLoser, groupPrize: groupPrizeScores };
@@ -350,10 +349,10 @@ function simulate(fixtures, results, teamsObj, participants, N = 20000) {
     if (finalWinner && teamToParticipant[finalWinner]) counts.finalWinner[teamToParticipant[finalWinner]]++;
     if (finalLoser  && teamToParticipant[finalLoser])  counts.runnerUp[teamToParticipant[finalLoser]]++;
 
-    // Group prize: find best score; split ties fractionally
+    // Group prize: pts tiebroken by GD; split only on exact pts+GD tie
     if (groupPrize.length > 0) {
       const best = groupPrize[0];
-      const tied = groupPrize.filter(p => p.pts === best.pts && p.gd === best.gd && p.gf === best.gf);
+      const tied = groupPrize.filter(p => p.pts === best.pts && p.gd === best.gd);
       for (const t of tied) counts.groupPrize[t.id] += 1 / tied.length;
     }
   }
