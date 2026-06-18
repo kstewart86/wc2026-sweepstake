@@ -515,11 +515,10 @@ function openDetail(participantId) {
   if (prob) {
     html += `
       <div style="display:flex;gap:12px;flex-wrap:wrap;margin:8px 0 0">
-        <span style="font-size:13px">🥇 ${fmtPct(prob.pFinalWinner)} &nbsp;·&nbsp; ${fmtCurrency(prize1 * prob.pFinalWinner)} exp</span>
-        <span style="font-size:13px">🥈 ${fmtPct(prob.pRunnerUp)} &nbsp;·&nbsp; ${fmtCurrency(prize2 * prob.pRunnerUp)} exp</span>
-        <span style="font-size:13px">🏅 ${fmtPct(prob.pGroupPrize)} &nbsp;·&nbsp; ${fmtCurrency(prize3 * prob.pGroupPrize)} exp</span>
-      </div>
-      <div style="font-size:15px;font-weight:700;color:var(--accent);margin-top:6px">Expected winnings: ${fmtCurrency(prob.expectedWinnings)}</div>`;
+        <span style="font-size:13px">🥇 ${fmtPct(prob.pFinalWinner)}</span>
+        <span style="font-size:13px">🥈 ${fmtPct(prob.pRunnerUp)}</span>
+        <span style="font-size:13px">🏅 ${fmtPct(prob.pGroupPrize)}</span>
+      </div>`;
   }
 
   for (const teamId of p.teams) {
