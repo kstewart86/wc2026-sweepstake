@@ -362,7 +362,7 @@ function simulate(fixtures, results, teamsObj, participants, N = 20000) {
   for (const g of 'ABCDEFGHIJKL'.split('')) realGroupResults[g] = [];
   for (const r of results.matches) {
     const fix = fixtures.matches.find(f => f.matchId === r.matchId);
-    if (fix?.stage === 'group') {
+    if (fix?.stage === 'group' && r.status === 'finished') {
       realGroupResults[fix.group].push({ homeId: r.homeId, awayId: r.awayId, homeGoals: r.homeGoals, awayGoals: r.awayGoals });
     }
   }
