@@ -6,20 +6,28 @@
 
 'use strict';
 
-// ── Country flag emoji lookup ──────────────────────────────────────────────
-const FLAGS = {
-  ARG:'🇦🇷', AUS:'🇦🇺', AUT:'🇦🇹', BEL:'🇧🇪', BIH:'🇧🇦',
-  BRA:'🇧🇷', CAN:'🇨🇦', COD:'🇨🇩', COL:'🇨🇴', CPV:'🇨🇻',
-  CRO:'🇭🇷', CUW:'🇨🇼', CZE:'🇨🇿', DZA:'🇩🇿', ECU:'🇪🇨',
-  EGY:'🇪🇬', ENG:'🏴󠁧󠁢󠁥󠁮󠁧󠁿', ESP:'🇪🇸', FRA:'🇫🇷', GER:'🇩🇪',
-  GHA:'🇬🇭', HTI:'🇭🇹', IRN:'🇮🇷', IRQ:'🇮🇶', CIV:'🇨🇮',
-  JPN:'🇯🇵', JOR:'🇯🇴', KOR:'🇰🇷', KSA:'🇸🇦', MAR:'🇲🇦',
-  MEX:'🇲🇽', NED:'🇳🇱', NOR:'🇳🇴', NZL:'🇳🇿', PAN:'🇵🇦',
-  PAR:'🇵🇾', POR:'🇵🇹', QAT:'🇶🇦', SCO:'🏴󠁧󠁢󠁳󠁣󠁴󠁿', SEN:'🇸🇳',
-  SUI:'🇨🇭', SWE:'🇸🇪', TUN:'🇹🇳', TUR:'🇹🇷', URU:'🇺🇾',
-  USA:'🇺🇸', UZB:'🇺🇿', ZAF:'🇿🇦',
+// ── Country flags via Twemoji CDN (renders on all platforms incl. Windows) ──
+const TWEMOJI = 'https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/';
+const FLAG_CODE = {
+  ARG:'1f1e6-1f1f7', AUS:'1f1e6-1f1fa', AUT:'1f1e6-1f1f9', BEL:'1f1e7-1f1ea',
+  BIH:'1f1e7-1f1e6', BRA:'1f1e7-1f1f7', CAN:'1f1e8-1f1e6', CIV:'1f1e8-1f1ee',
+  COD:'1f1e8-1f1e9', COL:'1f1e8-1f1f4', CPV:'1f1e8-1f1fb', CRO:'1f1ed-1f1f7',
+  CUW:'1f1e8-1f1fc', CZE:'1f1e8-1f1ff', DZA:'1f1e9-1f1ff', ECU:'1f1ea-1f1e8',
+  EGY:'1f1ea-1f1ec', ENG:'1f3f4-e0067-e0062-e0065-e006e-e0067-e007f',
+  ESP:'1f1ea-1f1f8', FRA:'1f1eb-1f1f7', GER:'1f1e9-1f1ea', GHA:'1f1ec-1f1ed',
+  HTI:'1f1ed-1f1f9', IRN:'1f1ee-1f1f7', IRQ:'1f1ee-1f1f6', JOR:'1f1ef-1f1f4',
+  JPN:'1f1ef-1f1f5', KOR:'1f1f0-1f1f7', KSA:'1f1f8-1f1e6', MAR:'1f1f2-1f1e6',
+  MEX:'1f1f2-1f1fd', NED:'1f1f3-1f1f1', NOR:'1f1f3-1f1f4', NZL:'1f1f3-1f1ff',
+  PAN:'1f1f5-1f1e6', PAR:'1f1f5-1f1fe', POR:'1f1f5-1f1f9', QAT:'1f1f6-1f1e6',
+  SCO:'1f3f4-e0067-e0062-e0073-e0063-e0074-e007f',
+  SEN:'1f1f8-1f1f3', SUI:'1f1e8-1f1ed', SWE:'1f1f8-1f1ea', TUN:'1f1f9-1f1f3',
+  TUR:'1f1f9-1f1f7', URU:'1f1fa-1f1fe', USA:'1f1fa-1f1f8', UZB:'1f1fa-1f1ff',
+  ZAF:'1f1ff-1f1e6',
 };
-function flag(teamId) { return FLAGS[teamId] ? `<span class="team-flag">${FLAGS[teamId]}</span>` : ''; }
+function flag(teamId) {
+  const c = FLAG_CODE[teamId];
+  return c ? `<img class="team-flag" src="${TWEMOJI}${c}.svg" alt="" aria-hidden="true">` : '';
+}
 
 // ── Theme ──────────────────────────────────────────────────────────────────
 function initTheme() {
@@ -225,7 +233,7 @@ function renderTeamChip(teamId) {
 
   return `
     <div class="${chipClass}">
-      <div class="team-name">${team.name}</div>
+      <div class="team-name">${flag(teamId)}${team.name}</div>
       <div class="team-group">Group ${team.group}</div>
       ${scoreHtml}
       ${teamPtsHtml}
@@ -427,10 +435,11 @@ function renderMatchCard(fix, teamToOwner) {
   function sideInfo(teamId) {
     const owner = teamToOwner[teamId];
     const country = DATA.teams[teamId]?.name || teamId;
+    const f = flag(teamId);
     if (owner) {
-      return { display: owner, sub: country };
+      return { display: owner, sub: f + country };
     } else {
-      return { display: country, sub: null };
+      return { display: f + country, sub: null };
     }
   }
 
