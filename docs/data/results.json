@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-06-18T17:59:11.754Z",
+  "updatedUtc": "2026-06-18T19:01:16.834Z",
   "matches": [
     {
       "matchId": 1,
@@ -209,6 +209,15 @@
       "awayGoals": 1,
       "status": "finished",
       "minute": "90'+7'"
+    },
+    {
+      "matchId": 9,
+      "homeId": "SUI",
+      "awayId": "BIH",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "status": "live",
+      "minute": "1'"
     }
   ]
 }
