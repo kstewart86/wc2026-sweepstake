@@ -512,28 +512,7 @@ function openDetail(participantId) {
 
   let html = `<div class="detail-name">${p.name}</div>`;
 
-  // Remaining schedule summary per team
-  const scheduleRows = p.teams.map(teamId => {
-    const team = DATA.teams[teamId];
-    if (!team) return '';
-    const remaining = DATA.fixtures.matches.filter(f =>
-      f.stage === 'group' && (f.homeId === teamId || f.awayId === teamId)
-    ).filter(f => {
-      const r = getResult(f.matchId);
-      return !isFinished(r) && !isLive(r);
-    });
-    if (remaining.length === 0) return `<div class="detail-schedule-row"><span class="detail-schedule-team">${flag(teamId)}${team.name}</span><span class="detail-schedule-done">All group matches played</span></div>`;
-    const fixtures = remaining.map(f => {
-      const opp = opponentOf(f, teamId);
-      const oppTeam = DATA.teams[opp];
-      const diff = (team && oppTeam) ? difficulty(team.elo, oppTeam.elo) : null;
-      const diffBadge = diff ? `<span class="difficulty-badge difficulty-${diff}">${diff.toUpperCase()}</span>` : '';
-      const date = new Date(f.kickoffUtc).toLocaleDateString([], { month: 'short', day: 'numeric' });
-      return `<span class="detail-schedule-fix">${flag(opp)}${oppTeam?.name || opp}${diffBadge}<span class="detail-schedule-date">${date}</span></span>`;
-    }).join('');
-    return `<div class="detail-schedule-row"><span class="detail-schedule-team">${flag(teamId)}${team.name}</span>${fixtures}</div>`;
-  }).join('');
-  html += `<div class="detail-schedule">${scheduleRows}</div>`;
+  html += `<p class="detail-subtitle">Right then — here's the full picture for their two sides. What's been played, what's still to come.</p>`;
 
   for (const teamId of p.teams) {
     const team = DATA.teams[teamId];
