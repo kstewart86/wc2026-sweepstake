@@ -279,6 +279,56 @@ h1 { display: flex; align-items: center; }
 .sort-btn:hover { border-color: var(--accent); color: var(--accent); }
 .sort-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); box-shadow: 0 0 12px rgba(59,130,246,0.35); }
 
+/* ── Leaderboard info tooltip ────────────────────────────────────── */
+#leaderboard-info { margin-bottom: 12px; }
+
+.info-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text2);
+  cursor: pointer;
+  position: relative;
+  padding: 4px 0;
+  border: none;
+  background: none;
+  font-family: var(--font);
+  user-select: none;
+}
+.info-trigger:hover,
+.info-trigger:focus { color: var(--accent); outline: none; }
+
+.info-tooltip {
+  display: none;
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 0;
+  width: 260px;
+  background: var(--surface3);
+  border: 1px solid var(--separator);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--text);
+  box-shadow: var(--shadow);
+  pointer-events: none;
+  z-index: 50;
+}
+.info-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 16px;
+  border: 6px solid transparent;
+  border-top-color: var(--surface3);
+}
+.info-trigger:hover .info-tooltip,
+.info-trigger:focus .info-tooltip { display: block; }
+
 /* ── Leaderboard cards ───────────────────────────────────────────── */
 #leaderboard-list { display: flex; flex-direction: column; gap: 10px; }
 

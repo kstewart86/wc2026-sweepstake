@@ -207,19 +207,20 @@ function renderTeamChip(teamId) {
     const { fixture, result } = latest;
     const opp = opponentOf(fixture, teamId);
     const oppName = DATA.teams[opp]?.name || opp;
+    const oppFlag = flag(opp);
     if (result && isLive(result)) {
       const sc = scoreFor(fixture, result, teamId);
       const state = sc.f > sc.a ? 'winning' : sc.f === sc.a ? 'drawing' : 'losing';
       chipClass += ` chip-${state}`;
-      scoreHtml = `<div class="team-score live">vs ${oppName} ${sc.f}–${sc.a} 🔴</div>`;
+      scoreHtml = `<div class="team-score live">vs ${oppFlag}${oppName} ${sc.f}–${sc.a} 🔴</div>`;
     } else if (result && isFinished(result)) {
       const sc = scoreFor(fixture, result, teamId);
       const state = sc.f > sc.a ? 'winning' : sc.f === sc.a ? 'drawing' : 'losing';
       chipClass += ` chip-${state}`;
       const emoji = sc.f > sc.a ? '✅' : sc.f === sc.a ? '🟡' : '❌';
-      scoreHtml = `<div class="team-score finished">${emoji} vs ${oppName} ${sc.f}–${sc.a}</div>`;
+      scoreHtml = `<div class="team-score finished">${emoji} vs ${oppFlag}${oppName} ${sc.f}–${sc.a}</div>`;
     } else {
-      scoreHtml = `<div class="team-score">vs ${oppName} ${fmtDateShort(fixture.kickoffUtc)}</div>`;
+      scoreHtml = `<div class="team-score">vs ${oppFlag}${oppName} ${fmtDateShort(fixture.kickoffUtc)}</div>`;
     }
   }
 
@@ -287,6 +288,19 @@ function renderLeaderboard() {
   const prevRankMap = {};
   if (DATA.rankingsHistory?.rankings?.length) {
     DATA.rankingsHistory.rankings.forEach((r, i) => { prevRankMap[r.id] = i + 1; });
+  }
+
+  // Info tooltip below sort row
+  const infoEl = document.getElementById('leaderboard-info');
+  if (infoEl) {
+    const label = groupStageComplete ? 'Final / Runner-up probability' : 'Group Prize probability';
+    infoEl.innerHTML = `
+      <span class="info-trigger" tabindex="0" role="button" aria-describedby="leaderboard-tooltip">
+        ℹ️ What do the bars show?
+        <span class="info-tooltip" id="leaderboard-tooltip" role="tooltip">
+          ${label}: where your teams sit <em>right now</em> combined with how tough their remaining fixtures are — simulated 20,000 times.
+        </span>
+      </span>`;
   }
 
   list.innerHTML = participants.map((p, idx) => {
