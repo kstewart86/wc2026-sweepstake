@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-06-17T23:52:12.832Z",
+  "updatedUtc": "2026-06-18T00:00:20.751Z",
   "matches": [
     {
       "matchId": 1,
@@ -196,6 +196,42 @@
       "matchId": 62,
       "homeId": "UZB",
       "awayId": "COL",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "status": "scheduled",
+      "minute": "0'"
+    },
+    {
+      "matchId": 3,
+      "homeId": "CZE",
+      "awayId": "ZAF",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "status": "scheduled",
+      "minute": "0'"
+    },
+    {
+      "matchId": 9,
+      "homeId": "SUI",
+      "awayId": "BIH",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "status": "scheduled",
+      "minute": "0'"
+    },
+    {
+      "matchId": 10,
+      "homeId": "CAN",
+      "awayId": "QAT",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "status": "scheduled",
+      "minute": "0'"
+    },
+    {
+      "matchId": 4,
+      "homeId": "MEX",
+      "awayId": "KOR",
       "homeGoals": 0,
       "awayGoals": 0,
       "status": "scheduled",
