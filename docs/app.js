@@ -345,13 +345,12 @@ function renderLeaderboard() {
           </div>
           ` : `
           <div class="prob-row">
-            <span class="prob-label">🏅 Group Prize
-              <span class="info-trigger" tabindex="0" role="button">ℹ
-                <span class="info-tooltip" role="tooltip">Where you sit now against how tough your run-in is</span>
-              </span>
-            </span>
+            <span class="prob-label">🏅 Group Prize</span>
             <div class="prob-bar-wrap"><div class="prob-bar pgrp" style="width:${(pGP/maxPG*100).toFixed(1)}%"></div></div>
             <span class="prob-value">${fmtPct(pGP)}</span>
+            <span class="info-trigger" tabindex="0" role="button" aria-label="What does this mean?">ℹ
+              <span class="info-tooltip" role="tooltip">Where you sit now against how tough your run-in is</span>
+            </span>
           </div>
           `}
         </div>
