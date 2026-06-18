@@ -60,6 +60,15 @@ let currentView     = 'leaderboard';
 let currentSort     = 'grouppts';
 let currentMatchTab = 'today';
 
+// ── Favourite ("this is me") ───────────────────────────────────────────────
+const FAV_KEY = 'twc-favourite';
+function getFavourite() { return localStorage.getItem(FAV_KEY); }
+function setFavourite(id) {
+  if (getFavourite() === id) localStorage.removeItem(FAV_KEY);
+  else localStorage.setItem(FAV_KEY, id);
+  renderLeaderboard();
+}
+
 // ── Bootstrap ─────────────────────────────────────────────────────────────
 async function loadAll() {
   const base = window.location.pathname.replace(/\/[^/]*$/, '') + '/data/';
@@ -279,6 +288,16 @@ function renderLeaderboard() {
     });
   }
 
+  // Pin favourite to top regardless of sort
+  const fav = getFavourite();
+  if (fav) {
+    const favIdx = participants.findIndex(p => p.id === fav);
+    if (favIdx > 0) {
+      const [favP] = participants.splice(favIdx, 1);
+      participants.unshift(favP);
+    }
+  }
+
   // Max prob values for bar scaling
   const maxP1 = Math.max(...participants.map(p => p.prob?.pFinalWinner ?? 0), 0.001);
   const maxP2 = Math.max(...participants.map(p => p.prob?.pRunnerUp ?? 0), 0.001);
@@ -322,12 +341,15 @@ function renderLeaderboard() {
       })
     );
 
+    const isFav = getFavourite() === p.id;
+    const cardClasses = ['participant-card', hasLiveTeam && 'participant-card--live', isFav && 'participant-card--favourite'].filter(Boolean).join(' ');
+
     return `
-      <div class="participant-card${hasLiveTeam ? ' participant-card--live' : ''}" data-id="${p.id}">
+      <div class="${cardClasses}" data-id="${p.id}">
         <div class="card-header">
           <div>
             <span class="card-name">${p.name}</span>
-            <div style="font-size:11px;color:var(--text2);margin-top:1px">#${currRank} ${arrowHtml}</div>
+            <div style="font-size:11px;color:var(--text2);margin-top:1px">#${currRank} ${arrowHtml}${isFav ? '<span class="fav-you-badge">you</span>' : ''}<button class="fav-btn${isFav ? ' fav-btn--active' : ''}" onclick="event.stopPropagation();setFavourite('${p.id}')" aria-label="Mark as me" title="This is me">★</button></div>
           </div>
           <div class="card-pts-badge">
             <span class="card-pts-number">${pts}</span>

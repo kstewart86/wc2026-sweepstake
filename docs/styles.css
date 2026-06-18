@@ -244,20 +244,22 @@ h1 { display: flex; align-items: center; justify-content: center; }
 
 /* ── Live alert banner ───────────────────────────────────────────── */
 .live-alert {
-  background: linear-gradient(90deg, #7f1d1d, #991b1b, #7f1d1d);
+  background: linear-gradient(90deg, #0f172a, #1e293b, #0f172a);
   background-size: 200% 100%;
-  color: #fff;
+  color: #fbbf24;
+  border-top: 1px solid rgba(251,191,36,0.2);
+  border-bottom: 1px solid rgba(251,191,36,0.2);
   text-align: center;
   font-size: 16px;
   font-weight: 700;
   padding: 13px 16px;
-  letter-spacing: .3px;
-  animation: alert-sweep 3s ease-in-out infinite;
+  letter-spacing: .4px;
+  animation: alert-sweep 4s ease-in-out infinite;
 }
 .live-alert.hidden { display: none; }
 @keyframes alert-sweep {
   0%, 100% { background-position: 0% 50%; opacity: 1; }
-  50%       { background-position: 100% 50%; opacity: .85; }
+  50%       { background-position: 100% 50%; opacity: .9; }
 }
 
 /* ── Nav ─────────────────────────────────────────────────────────── */
@@ -387,6 +389,41 @@ h1 { display: flex; align-items: center; justify-content: center; }
 }
 .participant-card:hover { border-color: rgba(59,130,246,0.25); box-shadow: 0 4px 20px rgba(0,0,0,0.5); }
 .participant-card:active { transform: scale(.985); }
+
+/* Favourite / "this is me" card */
+.participant-card--favourite {
+  border-color: rgba(251,191,36,0.4);
+  box-shadow: 0 0 0 1px rgba(251,191,36,0.12), 0 4px 20px rgba(251,191,36,0.08);
+}
+.fav-btn {
+  background: none;
+  border: none;
+  padding: 0 0 0 5px;
+  font-size: 13px;
+  color: var(--text2);
+  cursor: pointer;
+  opacity: 0.4;
+  transition: opacity .15s, color .15s;
+  vertical-align: middle;
+  line-height: 1;
+}
+.fav-btn:hover          { opacity: 1; color: #fbbf24; }
+.fav-btn--active        { opacity: 1 !important; color: #fbbf24 !important; }
+.fav-you-badge {
+  display: inline-block;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  color: #fbbf24;
+  background: rgba(251,191,36,0.12);
+  border: 1px solid rgba(251,191,36,0.25);
+  border-radius: 4px;
+  padding: 1px 5px;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
 .participant-card--live {
   border-color: rgba(59,130,246,0.5);
   animation: card-glow 2s ease-in-out infinite;
