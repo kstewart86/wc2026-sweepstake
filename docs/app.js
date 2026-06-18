@@ -409,7 +409,7 @@ function renderMatches() {
   // Build participant lookup: teamId → participant first name
   const teamToOwner = {};
   for (const p of DATA.participants) {
-    for (const t of p.teams) teamToOwner[t] = p.name;
+    for (const t of p.teams) teamToOwner[t] = { name: p.name, id: p.id };
   }
 
   // Filter by active tab
@@ -453,9 +453,9 @@ function renderMatchCard(fix, teamToOwner) {
     const country = DATA.teams[teamId]?.name || teamId;
     const f = flag(teamId);
     if (owner) {
-      return { display: owner, sub: f + country };
+      return { display: owner.name, ownerId: owner.id, sub: f + country };
     } else {
-      return { display: f + country, sub: null };
+      return { display: f + country, ownerId: null, sub: null };
     }
   }
 
@@ -488,7 +488,7 @@ function renderMatchCard(fix, teamToOwner) {
     <div class="match-card${r && isLive(r) ? ' match-card--live' : ''}">
       <div class="match-row">
         <div class="${homeClass}">
-          <div class="match-participant">${home.display}</div>
+          ${home.ownerId ? `<button class="participant-link" onclick="openDetail('${home.ownerId}')">${home.display}</button>` : `<div class="match-participant">${home.display}</div>`}
           ${home.sub ? `<div class="match-country">${home.sub}</div>` : ''}
         </div>
         <div class="match-score-box">
@@ -496,7 +496,7 @@ function renderMatchCard(fix, teamToOwner) {
           ${centreStatus}
         </div>
         <div class="${awayClass}">
-          <div class="match-participant">${away.display}</div>
+          ${away.ownerId ? `<button class="participant-link" onclick="openDetail('${away.ownerId}')">${away.display}</button>` : `<div class="match-participant">${away.display}</div>`}
           ${away.sub ? `<div class="match-country">${away.sub}</div>` : ''}
         </div>
       </div>

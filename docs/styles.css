@@ -111,11 +111,32 @@ h1 {
 
 /* ── Brand ball image ────────────────────────────────────────────── */
 .brand-ball {
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
   flex-shrink: 0;
   margin-right: 8px;
   vertical-align: middle;
+}
+
+/* ── Participant name link in fixture cards ──────────────────────── */
+.participant-link {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: var(--font);
+  font-size: inherit;
+  font-weight: inherit;
+  color: var(--text);
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: rgba(255,255,255,0.2);
+  text-underline-offset: 3px;
+  transition: color .15s, text-decoration-color .15s;
+  display: block;
+}
+.participant-link:hover {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
 }
 .view-title-ball {
   width: 22px;
@@ -672,7 +693,8 @@ h1 { display: flex; align-items: center; justify-content: center; }
 @media (min-width: 700px) {
   #header { padding: 22px 32px 16px; }
   .header-inner { max-width: 1200px; margin: 0 auto; }
-  h1 { font-size: 32px; }
+  h1 { font-size: 44px; }
+  .live-alert { font-size: 20px; padding: 16px 24px; }
 
   #nav { display: none; }
 
@@ -697,10 +719,10 @@ h1 { display: flex; align-items: center; justify-content: center; }
     align-items: center;
     justify-content: center;
     gap: 8px;
-    font-size: 22px;
+    font-size: 28px;
     font-weight: 800;
     margin-bottom: 14px;
-    letter-spacing: -0.4px;
+    letter-spacing: -0.5px;
     color: var(--text);
     text-align: center;
   }
@@ -708,5 +730,5 @@ h1 { display: flex; align-items: center; justify-content: center; }
   .participant-card:hover { transform: translateY(-1px); }
   .match-tabs { padding-top: 0; }
   /* Equalise column start: sort-row 35px + 14px margin = 49px = match-tabs height */
-  .sort-row { min-height: 35px; }
+  .sort-row { min-height: 35px; justify-content: center; }
 }
