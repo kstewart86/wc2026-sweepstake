@@ -79,6 +79,7 @@ async function main() {
   // Never overwrite a finished match with a non-finished one (data quality guard).
   const merged = [...results.matches];
   for (const r of fresh) {
+    if (r.status !== 'finished' && r.status !== 'live') continue; // only save real scores
     if (r.homeGoals === null || r.awayGoals === null) continue; // skip incomplete
     const idx = merged.findIndex(m => m.matchId === r.matchId);
     if (idx >= 0) {
