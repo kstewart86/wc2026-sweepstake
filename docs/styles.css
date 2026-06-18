@@ -98,7 +98,7 @@ body {
 }
 
 h1 {
-  font-size: 22px;
+  font-size: 28px;
   font-weight: 800;
   line-height: 1.1;
   letter-spacing: -0.5px;
@@ -115,6 +115,12 @@ h1 {
   height: 28px;
   flex-shrink: 0;
   margin-right: 8px;
+  vertical-align: middle;
+}
+.view-title-ball {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
   vertical-align: middle;
 }
 h1 { display: flex; align-items: center; justify-content: center; }
@@ -287,7 +293,7 @@ h1 { display: flex; align-items: center; justify-content: center; }
 .sort-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); box-shadow: 0 0 12px rgba(59,130,246,0.35); }
 
 /* ── Leaderboard info tooltip ────────────────────────────────────── */
-#leaderboard-info { margin-bottom: 12px; }
+#leaderboard-info { margin-bottom: 0; }
 
 .info-trigger {
   display: inline-flex;
@@ -360,6 +366,10 @@ h1 { display: flex; align-items: center; justify-content: center; }
 }
 .participant-card:hover { border-color: rgba(59,130,246,0.25); box-shadow: 0 4px 20px rgba(0,0,0,0.5); }
 .participant-card:active { transform: scale(.985); }
+.participant-card--live {
+  border-color: rgba(59,130,246,0.3);
+  animation: card-glow 2.4s ease-in-out infinite;
+}
 
 .card-header {
   display: flex;
@@ -662,7 +672,7 @@ h1 { display: flex; align-items: center; justify-content: center; }
 @media (min-width: 700px) {
   #header { padding: 22px 32px 16px; }
   .header-inner { max-width: 1200px; margin: 0 auto; }
-  h1 { font-size: 26px; }
+  h1 { font-size: 32px; }
 
   #nav { display: none; }
 
@@ -683,12 +693,16 @@ h1 { display: flex; align-items: center; justify-content: center; }
   }
 
   .view-title {
-    display: block;
-    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 22px;
     font-weight: 800;
     margin-bottom: 14px;
     letter-spacing: -0.4px;
     color: var(--text);
+    text-align: center;
   }
 
   .participant-card:hover { transform: translateY(-1px); }

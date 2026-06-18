@@ -211,8 +211,8 @@ function renderTeamChip(teamId) {
     if (result && isLive(result)) {
       const sc = scoreFor(fixture, result, teamId);
       const state = sc.f > sc.a ? 'winning' : sc.f === sc.a ? 'drawing' : 'losing';
-      chipClass += ` chip-${state}`;
-      scoreHtml = `<div class="team-score live">vs ${oppFlag}${oppName} ${sc.f}–${sc.a} 🔴</div>`;
+      chipClass += ` chip-${state} chip-live`;
+      scoreHtml = `<div class="team-score live">vs ${oppFlag}${oppName} ${sc.f}–${sc.a} <span class="live-pip"></span></div>`;
     } else if (result && isFinished(result)) {
       const sc = scoreFor(fixture, result, teamId);
       const state = sc.f > sc.a ? 'winning' : sc.f === sc.a ? 'drawing' : 'losing';
@@ -314,8 +314,16 @@ function renderLeaderboard() {
       }
     }
 
+    const hasLiveTeam = p.teams.some(teamId =>
+      DATA.results?.matches?.some(r => {
+        if (!isLive(r)) return false;
+        const f = DATA.fixtures.matches.find(m => m.matchId === r.matchId);
+        return f && (f.homeId === teamId || f.awayId === teamId);
+      })
+    );
+
     return `
-      <div class="participant-card" data-id="${p.id}">
+      <div class="participant-card${hasLiveTeam ? ' participant-card--live' : ''}" data-id="${p.id}">
         <div class="card-header">
           <div>
             <span class="card-name">${p.name}</span>
@@ -466,7 +474,7 @@ function renderMatchCard(fix, teamToOwner) {
   let centreScore, centreStatus;
   if (r && isLive(r)) {
     centreScore  = `<div class="match-score live">${r.homeGoals}–${r.awayGoals}</div>`;
-    centreStatus = `<div class="match-status live">🔴 ${r.minute || 'LIVE'}</div>`;
+    centreStatus = `<div class="match-status live"><span class="live-pip"></span>${r.minute || 'LIVE'}</div>`;
   } else if (r && isFinished(r)) {
     centreScore  = `<div class="match-score">${r.homeGoals}–${r.awayGoals}</div>`;
     centreStatus = `<div class="match-status">FT</div>`;
@@ -477,7 +485,7 @@ function renderMatchCard(fix, teamToOwner) {
   }
 
   return `
-    <div class="match-card">
+    <div class="match-card${r && isLive(r) ? ' match-card--live' : ''}">
       <div class="match-row">
         <div class="${homeClass}">
           <div class="match-participant">${home.display}</div>
@@ -537,7 +545,7 @@ function openDetail(participantId) {
         resultHtml = `${emoji} ${sc.f}–${sc.a}`;
       } else if (r && isLive(r)) {
         const sc = scoreFor(f, r, teamId);
-        resultHtml = `🔴 ${sc.f}–${sc.a}`;
+        resultHtml = `<span class="live-pip"></span>${sc.f}–${sc.a}`;
       } else {
         resultHtml = fmtDate(f.kickoffUtc);
         if (team && oppTeam) {
