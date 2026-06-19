@@ -644,11 +644,13 @@ h1 { display: flex; align-items: center; justify-content: center; }
 .match-side {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   min-width: 0;
   padding: 6px 8px;
   border-radius: var(--radius-sm);
 }
-.match-side.away { text-align: right; align-items: flex-end; }
+.match-side.away { align-items: center; text-align: center; }
 
 /* Match side result tints */
 .match-side.side-winning { background: var(--green-lo); }
