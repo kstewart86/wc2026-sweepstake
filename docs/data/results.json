@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-06-19T00:03:12.288Z",
+  "updatedUtc": "2026-06-19T01:02:11.110Z",
   "matches": [
     {
       "matchId": 1,
@@ -227,6 +227,15 @@
       "awayGoals": 0,
       "status": "finished",
       "minute": "90'+10'"
+    },
+    {
+      "matchId": 4,
+      "homeId": "MEX",
+      "awayId": "KOR",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "status": "live",
+      "minute": "1'"
     }
   ]
 }
