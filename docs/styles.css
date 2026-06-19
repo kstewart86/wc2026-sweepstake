@@ -85,7 +85,7 @@ body {
 
 .header-top {
   display: grid;
-  grid-template-columns: 36px 1fr 36px;
+  grid-template-columns: 52px 1fr 52px;
   align-items: center;
   margin-bottom: 14px;
 }
@@ -146,23 +146,63 @@ h1 {
 }
 h1 { display: flex; align-items: center; justify-content: center; }
 
-/* ── Theme toggle ────────────────────────────────────────────────── */
+/* ── Theme toggle — pill slider ──────────────────────────────────── */
 .theme-toggle {
+  position: relative;
+  width: 52px;
+  height: 28px;
+  border-radius: 14px;
   background: rgba(255,255,255,0.1);
   border: 1px solid rgba(255,255,255,0.15);
-  border-radius: 50%;
-  width: 36px;
-  height: 36px;
-  font-size: 16px;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 0;
   flex-shrink: 0;
-  transition: background .2s;
-  line-height: 1;
+  transition: background .25s, border-color .25s;
 }
-.theme-toggle:hover { background: rgba(255,255,255,0.2); }
+.theme-toggle:hover { background: rgba(255,255,255,0.16); }
+/* Moon icon on left track */
+.theme-toggle::before {
+  content: '🌙';
+  position: absolute;
+  left: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 11px;
+  line-height: 1;
+  pointer-events: none;
+}
+/* Sun icon on right track */
+.theme-toggle::after {
+  content: '☀️';
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 11px;
+  line-height: 1;
+  pointer-events: none;
+}
+/* Sliding thumb */
+.toggle-thumb {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.35);
+  transition: transform .25s cubic-bezier(.34,1.56,.64,1);
+  pointer-events: none;
+  display: block;
+}
+/* Light mode: thumb slides right, covering the sun */
+[data-theme="light"] .toggle-thumb { transform: translateX(24px); }
+[data-theme="light"] .theme-toggle {
+  background: rgba(0,0,0,0.08);
+  border-color: rgba(0,0,0,0.12);
+}
+[data-theme="light"] .theme-toggle:hover { background: rgba(0,0,0,0.13); }
 
 /* ── Rank arrow badges ───────────────────────────────────────────── */
 .rank-arrow {
