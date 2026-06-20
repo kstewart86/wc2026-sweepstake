@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-06-20T00:00:19.242Z",
+  "updatedUtc": "2026-06-20T00:34:16.635Z",
   "matches": [
     {
       "matchId": 1,
@@ -254,6 +254,15 @@
       "awayGoals": 1,
       "status": "finished",
       "minute": "90'+7'"
+    },
+    {
+      "matchId": 16,
+      "homeId": "BRA",
+      "awayId": "HTI",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "status": "live",
+      "minute": "1'"
     }
   ]
 }
