@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-06-21T01:56:10.717Z",
+  "updatedUtc": "2026-06-21T04:01:10.671Z",
   "matches": [
     {
       "matchId": 1,
@@ -299,6 +299,15 @@
       "awayGoals": 0,
       "status": "finished",
       "minute": "90'+6'"
+    },
+    {
+      "matchId": 34,
+      "homeId": "TUN",
+      "awayId": "JPN",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "status": "live",
+      "minute": "1'"
     }
   ]
 }
