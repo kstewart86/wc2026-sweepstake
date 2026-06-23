@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-06-23T00:43:10.238Z",
+  "updatedUtc": "2026-06-23T00:44:10.162Z",
   "matches": [
     {
       "matchId": 1,
@@ -361,16 +361,16 @@
       "homeGoals": 3,
       "awayGoals": 0,
       "status": "live",
-      "minute": "87'"
+      "minute": "88'"
     },
     {
       "matchId": 52,
       "homeId": "NOR",
       "awayId": "SEN",
-      "homeGoals": 0,
+      "homeGoals": 1,
       "awayGoals": 0,
       "status": "live",
-      "minute": "43'"
+      "minute": "44'"
     }
   ]
 }
