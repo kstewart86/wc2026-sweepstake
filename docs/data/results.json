@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-06-23T05:01:11.901Z",
+  "updatedUtc": "2026-06-23T17:01:17.977Z",
   "matches": [
     {
       "matchId": 1,
@@ -380,6 +380,15 @@
       "awayGoals": 2,
       "status": "finished",
       "minute": "90'+8'"
+    },
+    {
+      "matchId": 63,
+      "homeId": "POR",
+      "awayId": "UZB",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "status": "live",
+      "minute": "1'"
     }
   ]
 }
