@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-06-23T00:22:12.282Z",
+  "updatedUtc": "2026-06-23T00:23:10.991Z",
   "matches": [
     {
       "matchId": 1,
@@ -358,10 +358,10 @@
       "matchId": 51,
       "homeId": "FRA",
       "awayId": "IRQ",
-      "homeGoals": 2,
+      "homeGoals": 3,
       "awayGoals": 0,
       "status": "live",
-      "minute": "66'"
+      "minute": "67'"
     },
     {
       "matchId": 52,
@@ -370,7 +370,7 @@
       "homeGoals": 0,
       "awayGoals": 0,
       "status": "live",
-      "minute": "22'"
+      "minute": "23'"
     }
   ]
 }
