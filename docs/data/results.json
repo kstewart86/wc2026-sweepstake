@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-06-23T00:48:10.961Z",
+  "updatedUtc": "2026-06-23T00:49:11.713Z",
   "matches": [
     {
       "matchId": 1,
@@ -360,7 +360,7 @@
       "awayId": "IRQ",
       "homeGoals": 3,
       "awayGoals": 0,
-      "status": "live",
+      "status": "finished",
       "minute": "90'+2'"
     },
     {
@@ -370,7 +370,7 @@
       "homeGoals": 1,
       "awayGoals": 0,
       "status": "live",
-      "minute": "45'+2'"
+      "minute": "45'+3'"
     }
   ]
 }
