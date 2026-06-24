@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-06-24T20:16:12.435Z",
+  "updatedUtc": "2026-06-24T20:17:12.244Z",
   "matches": [
     {
       "matchId": 1,
@@ -424,16 +424,16 @@
       "homeGoals": 2,
       "awayGoals": 1,
       "status": "live",
-      "minute": "54'"
+      "minute": "55'"
     },
     {
       "matchId": 11,
       "homeId": "SUI",
       "awayId": "CAN",
-      "homeGoals": 1,
+      "homeGoals": 2,
       "awayGoals": 0,
       "status": "live",
-      "minute": "57'"
+      "minute": "58'"
     }
   ]
 }
