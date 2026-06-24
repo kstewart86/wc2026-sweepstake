@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-06-24T19:29:13.128Z",
+  "updatedUtc": "2026-06-24T19:30:19.364Z",
   "matches": [
     {
       "matchId": 1,
@@ -421,10 +421,10 @@
       "matchId": 12,
       "homeId": "BIH",
       "awayId": "QAT",
-      "homeGoals": 0,
+      "homeGoals": 1,
       "awayGoals": 0,
       "status": "live",
-      "minute": "28'"
+      "minute": "30'"
     },
     {
       "matchId": 11,
@@ -433,7 +433,7 @@
       "homeGoals": 0,
       "awayGoals": 0,
       "status": "live",
-      "minute": "29'"
+      "minute": "30'"
     }
   ]
 }
