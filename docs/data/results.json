@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-06-24T22:08:12.468Z",
+  "updatedUtc": "2026-06-24T22:09:10.724Z",
   "matches": [
     {
       "matchId": 1,
@@ -442,16 +442,16 @@
       "homeGoals": 0,
       "awayGoals": 0,
       "status": "live",
-      "minute": "7'"
+      "minute": "8'"
     },
     {
       "matchId": 17,
       "homeId": "SCO",
       "awayId": "BRA",
       "homeGoals": 0,
-      "awayGoals": 0,
+      "awayGoals": 1,
       "status": "live",
-      "minute": "7'"
+      "minute": "8'"
     }
   ]
 }
