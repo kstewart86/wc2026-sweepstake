@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-06-25T20:07:11.477Z",
+  "updatedUtc": "2026-06-25T20:08:11.435Z",
   "matches": [
     {
       "matchId": 1,
@@ -478,16 +478,16 @@
       "homeGoals": 0,
       "awayGoals": 1,
       "status": "live",
-      "minute": "6'"
+      "minute": "7'"
     },
     {
       "matchId": 30,
       "homeId": "CUW",
       "awayId": "CIV",
       "homeGoals": 0,
-      "awayGoals": 0,
+      "awayGoals": 1,
       "status": "live",
-      "minute": "6'"
+      "minute": "7'"
     }
   ]
 }
