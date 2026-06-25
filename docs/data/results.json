@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-06-25T02:15:14.800Z",
+  "updatedUtc": "2026-06-25T02:16:11.082Z",
   "matches": [
     {
       "matchId": 1,
@@ -460,16 +460,16 @@
       "homeGoals": 0,
       "awayGoals": 0,
       "status": "live",
-      "minute": "54'"
+      "minute": "55'"
     },
     {
       "matchId": 5,
       "homeId": "CZE",
       "awayId": "MEX",
       "homeGoals": 0,
-      "awayGoals": 0,
+      "awayGoals": 1,
       "status": "live",
-      "minute": "54'"
+      "minute": "56'"
     }
   ]
 }
