@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-06-25T02:58:10.675Z",
+  "updatedUtc": "2026-06-25T20:01:10.666Z",
   "matches": [
     {
       "matchId": 1,
@@ -470,6 +470,15 @@
       "awayGoals": 3,
       "status": "finished",
       "minute": "90'+6'"
+    },
+    {
+      "matchId": 29,
+      "homeId": "ECU",
+      "awayId": "GER",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "status": "live",
+      "minute": "1'"
     }
   ]
 }
