@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-06-26T19:22:11.917Z",
+  "updatedUtc": "2026-06-26T19:23:10.922Z",
   "matches": [
     {
       "matchId": 1,
@@ -529,10 +529,10 @@
       "matchId": 53,
       "homeId": "NOR",
       "awayId": "FRA",
-      "homeGoals": 0,
+      "homeGoals": 1,
       "awayGoals": 2,
       "status": "live",
-      "minute": "21'"
+      "minute": "22'"
     },
     {
       "matchId": 54,
@@ -541,7 +541,7 @@
       "homeGoals": 1,
       "awayGoals": 0,
       "status": "live",
-      "minute": "20'"
+      "minute": "21'"
     }
   ]
 }
