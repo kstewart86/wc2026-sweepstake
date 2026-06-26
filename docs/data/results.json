@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-06-26T00:21:13.779Z",
+  "updatedUtc": "2026-06-26T00:22:12.640Z",
   "matches": [
     {
       "matchId": 1,
@@ -496,16 +496,16 @@
       "homeGoals": 1,
       "awayGoals": 0,
       "status": "live",
-      "minute": "60'"
+      "minute": "61'"
     },
     {
       "matchId": 36,
       "homeId": "TUN",
       "awayId": "NED",
       "homeGoals": 1,
-      "awayGoals": 2,
+      "awayGoals": 3,
       "status": "live",
-      "minute": "61'"
+      "minute": "63'"
     }
   ]
 }
