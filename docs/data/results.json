@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-06-26T03:11:11.751Z",
+  "updatedUtc": "2026-06-26T03:12:10.918Z",
   "matches": [
     {
       "matchId": 1,
@@ -514,16 +514,16 @@
       "homeGoals": 0,
       "awayGoals": 0,
       "status": "live",
-      "minute": "48'"
+      "minute": "49'"
     },
     {
       "matchId": 23,
       "homeId": "TUR",
       "awayId": "USA",
       "homeGoals": 2,
-      "awayGoals": 1,
+      "awayGoals": 2,
       "status": "live",
-      "minute": "48'"
+      "minute": "49'"
     }
   ]
 }
