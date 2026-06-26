@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-06-26T00:23:10.637Z",
+  "updatedUtc": "2026-06-26T00:24:11.736Z",
   "matches": [
     {
       "matchId": 1,
@@ -494,9 +494,9 @@
       "homeId": "JPN",
       "awayId": "SWE",
       "homeGoals": 1,
-      "awayGoals": 0,
+      "awayGoals": 1,
       "status": "live",
-      "minute": "62'"
+      "minute": "63'"
     },
     {
       "matchId": 36,
@@ -505,7 +505,7 @@
       "homeGoals": 1,
       "awayGoals": 3,
       "status": "live",
-      "minute": "64'"
+      "minute": "65'"
     }
   ]
 }
