@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-06-27T04:56:10.260Z",
+  "updatedUtc": "2026-06-27T04:57:11.072Z",
   "matches": [
     {
       "matchId": 1,
@@ -568,16 +568,16 @@
       "homeGoals": 1,
       "awayGoals": 1,
       "status": "live",
-      "minute": "90'+1'"
+      "minute": "90'+2'"
     },
     {
       "matchId": 42,
       "homeId": "NZL",
       "awayId": "BEL",
       "homeGoals": 1,
-      "awayGoals": 4,
+      "awayGoals": 5,
       "status": "live",
-      "minute": "90'+3'"
+      "minute": "90'+5'"
     }
   ]
 }
