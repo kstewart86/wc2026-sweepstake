@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-06-27T21:32:11.996Z",
+  "updatedUtc": "2026-06-27T21:33:12.027Z",
   "matches": [
     {
       "matchId": 1,
@@ -583,10 +583,10 @@
       "matchId": 72,
       "homeId": "CRO",
       "awayId": "GHA",
-      "homeGoals": 0,
+      "homeGoals": 1,
       "awayGoals": 0,
       "status": "live",
-      "minute": "30'"
+      "minute": "32'"
     },
     {
       "matchId": 71,
@@ -595,7 +595,7 @@
       "homeGoals": 0,
       "awayGoals": 0,
       "status": "live",
-      "minute": "31'"
+      "minute": "32'"
     }
   ]
 }
