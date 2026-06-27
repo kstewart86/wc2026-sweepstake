@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-06-26T21:05:11.310Z",
+  "updatedUtc": "2026-06-27T00:02:10.862Z",
   "matches": [
     {
       "matchId": 1,
@@ -542,6 +542,15 @@
       "awayGoals": 0,
       "status": "finished",
       "minute": "90'+6'"
+    },
+    {
+      "matchId": 47,
+      "homeId": "URU",
+      "awayId": "ESP",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "status": "live",
+      "minute": "1'"
     }
   ]
 }
