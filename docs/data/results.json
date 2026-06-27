@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-06-27T01:59:09.846Z",
+  "updatedUtc": "2026-06-27T02:00:18.675Z",
   "matches": [
     {
       "matchId": 1,
@@ -550,7 +550,7 @@
       "homeGoals": 0,
       "awayGoals": 1,
       "status": "live",
-      "minute": "90'+4'"
+      "minute": "90'+5'"
     },
     {
       "matchId": 48,
@@ -558,7 +558,7 @@
       "awayId": "KSA",
       "homeGoals": 0,
       "awayGoals": 0,
-      "status": "live",
+      "status": "finished",
       "minute": "90'+5'"
     }
   ]
