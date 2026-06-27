@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-06-27T02:02:13.331Z",
+  "updatedUtc": "2026-06-27T03:02:12.804Z",
   "matches": [
     {
       "matchId": 1,
@@ -560,6 +560,24 @@
       "awayGoals": 0,
       "status": "finished",
       "minute": "90'+5'"
+    },
+    {
+      "matchId": 41,
+      "homeId": "EGY",
+      "awayId": "IRN",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "status": "live",
+      "minute": "1'"
+    },
+    {
+      "matchId": 42,
+      "homeId": "NZL",
+      "awayId": "BEL",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "status": "live",
+      "minute": "1'"
     }
   ]
 }
