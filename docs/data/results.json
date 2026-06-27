@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-06-27T23:00:17.663Z",
+  "updatedUtc": "2026-06-27T23:32:10.359Z",
   "matches": [
     {
       "matchId": 1,
@@ -596,6 +596,24 @@
       "awayGoals": 2,
       "status": "finished",
       "minute": "90'+6'"
+    },
+    {
+      "matchId": 65,
+      "homeId": "COL",
+      "awayId": "POR",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "status": "live",
+      "minute": "1'"
+    },
+    {
+      "matchId": 66,
+      "homeId": "COD",
+      "awayId": "UZB",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "status": "live",
+      "minute": "1'"
     }
   ]
 }
