@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-06-28T03:22:12.102Z",
+  "updatedUtc": "2026-06-28T03:23:12.971Z",
   "matches": [
     {
       "matchId": 1,
@@ -619,10 +619,10 @@
       "matchId": 59,
       "homeId": "DZA",
       "awayId": "AUT",
-      "homeGoals": 1,
+      "homeGoals": 2,
       "awayGoals": 2,
       "status": "live",
-      "minute": "60'"
+      "minute": "61'"
     },
     {
       "matchId": 60,
@@ -631,7 +631,7 @@
       "homeGoals": 1,
       "awayGoals": 2,
       "status": "live",
-      "minute": "60'"
+      "minute": "61'"
     }
   ]
 }
