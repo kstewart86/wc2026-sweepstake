@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-06-28T02:19:13.351Z",
+  "updatedUtc": "2026-06-28T02:20:13.074Z",
   "matches": [
     {
       "matchId": 1,
@@ -622,16 +622,16 @@
       "homeGoals": 0,
       "awayGoals": 0,
       "status": "live",
-      "minute": "18'"
+      "minute": "19'"
     },
     {
       "matchId": 60,
       "homeId": "JOR",
       "awayId": "ARG",
       "homeGoals": 0,
-      "awayGoals": 0,
+      "awayGoals": 1,
       "status": "live",
-      "minute": "18'"
+      "minute": "19'"
     }
   ]
 }
