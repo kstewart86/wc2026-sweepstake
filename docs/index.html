@@ -54,15 +54,16 @@
 <div id="live-alert" class="live-alert hidden">⚽ You're missing the footie mate! ⚽</div>
 
 <nav id="nav">
-  <button class="nav-btn active" data-view="leaderboard">Leaderboard</button>
+  <button class="nav-btn active" data-view="leaderboard">Standings</button>
   <button class="nav-btn" data-view="matches">Fixtures</button>
+  <button class="nav-btn" data-view="bracket">Bracket</button>
 </nav>
 
 <div class="views-wrapper">
 
   <!-- ── LEADERBOARD VIEW ─────────────────────────────────────────── -->
   <section id="view-leaderboard" class="view">
-    <h2 class="view-title">Leaderboard</h2>
+    <h2 class="view-title">Standings</h2>
     <div class="sort-row">
       Sort by:
       <button class="sort-btn" data-sort="p1st">Win Probability</button>
@@ -81,6 +82,14 @@
       <button class="match-tab-btn" data-mtab="future">Future</button>
     </div>
     <div id="matches-list"></div>
+  </section>
+
+  <!-- ── BRACKET VIEW ─────────────────────────────────────────────── -->
+  <section id="view-bracket" class="view hidden">
+    <h2 class="view-title">Knockout Bracket</h2>
+    <div class="bracket-scroll">
+      <div id="bracket" class="bracket"></div>
+    </div>
   </section>
 
 </div>

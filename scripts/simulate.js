@@ -103,8 +103,11 @@ function buildGroupTable(teams, matches) {
 }
 
 // Sort a group using FIFA 2026 tiebreakers:
-// 1. Points  2. GD  3. GF  4. Head-to-head pts  5. H2H GD  6. H2H GF  7. coin flip (sim)
-function sortGroup(teamIds, table) {
+// 1. Points  2. GD  3. GF  4. Head-to-head pts  5. H2H GD  6. H2H GF  7. final tiebreak
+// `finalTiebreak(a, b)` breaks a perfect tie. Simulations pass nothing → random coin
+// flip; the real bracket resolver passes a deterministic comparator so bracket.json
+// is stable across runs (no spurious commits from re-ordering tied teams).
+function sortGroup(teamIds, table, finalTiebreak) {
   return [...teamIds].sort((a, b) => {
     if (table[b].pts !== table[a].pts) return table[b].pts - table[a].pts;
     if (table[b].gd  !== table[a].gd)  return table[b].gd  - table[a].gd;
@@ -115,6 +118,7 @@ function sortGroup(teamIds, table) {
     const h2hGDA = (table[a].headToHead[b] || {}).gd || 0;
     const h2hGDB = (table[b].headToHead[a] || {}).gd || 0;
     if (h2hGDB !== h2hGDA) return h2hGDB - h2hGDA;
+    if (finalTiebreak) return finalTiebreak(a, b);
     return Math.random() < 0.5 ? -1 : 1; // coin flip tiebreak
   });
 }
@@ -432,4 +436,124 @@ function simulate(fixtures, results, teamsObj, participants, N = 20000) {
   };
 }
 
-module.exports = { simulate };
+// ---------------------------------------------------------------------------
+// Resolve the ACTUAL knockout bracket from real results (no simulation).
+// For every knockout match, determine the real home/away teamIds where knowable:
+//   - R32 group slots (1X / 2X) once that group is mathematically complete
+//   - R32 "3rd" slots via the best-8 thirds ranking + Annex C (needs all 12 groups)
+//   - W{n} slots from finished knockout results (winner propagation)
+// Slots that can't yet be resolved come back null and render as "TBD".
+//
+// Deterministic: group ties break by teamId, and no simulation runs, so the
+// output only changes when real results change.
+// ---------------------------------------------------------------------------
+function resolveBracket(fixtures, results, teamsObj) {
+  const teams = teamsObj.teams || teamsObj;
+  const resById = {};
+  for (const r of results.matches) resById[r.matchId] = r;
+
+  const groups = 'ABCDEFGHIJKL'.split('');
+  const groupTeams = {};
+  for (const g of groups) groupTeams[g] = [];
+  for (const [id, t] of Object.entries(teams)) if (groupTeams[t.group]) groupTeams[t.group].push(id);
+
+  // Real finished group results only.
+  const groupResults = {};
+  const groupTotal = {};
+  for (const g of groups) { groupResults[g] = []; groupTotal[g] = 0; }
+  for (const fix of fixtures.matches) {
+    if (fix.stage !== 'group') continue;
+    groupTotal[fix.group]++;
+    const r = resById[fix.matchId];
+    if (r && r.status === 'finished') {
+      groupResults[fix.group].push({ homeId: r.homeId, awayId: r.awayId, homeGoals: r.homeGoals, awayGoals: r.awayGoals });
+    }
+  }
+
+  const alpha = (a, b) => (a < b ? -1 : a > b ? 1 : 0); // deterministic final tiebreak
+  const groupComplete = {}, groupWinner = {}, groupRunnerUp = {}, thirdByGroup = {};
+  const thirds = [];
+  for (const g of groups) {
+    groupComplete[g] = groupTotal[g] > 0 && groupResults[g].length >= groupTotal[g];
+    if (!groupComplete[g]) continue;
+    const tbl = buildGroupTable(groupTeams[g], groupResults[g]);
+    const sorted = sortGroup(groupTeams[g], tbl, alpha);
+    groupWinner[g] = sorted[0];
+    groupRunnerUp[g] = sorted[1];
+    thirdByGroup[g] = sorted[2];
+    thirds.push({ group: g, teamId: sorted[2], pts: tbl[sorted[2]].pts, gd: tbl[sorted[2]].gd, gf: tbl[sorted[2]].gf });
+  }
+  const groupStageComplete = groups.every(g => groupComplete[g]);
+
+  let annexAssign = {}; // { r32MatchId: groupChar }
+  if (groupStageComplete) {
+    thirds.sort(compareThirds);
+    annexAssign = assignThirdPlace(thirds.slice(0, 8).map(t => t.group));
+  }
+
+  const knockoutWinner = {}; // matchId → teamId
+  const order = ['r32', 'r16', 'qf', 'sf', 'final'];
+
+  function resolveSlot(slot, fix) {
+    if (!slot) return null;
+    if (slot[0] === 'W') return knockoutWinner[parseInt(slot.slice(1), 10)] || null;
+    if (slot === '3rd') {
+      if (!groupStageComplete) return null;
+      const g = annexAssign[fix.matchId];
+      return g ? thirdByGroup[g] : null;
+    }
+    const pos = slot[0], g = slot[1];
+    if (!groupComplete[g]) return null;
+    if (pos === '1') return groupWinner[g];
+    if (pos === '2') return groupRunnerUp[g];
+    return null;
+  }
+
+  const rounds = [];
+  for (const stage of order) {
+    const matches = [];
+    for (const fix of fixtures.matches.filter(f => f.stage === stage)) {
+      const r = resById[fix.matchId];
+      // The feed is authoritative: once a matchup is known (played, live, or a
+      // captured scheduled fixture), use its real teams. Slot resolution (incl.
+      // the Annex-C third-place approximation) is only a fallback before then.
+      let homeId = (r && r.homeId) ? r.homeId : resolveSlot(fix.homeSlot, fix);
+      let awayId = (r && r.awayId) ? r.awayId : resolveSlot(fix.awaySlot, fix);
+      let homeGoals = null, awayGoals = null;
+      const status = r?.status ?? 'scheduled';
+
+      if (r) {
+        if (r.homeId === homeId)      { homeGoals = r.homeGoals; awayGoals = r.awayGoals; }
+        else if (r.homeId === awayId) { homeGoals = r.awayGoals; awayGoals = r.homeGoals; }
+        else                          { homeGoals = r.homeGoals; awayGoals = r.awayGoals; }
+      }
+
+      let winnerId = null;
+      if (status === 'finished' && homeId && awayId) {
+        if (r.winnerId) winnerId = r.winnerId;            // explicit (e.g. penalty result)
+        else if (homeGoals > awayGoals) winnerId = homeId;
+        else if (awayGoals > homeGoals) winnerId = awayId;
+        if (winnerId) knockoutWinner[fix.matchId] = winnerId;
+      }
+
+      matches.push({
+        matchId: fix.matchId, homeId, awayId, homeGoals, awayGoals,
+        status, winnerId, kickoffUtc: fix.kickoffUtc, venue: fix.venue,
+      });
+    }
+    rounds.push({ stage, matches });
+  }
+
+  // The round currently being contested = first knockout round not yet fully
+  // finished. Once every round is done, the tournament is complete.
+  let currentStage = groupStageComplete ? 'complete' : 'group';
+  if (groupStageComplete) {
+    for (const rd of rounds) {
+      if (!rd.matches.every(m => m.status === 'finished')) { currentStage = rd.stage; break; }
+    }
+  }
+
+  return { updatedUtc: new Date().toISOString(), groupStageComplete, currentStage, rounds };
+}
+
+module.exports = { simulate, resolveBracket };

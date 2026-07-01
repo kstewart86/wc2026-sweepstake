@@ -1,0 +1,373 @@
+{
+  "updatedUtc": "2026-07-01T03:41:17.538Z",
+  "groupStageComplete": true,
+  "currentStage": "r32",
+  "rounds": [
+    {
+      "stage": "r32",
+      "matches": [
+        {
+          "matchId": 73,
+          "homeId": "ZAF",
+          "awayId": "CAN",
+          "homeGoals": 0,
+          "awayGoals": 1,
+          "status": "finished",
+          "winnerId": "CAN",
+          "kickoffUtc": "2026-06-29T19:00:00Z",
+          "venue": "TBD"
+        },
+        {
+          "matchId": 74,
+          "homeId": "GER",
+          "awayId": "PAR",
+          "homeGoals": 1,
+          "awayGoals": 1,
+          "status": "finished",
+          "winnerId": "PAR",
+          "kickoffUtc": "2026-06-29T22:00:00Z",
+          "venue": "TBD"
+        },
+        {
+          "matchId": 75,
+          "homeId": "NED",
+          "awayId": "MAR",
+          "homeGoals": 1,
+          "awayGoals": 1,
+          "status": "finished",
+          "winnerId": "MAR",
+          "kickoffUtc": "2026-06-30T19:00:00Z",
+          "venue": "TBD"
+        },
+        {
+          "matchId": 76,
+          "homeId": "BRA",
+          "awayId": "JPN",
+          "homeGoals": 2,
+          "awayGoals": 1,
+          "status": "finished",
+          "winnerId": "BRA",
+          "kickoffUtc": "2026-06-30T22:00:00Z",
+          "venue": "TBD"
+        },
+        {
+          "matchId": 77,
+          "homeId": "FRA",
+          "awayId": "SWE",
+          "homeGoals": 3,
+          "awayGoals": 0,
+          "status": "finished",
+          "winnerId": "FRA",
+          "kickoffUtc": "2026-07-01T19:00:00Z",
+          "venue": "TBD"
+        },
+        {
+          "matchId": 78,
+          "homeId": "CIV",
+          "awayId": "NOR",
+          "homeGoals": 1,
+          "awayGoals": 2,
+          "status": "finished",
+          "winnerId": "NOR",
+          "kickoffUtc": "2026-07-01T22:00:00Z",
+          "venue": "TBD"
+        },
+        {
+          "matchId": 79,
+          "homeId": "MEX",
+          "awayId": "ECU",
+          "homeGoals": 2,
+          "awayGoals": 0,
+          "status": "live",
+          "winnerId": null,
+          "kickoffUtc": "2026-07-02T19:00:00Z",
+          "venue": "TBD"
+        },
+        {
+          "matchId": 80,
+          "homeId": "ENG",
+          "awayId": "COD",
+          "homeGoals": null,
+          "awayGoals": null,
+          "status": "scheduled",
+          "winnerId": null,
+          "kickoffUtc": "2026-07-02T22:00:00Z",
+          "venue": "TBD"
+        },
+        {
+          "matchId": 81,
+          "homeId": "USA",
+          "awayId": "BIH",
+          "homeGoals": null,
+          "awayGoals": null,
+          "status": "scheduled",
+          "winnerId": null,
+          "kickoffUtc": "2026-07-03T19:00:00Z",
+          "venue": "TBD"
+        },
+        {
+          "matchId": 82,
+          "homeId": "BEL",
+          "awayId": "SEN",
+          "homeGoals": null,
+          "awayGoals": null,
+          "status": "scheduled",
+          "winnerId": null,
+          "kickoffUtc": "2026-07-03T22:00:00Z",
+          "venue": "TBD"
+        },
+        {
+          "matchId": 83,
+          "homeId": "POR",
+          "awayId": "CRO",
+          "homeGoals": null,
+          "awayGoals": null,
+          "status": "scheduled",
+          "winnerId": null,
+          "kickoffUtc": "2026-07-04T19:00:00Z",
+          "venue": "TBD"
+        },
+        {
+          "matchId": 84,
+          "homeId": "ESP",
+          "awayId": "AUT",
+          "homeGoals": null,
+          "awayGoals": null,
+          "status": "scheduled",
+          "winnerId": null,
+          "kickoffUtc": "2026-07-04T22:00:00Z",
+          "venue": "TBD"
+        },
+        {
+          "matchId": 85,
+          "homeId": "SUI",
+          "awayId": "DZA",
+          "homeGoals": null,
+          "awayGoals": null,
+          "status": "scheduled",
+          "winnerId": null,
+          "kickoffUtc": "2026-07-05T19:00:00Z",
+          "venue": "TBD"
+        },
+        {
+          "matchId": 86,
+          "homeId": "ARG",
+          "awayId": "CPV",
+          "homeGoals": null,
+          "awayGoals": null,
+          "status": "scheduled",
+          "winnerId": null,
+          "kickoffUtc": "2026-07-05T22:00:00Z",
+          "venue": "TBD"
+        },
+        {
+          "matchId": 87,
+          "homeId": "COL",
+          "awayId": "GHA",
+          "homeGoals": null,
+          "awayGoals": null,
+          "status": "scheduled",
+          "winnerId": null,
+          "kickoffUtc": "2026-07-06T19:00:00Z",
+          "venue": "TBD"
+        },
+        {
+          "matchId": 88,
+          "homeId": "AUS",
+          "awayId": "EGY",
+          "homeGoals": null,
+          "awayGoals": null,
+          "status": "scheduled",
+          "winnerId": null,
+          "kickoffUtc": "2026-07-06T22:00:00Z",
+          "venue": "TBD"
+        }
+      ]
+    },
+    {
+      "stage": "r16",
+      "matches": [
+        {
+          "matchId": 89,
+          "homeId": "CAN",
+          "awayId": "PAR",
+          "homeGoals": null,
+          "awayGoals": null,
+          "status": "scheduled",
+          "winnerId": null,
+          "kickoffUtc": "2026-07-08T19:00:00Z",
+          "venue": "TBD"
+        },
+        {
+          "matchId": 90,
+          "homeId": "MAR",
+          "awayId": "BRA",
+          "homeGoals": null,
+          "awayGoals": null,
+          "status": "scheduled",
+          "winnerId": null,
+          "kickoffUtc": "2026-07-08T22:00:00Z",
+          "venue": "TBD"
+        },
+        {
+          "matchId": 91,
+          "homeId": "FRA",
+          "awayId": "NOR",
+          "homeGoals": null,
+          "awayGoals": null,
+          "status": "scheduled",
+          "winnerId": null,
+          "kickoffUtc": "2026-07-09T19:00:00Z",
+          "venue": "TBD"
+        },
+        {
+          "matchId": 92,
+          "homeId": null,
+          "awayId": null,
+          "homeGoals": null,
+          "awayGoals": null,
+          "status": "scheduled",
+          "winnerId": null,
+          "kickoffUtc": "2026-07-09T22:00:00Z",
+          "venue": "TBD"
+        },
+        {
+          "matchId": 93,
+          "homeId": null,
+          "awayId": null,
+          "homeGoals": null,
+          "awayGoals": null,
+          "status": "scheduled",
+          "winnerId": null,
+          "kickoffUtc": "2026-07-10T19:00:00Z",
+          "venue": "TBD"
+        },
+        {
+          "matchId": 94,
+          "homeId": null,
+          "awayId": null,
+          "homeGoals": null,
+          "awayGoals": null,
+          "status": "scheduled",
+          "winnerId": null,
+          "kickoffUtc": "2026-07-10T22:00:00Z",
+          "venue": "TBD"
+        },
+        {
+          "matchId": 95,
+          "homeId": null,
+          "awayId": null,
+          "homeGoals": null,
+          "awayGoals": null,
+          "status": "scheduled",
+          "winnerId": null,
+          "kickoffUtc": "2026-07-11T19:00:00Z",
+          "venue": "TBD"
+        },
+        {
+          "matchId": 96,
+          "homeId": null,
+          "awayId": null,
+          "homeGoals": null,
+          "awayGoals": null,
+          "status": "scheduled",
+          "winnerId": null,
+          "kickoffUtc": "2026-07-11T22:00:00Z",
+          "venue": "TBD"
+        }
+      ]
+    },
+    {
+      "stage": "qf",
+      "matches": [
+        {
+          "matchId": 97,
+          "homeId": null,
+          "awayId": null,
+          "homeGoals": null,
+          "awayGoals": null,
+          "status": "scheduled",
+          "winnerId": null,
+          "kickoffUtc": "2026-07-14T19:00:00Z",
+          "venue": "TBD"
+        },
+        {
+          "matchId": 98,
+          "homeId": null,
+          "awayId": null,
+          "homeGoals": null,
+          "awayGoals": null,
+          "status": "scheduled",
+          "winnerId": null,
+          "kickoffUtc": "2026-07-14T22:00:00Z",
+          "venue": "TBD"
+        },
+        {
+          "matchId": 99,
+          "homeId": null,
+          "awayId": null,
+          "homeGoals": null,
+          "awayGoals": null,
+          "status": "scheduled",
+          "winnerId": null,
+          "kickoffUtc": "2026-07-15T19:00:00Z",
+          "venue": "TBD"
+        },
+        {
+          "matchId": 100,
+          "homeId": null,
+          "awayId": null,
+          "homeGoals": null,
+          "awayGoals": null,
+          "status": "scheduled",
+          "winnerId": null,
+          "kickoffUtc": "2026-07-15T22:00:00Z",
+          "venue": "TBD"
+        }
+      ]
+    },
+    {
+      "stage": "sf",
+      "matches": [
+        {
+          "matchId": 101,
+          "homeId": null,
+          "awayId": null,
+          "homeGoals": null,
+          "awayGoals": null,
+          "status": "scheduled",
+          "winnerId": null,
+          "kickoffUtc": "2026-07-17T22:00:00Z",
+          "venue": "TBD"
+        },
+        {
+          "matchId": 102,
+          "homeId": null,
+          "awayId": null,
+          "homeGoals": null,
+          "awayGoals": null,
+          "status": "scheduled",
+          "winnerId": null,
+          "kickoffUtc": "2026-07-18T22:00:00Z",
+          "venue": "TBD"
+        }
+      ]
+    },
+    {
+      "stage": "final",
+      "matches": [
+        {
+          "matchId": 103,
+          "homeId": null,
+          "awayId": null,
+          "homeGoals": null,
+          "awayGoals": null,
+          "status": "scheduled",
+          "winnerId": null,
+          "kickoffUtc": "2026-07-19T22:00:00Z",
+          "venue": "MetLife Stadium, East Rutherford"
+        }
+      ]
+    }
+  ]
+}

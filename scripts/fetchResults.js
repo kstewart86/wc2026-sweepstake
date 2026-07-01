@@ -53,19 +53,48 @@ const ESPN_TO_SLUG = {
 
 function toSlug(code) { return ESPN_TO_SLUG[code] || code; }
 
-// Match the fixture's homeId/awayId to a real match result by team IDs
-function matchFixtureToResult(homeSlug, awaySlug, fixtures) {
-  return fixtures.find(f =>
+// Match a live/finished game (by its two team slugs) to a fixture.
+//   • Group fixtures carry homeId/awayId directly.
+//   • Knockout fixtures don't — their teams come from the bracket via `koMatchups`
+//     ({ matchId, homeId, awayId, anchors }). The third-place side of an R32 tie
+//     can be mispredicted, so we also match on `anchors` — the reliably-known
+//     group-seeded / prior-winner side — and then take BOTH real teams from the
+//     feed. Returns { matchId, ko } or null.
+function matchFixtureToResult(homeSlug, awaySlug, fixtures, koMatchups = []) {
+  const group = fixtures.find(f =>
     f.stage === 'group' &&
     ((f.homeId === homeSlug && f.awayId === awaySlug) ||
      (f.homeId === awaySlug && f.awayId === homeSlug))
   );
+  if (group) return { matchId: group.matchId, ko: false, fix: group };
+
+  // Exact pair first, then anchor (one reliable side) as a fallback.
+  const exact = koMatchups.find(m =>
+    (m.homeId === homeSlug && m.awayId === awaySlug) ||
+    (m.homeId === awaySlug && m.awayId === homeSlug));
+  const ko = exact || koMatchups.find(m =>
+    (m.anchors || []).includes(homeSlug) || (m.anchors || []).includes(awaySlug));
+  return ko ? { matchId: ko.matchId, ko: true } : null;
+}
+
+// Build a normalised result row. Group games keep the fixture's canonical
+// home/away orientation; knockout games take the feed's real teams as-is.
+function buildRow({ match, homeSlug, awaySlug, feedHome, feedAway, status, winnerId, minute }) {
+  if (match.ko) {
+    return { matchId: match.matchId, homeId: homeSlug, awayId: awaySlug, homeGoals: feedHome, awayGoals: feedAway, status, winnerId, minute };
+  }
+  const orient = homeSlug === match.fix.homeId;
+  return {
+    matchId: match.matchId, homeId: match.fix.homeId, awayId: match.fix.awayId,
+    homeGoals: orient ? feedHome : feedAway, awayGoals: orient ? feedAway : feedHome,
+    status, winnerId, minute,
+  };
 }
 
 // ---------------------------------------------------------------------------
 // football-data.org adapter
 // ---------------------------------------------------------------------------
-async function fetchFromFootballData(apiKey, fixtures) {
+async function fetchFromFootballData(apiKey, fixtures, koMatchups) {
   const url = `https://api.football-data.org/v4/competitions/${COMPETITION_ID}/matches?status=LIVE,FINISHED,IN_PLAY`;
   const res = await fetch(url, { headers: { 'X-Auth-Token': apiKey } });
   if (!res.ok) throw new Error(`football-data.org ${res.status}: ${res.statusText}`);
@@ -74,32 +103,34 @@ async function fetchFromFootballData(apiKey, fixtures) {
   return (data.matches || []).map(m => {
     const homeSlug = toSlug(m.homeTeam?.tla || '');
     const awaySlug = toSlug(m.awayTeam?.tla || '');
-    const fix = matchFixtureToResult(homeSlug, awaySlug, fixtures);
-    if (!fix) return null;
+    const match = matchFixtureToResult(homeSlug, awaySlug, fixtures, koMatchups);
+    if (!match) return null;
 
     const statusMap = { 'FINISHED': 'finished', 'IN_PLAY': 'live', 'PAUSED': 'live', 'SCHEDULED': 'scheduled', 'TIMED': 'scheduled' };
-    return {
-      matchId: fix.matchId,
-      homeId: fix.homeId,
-      awayId: fix.awayId,
-      homeGoals: m.score?.fullTime?.home ?? m.score?.halfTime?.home ?? null,
-      awayGoals: m.score?.fullTime?.away ?? m.score?.halfTime?.away ?? null,
+    const feedHome = m.score?.fullTime?.home ?? m.score?.halfTime?.home ?? null;
+    const feedAway = m.score?.fullTime?.away ?? m.score?.halfTime?.away ?? null;
+    const w = m.score?.winner; // HOME_TEAM | AWAY_TEAM | DRAW | null
+    return buildRow({
+      match, homeSlug, awaySlug, feedHome, feedAway,
       status: statusMap[m.status] || 'scheduled',
+      winnerId: w === 'HOME_TEAM' ? homeSlug : w === 'AWAY_TEAM' ? awaySlug : null,
       minute: m.minute || null,
-    };
+    });
   }).filter(Boolean);
 }
 
 // ---------------------------------------------------------------------------
 // ESPN public API adapter
 // ---------------------------------------------------------------------------
-async function fetchFromESPN(fixtures) {
-  const today = new Date().toISOString().slice(0, 10).replace(/-/g, '');
-  const yesterday = new Date(Date.now() - 86400000).toISOString().slice(0, 10).replace(/-/g, '');
+async function fetchFromESPN(fixtures, koMatchups) {
+  // Scan a wider window than yesterday/today so knockout games that were missed
+  // (e.g. during a CI outage) get backfilled instead of showing as unplayed.
+  const dates = [];
+  for (let d = 6; d >= -1; d--) dates.push(new Date(Date.now() - d * 86400000).toISOString().slice(0, 10).replace(/-/g, ''));
   const results = [];
 
-  for (const dateStr of [yesterday, today]) {
-    const url = `${ESPN_BASE}?dates=${dateStr}&limit=20`;
+  for (const dateStr of dates) {
+    const url = `${ESPN_BASE}?dates=${dateStr}&limit=30`;
     const res = await fetch(url);
     if (!res.ok) continue;
     const data = await res.json();
@@ -113,26 +144,24 @@ async function fetchFromESPN(fixtures) {
 
       const homeSlug = toSlug(home.team?.abbreviation || '');
       const awaySlug = toSlug(away.team?.abbreviation || '');
-      const fix = matchFixtureToResult(homeSlug, awaySlug, fixtures);
-      if (!fix) continue;
+      const match = matchFixtureToResult(homeSlug, awaySlug, fixtures, koMatchups);
+      if (!match) continue;
 
       const stateType = comp.status?.type?.name || '';
       let status = 'scheduled';
-      if (['STATUS_FINAL', 'STATUS_FULL_TIME', 'STATUS_FULL_PEN', 'STATUS_POSTPONED'].includes(stateType)) status = 'finished';
+      if (['STATUS_FINAL', 'STATUS_FULL_TIME', 'STATUS_FULL_PEN', 'STATUS_FINAL_PEN', 'STATUS_POSTPONED'].includes(stateType)) status = 'finished';
       else if (['STATUS_IN_PROGRESS', 'STATUS_HALFTIME', 'STATUS_FIRST_HALF', 'STATUS_SECOND_HALF', 'STATUS_EXTRA_TIME', 'STATUS_PENALTY'].includes(stateType)) status = 'live';
 
       const hg = parseInt(home.score, 10);
       const ag = parseInt(away.score, 10);
-
-      results.push({
-        matchId: fix.matchId,
-        homeId: fix.homeId,
-        awayId: fix.awayId,
-        homeGoals: isNaN(hg) ? null : hg,
-        awayGoals: isNaN(ag) ? null : ag,
+      results.push(buildRow({
+        match, homeSlug, awaySlug,
+        feedHome: isNaN(hg) ? null : hg,
+        feedAway: isNaN(ag) ? null : ag,
         status,
+        winnerId: home.winner ? homeSlug : away.winner ? awaySlug : null,
         minute: comp.status?.displayClock || null,
-      });
+      }));
     }
   }
 
@@ -143,14 +172,14 @@ async function fetchFromESPN(fixtures) {
 // Main export: fetchLiveResults()
 // Returns normalised match array; throws only on total failure.
 // ---------------------------------------------------------------------------
-async function fetchLiveResults(fixtures) {
+async function fetchLiveResults(fixtures, koMatchups = []) {
   const apiKey = process.env.SCORE_API_KEY;
   const fixtureList = fixtures.matches;
 
   if (apiKey) {
     try {
       console.log('[fetch] Trying football-data.org...');
-      const r = await fetchFromFootballData(apiKey, fixtureList);
+      const r = await fetchFromFootballData(apiKey, fixtureList, koMatchups);
       if (r.length > 0) { console.log(`[fetch] football-data.org: ${r.length} matches`); return r; }
       console.log('[fetch] football-data.org returned 0 matches — falling through to ESPN');
     } catch (e) {
@@ -159,7 +188,7 @@ async function fetchLiveResults(fixtures) {
   }
 
   console.log('[fetch] Trying ESPN public API...');
-  const espn = await fetchFromESPN(fixtureList);
+  const espn = await fetchFromESPN(fixtureList, koMatchups);
   console.log(`[fetch] ESPN: ${espn.length} matches`);
   return espn;
 }

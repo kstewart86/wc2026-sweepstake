@@ -755,6 +755,91 @@ h1 { display: flex; align-items: center; justify-content: center; }
 .difficulty-even { background: var(--orange-lo); color: var(--orange); }
 .difficulty-hard { background: var(--red-lo); color: var(--red); }
 
+/* ── Knockout: leaderboard card status ───────────────────────────── */
+.participant-card--out { opacity: .72; }
+.participant-card--out:hover { opacity: 1; }
+
+.ko-badge {
+  font-size: 11px;
+  font-weight: 800;
+  padding: 5px 11px;
+  border-radius: 20px;
+  white-space: nowrap;
+  letter-spacing: .2px;
+  align-self: center;
+}
+.ko-badge--alive { background: var(--green-lo); color: var(--green); border: 1px solid rgba(16,185,129,0.3); }
+.ko-badge--out   { background: var(--surface2); color: var(--text2); border: 1px solid var(--separator); }
+.ko-badge--champ { background: rgba(251,191,36,0.15); color: #fbbf24; border: 1px solid rgba(251,191,36,0.35); box-shadow: 0 0 12px rgba(251,191,36,0.25); }
+
+/* Knockout team chips */
+.team-chip--ko .ko-status { font-size: 10px; font-weight: 700; letter-spacing: .2px; }
+.ko-status--alive { color: var(--green); }
+.ko-status--out   { color: var(--text2); }
+.ko-status--champ { color: #fbbf24; }
+.team-chip--alive { border-color: rgba(16,185,129,0.22); }
+.team-chip--eliminated { opacity: .5; filter: grayscale(0.75); }
+.team-chip--eliminated .team-flag { filter: grayscale(1); }
+
+/* Expected-payout footer (knockout) */
+.card-footer-single { display: flex; align-items: center; justify-content: space-between; }
+.ev-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .5px; color: var(--text2); }
+.ev-value { font-size: 16px; font-weight: 900; color: var(--green); letter-spacing: -.3px; }
+
+/* Detail modal: odds strip, KO tags, run label */
+.detail-odds { display: flex; gap: 8px; margin: 14px 0 4px; }
+.detail-odds-cell {
+  flex: 1; min-width: 0;
+  background: var(--surface2);
+  border: 1px solid var(--separator);
+  border-radius: var(--radius-sm);
+  padding: 10px 6px;
+  text-align: center;
+}
+.detail-odds-label { display: block; font-size: 9px; text-transform: uppercase; letter-spacing: .4px; color: var(--text2); font-weight: 600; margin-bottom: 4px; }
+.detail-odds-val   { display: block; font-size: 16px; font-weight: 900; color: var(--text); letter-spacing: -.3px; }
+.detail-ko-tag { font-size: 10px; font-weight: 700; padding: 1px 6px; border-radius: 6px; margin-left: 4px; text-transform: none; letter-spacing: 0; }
+.detail-ko-tag--alive { background: var(--green-lo); color: var(--green); }
+.detail-ko-tag--out   { background: var(--red-lo); color: var(--red); }
+.detail-ko-tag--champ { background: rgba(251,191,36,0.15); color: #fbbf24; }
+.detail-run-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; color: var(--accent); margin: 12px 0 2px; }
+
+/* ── Bracket ─────────────────────────────────────────────────────── */
+.bracket-scroll { width: 100%; }
+.bracket { display: flex; flex-direction: column; gap: 20px; }
+.bracket-round { min-width: 0; }
+.bracket-round-label {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .6px;
+  color: var(--text2); margin-bottom: 9px;
+}
+.bracket-round--current .bracket-round-label { color: var(--accent); }
+.bracket-now { font-size: 9px; font-weight: 800; background: var(--accent); color: #fff; padding: 1px 7px; border-radius: 10px; letter-spacing: .5px; }
+.bracket-matches { display: flex; flex-direction: column; gap: 8px; }
+.bracket-match {
+  background: var(--surface);
+  border: 1px solid var(--separator);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+.bracket-match--live { border-color: rgba(59,130,246,0.5); animation: card-glow 2s ease-in-out infinite; }
+.bm-team {
+  display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  padding: 8px 10px; font-size: 13px; font-weight: 600; color: var(--text);
+}
+.bm-team + .bm-team { border-top: 1px solid var(--separator); }
+.bm-name { display: flex; align-items: center; gap: 4px; min-width: 0; }
+.bm-team-name { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.bm-team--winner { font-weight: 800; }
+.bm-team--winner .bm-score { color: var(--green); }
+.bm-team--loser  { color: var(--text2); opacity: .5; }
+.bm-team--loser .team-flag { filter: grayscale(1); }
+.bm-team--tbd    { color: var(--text2); font-style: italic; opacity: .55; }
+.bm-team--owned  { box-shadow: inset 3px 0 0 var(--accent); }
+.bm-owner { font-size: 10px; color: var(--accent); font-weight: 700; margin-left: 6px; background: var(--accent-lo); padding: 0 5px; border-radius: 6px; white-space: nowrap; }
+.bm-score { font-weight: 800; font-variant-numeric: tabular-nums; flex-shrink: 0; }
+
 /* ── Helpers ─────────────────────────────────────────────────────── */
 .hidden { display: none !important; }
 .text-center { text-align: center; }
@@ -810,4 +895,13 @@ h1 { display: flex; align-items: center; justify-content: center; }
   .match-tabs { padding-top: 0; }
   /* Equalise column start: sort-row 35px + 14px margin = 49px = match-tabs height */
   .sort-row { min-height: 35px; justify-content: center; }
+
+  /* Bracket spans the full width below the two columns, as a horizontal tree. */
+  #view-bracket { grid-column: 1 / -1; margin-top: 8px; }
+  .bracket { flex-direction: row; gap: 10px; align-items: stretch; }
+  .bracket-round { flex: 1 1 0; display: flex; flex-direction: column; }
+  .bracket-round-label { justify-content: center; margin-bottom: 12px; }
+  .bracket-matches { flex: 1; justify-content: space-around; gap: 6px; }
+  .bm-team { padding: 6px 8px; font-size: 12px; }
+  .bm-owner { font-size: 9px; padding: 0 4px; }
 }

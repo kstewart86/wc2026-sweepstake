@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-06-28T04:00:17.113Z",
+  "updatedUtc": "2026-07-01T03:41:08.962Z",
   "matches": [
     {
       "matchId": 1,
@@ -478,6 +478,7 @@
       "homeGoals": 2,
       "awayGoals": 1,
       "status": "finished",
+      "winnerId": "ECU",
       "minute": "90'+7'"
     },
     {
@@ -487,6 +488,7 @@
       "homeGoals": 0,
       "awayGoals": 2,
       "status": "finished",
+      "winnerId": "CIV",
       "minute": "90'+6'"
     },
     {
@@ -496,6 +498,7 @@
       "homeGoals": 1,
       "awayGoals": 1,
       "status": "finished",
+      "winnerId": null,
       "minute": "90'+7'"
     },
     {
@@ -505,6 +508,7 @@
       "homeGoals": 1,
       "awayGoals": 3,
       "status": "finished",
+      "winnerId": "NED",
       "minute": "90'+5'"
     },
     {
@@ -514,6 +518,7 @@
       "homeGoals": 0,
       "awayGoals": 0,
       "status": "finished",
+      "winnerId": null,
       "minute": "90'+5'"
     },
     {
@@ -523,6 +528,7 @@
       "homeGoals": 3,
       "awayGoals": 2,
       "status": "finished",
+      "winnerId": "TUR",
       "minute": "90'+9'"
     },
     {
@@ -532,6 +538,7 @@
       "homeGoals": 1,
       "awayGoals": 4,
       "status": "finished",
+      "winnerId": "FRA",
       "minute": "90'+5'"
     },
     {
@@ -541,6 +548,7 @@
       "homeGoals": 5,
       "awayGoals": 0,
       "status": "finished",
+      "winnerId": "SEN",
       "minute": "90'+6'"
     },
     {
@@ -550,6 +558,7 @@
       "homeGoals": 0,
       "awayGoals": 1,
       "status": "finished",
+      "winnerId": "ESP",
       "minute": "90'+6'"
     },
     {
@@ -559,6 +568,7 @@
       "homeGoals": 0,
       "awayGoals": 0,
       "status": "finished",
+      "winnerId": null,
       "minute": "90'+5'"
     },
     {
@@ -568,6 +578,7 @@
       "homeGoals": 1,
       "awayGoals": 1,
       "status": "finished",
+      "winnerId": null,
       "minute": "90'+9'"
     },
     {
@@ -577,6 +588,7 @@
       "homeGoals": 1,
       "awayGoals": 5,
       "status": "finished",
+      "winnerId": "BEL",
       "minute": "90'+6'"
     },
     {
@@ -586,6 +598,7 @@
       "homeGoals": 2,
       "awayGoals": 1,
       "status": "finished",
+      "winnerId": "CRO",
       "minute": "90'+8'"
     },
     {
@@ -595,6 +608,7 @@
       "homeGoals": 0,
       "awayGoals": 2,
       "status": "finished",
+      "winnerId": "ENG",
       "minute": "90'+6'"
     },
     {
@@ -604,6 +618,7 @@
       "homeGoals": 0,
       "awayGoals": 0,
       "status": "finished",
+      "winnerId": null,
       "minute": "90'+6'"
     },
     {
@@ -613,6 +628,7 @@
       "homeGoals": 3,
       "awayGoals": 1,
       "status": "finished",
+      "winnerId": "COD",
       "minute": "90'+8'"
     },
     {
@@ -622,6 +638,7 @@
       "homeGoals": 3,
       "awayGoals": 3,
       "status": "finished",
+      "winnerId": null,
       "minute": "90'+7'"
     },
     {
@@ -631,7 +648,126 @@
       "homeGoals": 1,
       "awayGoals": 3,
       "status": "finished",
+      "winnerId": "ARG",
       "minute": "90'+6'"
+    },
+    {
+      "matchId": 78,
+      "homeId": "CIV",
+      "awayId": "NOR",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "status": "finished",
+      "winnerId": "NOR",
+      "minute": "90'+8'"
+    },
+    {
+      "matchId": 79,
+      "homeId": "MEX",
+      "awayId": "ECU",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "status": "live",
+      "winnerId": null,
+      "minute": "79'"
+    },
+    {
+      "matchId": 73,
+      "homeId": "ZAF",
+      "awayId": "CAN",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "status": "finished",
+      "winnerId": "CAN",
+      "minute": "90'+6'"
+    },
+    {
+      "matchId": 76,
+      "homeId": "BRA",
+      "awayId": "JPN",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "status": "finished",
+      "winnerId": "BRA",
+      "minute": "90'+11'"
+    },
+    {
+      "matchId": 74,
+      "homeId": "GER",
+      "awayId": "PAR",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "status": "finished",
+      "winnerId": "PAR",
+      "minute": "120'"
+    },
+    {
+      "matchId": 75,
+      "homeId": "NED",
+      "awayId": "MAR",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "status": "finished",
+      "winnerId": "MAR",
+      "minute": "120'"
+    },
+    {
+      "matchId": 77,
+      "homeId": "FRA",
+      "awayId": "SWE",
+      "homeGoals": 3,
+      "awayGoals": 0,
+      "status": "finished",
+      "winnerId": "FRA",
+      "minute": "90'+4'"
+    },
+    {
+      "matchId": 80,
+      "homeId": "ENG",
+      "awayId": "COD",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null
+    },
+    {
+      "matchId": 82,
+      "homeId": "BEL",
+      "awayId": "SEN",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null
+    },
+    {
+      "matchId": 81,
+      "homeId": "USA",
+      "awayId": "BIH",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null
+    },
+    {
+      "matchId": 84,
+      "homeId": "ESP",
+      "awayId": "AUT",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null
+    },
+    {
+      "matchId": 83,
+      "homeId": "POR",
+      "awayId": "CRO",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null
+    },
+    {
+      "matchId": 85,
+      "homeId": "SUI",
+      "awayId": "DZA",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null
     }
   ]
 }
