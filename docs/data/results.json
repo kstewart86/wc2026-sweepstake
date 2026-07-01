@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-01T19:07:47.478Z",
+  "updatedUtc": "2026-07-01T21:07:58.423Z",
   "matches": [
     {
       "matchId": 1,
@@ -791,9 +791,11 @@
       "matchId": 82,
       "homeId": "BEL",
       "awayId": "SEN",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "status": "live",
+      "winnerId": null,
+      "minute": "45'+5'",
       "kickoffUtc": "2026-07-01T20:00Z",
       "venue": "Lumen Field"
     },

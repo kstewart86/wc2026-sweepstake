@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-01T19:07:55.834Z",
+  "updatedUtc": "2026-07-01T21:08:06.634Z",
   "groupStageComplete": true,
   "currentStage": "r32",
   "rounds": [
@@ -127,11 +127,11 @@
           "matchId": 82,
           "homeId": "BEL",
           "awayId": "SEN",
-          "homeGoals": null,
-          "awayGoals": null,
+          "homeGoals": 0,
+          "awayGoals": 1,
           "homePens": null,
           "awayPens": null,
-          "status": "scheduled",
+          "status": "live",
           "winnerId": null,
           "kickoffUtc": "2026-07-01T20:00Z",
           "venue": "Lumen Field"
