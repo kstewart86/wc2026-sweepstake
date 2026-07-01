@@ -804,6 +804,10 @@ h1 { display: flex; align-items: center; justify-content: center; }
 .detail-ko-tag--champ { background: rgba(251,191,36,0.15); color: #fbbf24; }
 .detail-run-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; color: var(--accent); margin: 12px 0 2px; }
 
+/* Rivalry: owner tag on a knockout opponent + summary line */
+.detail-owner-tag { font-size: 10px; font-weight: 700; color: var(--accent); background: var(--accent-lo); padding: 1px 6px; border-radius: 6px; white-space: nowrap; }
+.detail-rivalry { font-size: 12px; font-weight: 600; color: var(--text2); margin: 8px 0 2px; line-height: 1.4; }
+
 /* ── Bracket ─────────────────────────────────────────────────────── */
 .bracket-scroll { width: 100%; }
 .bracket { display: flex; flex-direction: column; gap: 20px; }
@@ -839,6 +843,8 @@ h1 { display: flex; align-items: center; justify-content: center; }
 .bm-team--owned  { box-shadow: inset 3px 0 0 var(--accent); }
 .bm-owner { font-size: 10px; color: var(--accent); font-weight: 700; margin-left: 6px; background: var(--accent-lo); padding: 0 5px; border-radius: 6px; white-space: nowrap; }
 .bm-score { font-weight: 800; font-variant-numeric: tabular-nums; flex-shrink: 0; }
+.bm-pens { font-size: 9px; font-weight: 700; color: var(--text2); margin-left: 2px; vertical-align: super; }
+.bm-team--winner .bm-pens { color: var(--green); }
 
 /* ── Helpers ─────────────────────────────────────────────────────── */
 .hidden { display: none !important; }

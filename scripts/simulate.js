@@ -519,13 +519,13 @@ function resolveBracket(fixtures, results, teamsObj) {
       // the Annex-C third-place approximation) is only a fallback before then.
       let homeId = (r && r.homeId) ? r.homeId : resolveSlot(fix.homeSlot, fix);
       let awayId = (r && r.awayId) ? r.awayId : resolveSlot(fix.awaySlot, fix);
-      let homeGoals = null, awayGoals = null;
+      let homeGoals = null, awayGoals = null, homePens = null, awayPens = null;
       const status = r?.status ?? 'scheduled';
 
       if (r) {
-        if (r.homeId === homeId)      { homeGoals = r.homeGoals; awayGoals = r.awayGoals; }
-        else if (r.homeId === awayId) { homeGoals = r.awayGoals; awayGoals = r.homeGoals; }
-        else                          { homeGoals = r.homeGoals; awayGoals = r.awayGoals; }
+        if (r.homeId === homeId)      { homeGoals = r.homeGoals; awayGoals = r.awayGoals; homePens = r.homePens ?? null; awayPens = r.awayPens ?? null; }
+        else if (r.homeId === awayId) { homeGoals = r.awayGoals; awayGoals = r.homeGoals; homePens = r.awayPens ?? null; awayPens = r.homePens ?? null; }
+        else                          { homeGoals = r.homeGoals; awayGoals = r.awayGoals; homePens = r.homePens ?? null; awayPens = r.awayPens ?? null; }
       }
 
       let winnerId = null;
@@ -537,8 +537,10 @@ function resolveBracket(fixtures, results, teamsObj) {
       }
 
       matches.push({
-        matchId: fix.matchId, homeId, awayId, homeGoals, awayGoals,
-        status, winnerId, kickoffUtc: fix.kickoffUtc, venue: fix.venue,
+        matchId: fix.matchId, homeId, awayId, homeGoals, awayGoals, homePens, awayPens,
+        status, winnerId,
+        kickoffUtc: (r && r.kickoffUtc) || fix.kickoffUtc,
+        venue: (r && r.venue) || fix.venue,
       });
     }
     rounds.push({ stage, matches });

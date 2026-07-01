@@ -107,7 +107,12 @@ async function main() {
     if (!played && !koScheduled) continue;
     if (played && (raw.homeGoals === null || raw.awayGoals === null)) continue; // skip incomplete
     const r = koScheduled
-      ? { matchId: raw.matchId, homeId: raw.homeId, awayId: raw.awayId, status: 'scheduled', homeGoals: null, awayGoals: null }
+      ? {
+          matchId: raw.matchId, homeId: raw.homeId, awayId: raw.awayId,
+          status: 'scheduled', homeGoals: null, awayGoals: null,
+          ...(raw.kickoffUtc ? { kickoffUtc: raw.kickoffUtc } : {}),
+          ...(raw.venue ? { venue: raw.venue } : {}),
+        }
       : raw;
     const idx = merged.findIndex(m => m.matchId === r.matchId);
     if (idx >= 0) {

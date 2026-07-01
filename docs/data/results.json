@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-01T03:41:08.962Z",
+  "updatedUtc": "2026-07-01T19:07:47.478Z",
   "matches": [
     {
       "matchId": 1,
@@ -479,7 +479,9 @@
       "awayGoals": 1,
       "status": "finished",
       "winnerId": "ECU",
-      "minute": "90'+7'"
+      "minute": "90'+7'",
+      "kickoffUtc": "2026-06-25T20:00Z",
+      "venue": "MetLife Stadium"
     },
     {
       "matchId": 30,
@@ -489,7 +491,9 @@
       "awayGoals": 2,
       "status": "finished",
       "winnerId": "CIV",
-      "minute": "90'+6'"
+      "minute": "90'+6'",
+      "kickoffUtc": "2026-06-25T20:00Z",
+      "venue": "Lincoln Financial Field"
     },
     {
       "matchId": 35,
@@ -499,7 +503,9 @@
       "awayGoals": 1,
       "status": "finished",
       "winnerId": null,
-      "minute": "90'+7'"
+      "minute": "90'+7'",
+      "kickoffUtc": "2026-06-25T23:00Z",
+      "venue": "AT&T Stadium"
     },
     {
       "matchId": 36,
@@ -509,7 +515,9 @@
       "awayGoals": 3,
       "status": "finished",
       "winnerId": "NED",
-      "minute": "90'+5'"
+      "minute": "90'+5'",
+      "kickoffUtc": "2026-06-25T23:00Z",
+      "venue": "GEHA Field at Arrowhead Stadium"
     },
     {
       "matchId": 24,
@@ -519,7 +527,9 @@
       "awayGoals": 0,
       "status": "finished",
       "winnerId": null,
-      "minute": "90'+5'"
+      "minute": "90'+5'",
+      "kickoffUtc": "2026-06-26T02:00Z",
+      "venue": "Levi's Stadium"
     },
     {
       "matchId": 23,
@@ -529,7 +539,9 @@
       "awayGoals": 2,
       "status": "finished",
       "winnerId": "TUR",
-      "minute": "90'+9'"
+      "minute": "90'+9'",
+      "kickoffUtc": "2026-06-26T02:00Z",
+      "venue": "SoFi Stadium"
     },
     {
       "matchId": 53,
@@ -539,7 +551,9 @@
       "awayGoals": 4,
       "status": "finished",
       "winnerId": "FRA",
-      "minute": "90'+5'"
+      "minute": "90'+5'",
+      "kickoffUtc": "2026-06-26T19:00Z",
+      "venue": "Gillette Stadium"
     },
     {
       "matchId": 54,
@@ -549,7 +563,9 @@
       "awayGoals": 0,
       "status": "finished",
       "winnerId": "SEN",
-      "minute": "90'+6'"
+      "minute": "90'+6'",
+      "kickoffUtc": "2026-06-26T19:00Z",
+      "venue": "BMO Field"
     },
     {
       "matchId": 47,
@@ -559,7 +575,9 @@
       "awayGoals": 1,
       "status": "finished",
       "winnerId": "ESP",
-      "minute": "90'+6'"
+      "minute": "90'+6'",
+      "kickoffUtc": "2026-06-27T00:00Z",
+      "venue": "Estadio Akron"
     },
     {
       "matchId": 48,
@@ -569,7 +587,9 @@
       "awayGoals": 0,
       "status": "finished",
       "winnerId": null,
-      "minute": "90'+5'"
+      "minute": "90'+5'",
+      "kickoffUtc": "2026-06-27T00:00Z",
+      "venue": "NRG Stadium"
     },
     {
       "matchId": 41,
@@ -579,7 +599,9 @@
       "awayGoals": 1,
       "status": "finished",
       "winnerId": null,
-      "minute": "90'+9'"
+      "minute": "90'+9'",
+      "kickoffUtc": "2026-06-27T03:00Z",
+      "venue": "Lumen Field"
     },
     {
       "matchId": 42,
@@ -589,7 +611,9 @@
       "awayGoals": 5,
       "status": "finished",
       "winnerId": "BEL",
-      "minute": "90'+6'"
+      "minute": "90'+6'",
+      "kickoffUtc": "2026-06-27T03:00Z",
+      "venue": "BC Place"
     },
     {
       "matchId": 72,
@@ -599,7 +623,9 @@
       "awayGoals": 1,
       "status": "finished",
       "winnerId": "CRO",
-      "minute": "90'+8'"
+      "minute": "90'+8'",
+      "kickoffUtc": "2026-06-27T21:00Z",
+      "venue": "Lincoln Financial Field"
     },
     {
       "matchId": 71,
@@ -609,7 +635,9 @@
       "awayGoals": 2,
       "status": "finished",
       "winnerId": "ENG",
-      "minute": "90'+6'"
+      "minute": "90'+6'",
+      "kickoffUtc": "2026-06-27T21:00Z",
+      "venue": "MetLife Stadium"
     },
     {
       "matchId": 65,
@@ -619,7 +647,9 @@
       "awayGoals": 0,
       "status": "finished",
       "winnerId": null,
-      "minute": "90'+6'"
+      "minute": "90'+6'",
+      "kickoffUtc": "2026-06-27T23:30Z",
+      "venue": "Hard Rock Stadium"
     },
     {
       "matchId": 66,
@@ -629,7 +659,9 @@
       "awayGoals": 1,
       "status": "finished",
       "winnerId": "COD",
-      "minute": "90'+8'"
+      "minute": "90'+8'",
+      "kickoffUtc": "2026-06-27T23:30Z",
+      "venue": "Mercedes-Benz Stadium"
     },
     {
       "matchId": 59,
@@ -639,7 +671,9 @@
       "awayGoals": 3,
       "status": "finished",
       "winnerId": null,
-      "minute": "90'+7'"
+      "minute": "90'+7'",
+      "kickoffUtc": "2026-06-28T02:00Z",
+      "venue": "GEHA Field at Arrowhead Stadium"
     },
     {
       "matchId": 60,
@@ -649,7 +683,9 @@
       "awayGoals": 3,
       "status": "finished",
       "winnerId": "ARG",
-      "minute": "90'+6'"
+      "minute": "90'+6'",
+      "kickoffUtc": "2026-06-28T02:00Z",
+      "venue": "AT&T Stadium"
     },
     {
       "matchId": 78,
@@ -659,7 +695,9 @@
       "awayGoals": 2,
       "status": "finished",
       "winnerId": "NOR",
-      "minute": "90'+8'"
+      "minute": "90'+8'",
+      "kickoffUtc": "2026-06-30T17:00Z",
+      "venue": "AT&T Stadium"
     },
     {
       "matchId": 79,
@@ -667,9 +705,11 @@
       "awayId": "ECU",
       "homeGoals": 2,
       "awayGoals": 0,
-      "status": "live",
-      "winnerId": null,
-      "minute": "79'"
+      "status": "finished",
+      "winnerId": "MEX",
+      "minute": "90'+9'",
+      "kickoffUtc": "2026-07-01T02:00Z",
+      "venue": "Estadio Banorte"
     },
     {
       "matchId": 73,
@@ -679,7 +719,9 @@
       "awayGoals": 1,
       "status": "finished",
       "winnerId": "CAN",
-      "minute": "90'+6'"
+      "minute": "90'+6'",
+      "kickoffUtc": "2026-06-28T19:00Z",
+      "venue": "SoFi Stadium"
     },
     {
       "matchId": 76,
@@ -689,7 +731,9 @@
       "awayGoals": 1,
       "status": "finished",
       "winnerId": "BRA",
-      "minute": "90'+11'"
+      "minute": "90'+11'",
+      "kickoffUtc": "2026-06-29T17:00Z",
+      "venue": "NRG Stadium"
     },
     {
       "matchId": 74,
@@ -699,7 +743,11 @@
       "awayGoals": 1,
       "status": "finished",
       "winnerId": "PAR",
-      "minute": "120'"
+      "minute": "120'",
+      "kickoffUtc": "2026-06-29T20:30Z",
+      "venue": "Gillette Stadium",
+      "homePens": 3,
+      "awayPens": 4
     },
     {
       "matchId": 75,
@@ -709,7 +757,11 @@
       "awayGoals": 1,
       "status": "finished",
       "winnerId": "MAR",
-      "minute": "120'"
+      "minute": "120'",
+      "kickoffUtc": "2026-06-30T01:00Z",
+      "venue": "Estadio BBVA",
+      "homePens": 2,
+      "awayPens": 3
     },
     {
       "matchId": 77,
@@ -719,15 +771,21 @@
       "awayGoals": 0,
       "status": "finished",
       "winnerId": "FRA",
-      "minute": "90'+4'"
+      "minute": "90'+4'",
+      "kickoffUtc": "2026-06-30T21:00Z",
+      "venue": "MetLife Stadium"
     },
     {
       "matchId": 80,
       "homeId": "ENG",
       "awayId": "COD",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "status": "finished",
+      "winnerId": "ENG",
+      "minute": "90'+7'",
+      "kickoffUtc": "2026-07-01T16:00Z",
+      "venue": "Mercedes-Benz Stadium"
     },
     {
       "matchId": 82,
@@ -735,7 +793,9 @@
       "awayId": "SEN",
       "status": "scheduled",
       "homeGoals": null,
-      "awayGoals": null
+      "awayGoals": null,
+      "kickoffUtc": "2026-07-01T20:00Z",
+      "venue": "Lumen Field"
     },
     {
       "matchId": 81,
@@ -743,7 +803,9 @@
       "awayId": "BIH",
       "status": "scheduled",
       "homeGoals": null,
-      "awayGoals": null
+      "awayGoals": null,
+      "kickoffUtc": "2026-07-02T00:00Z",
+      "venue": "Levi's Stadium"
     },
     {
       "matchId": 84,
@@ -751,7 +813,9 @@
       "awayId": "AUT",
       "status": "scheduled",
       "homeGoals": null,
-      "awayGoals": null
+      "awayGoals": null,
+      "kickoffUtc": "2026-07-02T19:00Z",
+      "venue": "SoFi Stadium"
     },
     {
       "matchId": 83,
@@ -759,7 +823,9 @@
       "awayId": "CRO",
       "status": "scheduled",
       "homeGoals": null,
-      "awayGoals": null
+      "awayGoals": null,
+      "kickoffUtc": "2026-07-02T23:00Z",
+      "venue": "BMO Field"
     },
     {
       "matchId": 85,
@@ -767,7 +833,9 @@
       "awayId": "DZA",
       "status": "scheduled",
       "homeGoals": null,
-      "awayGoals": null
+      "awayGoals": null,
+      "kickoffUtc": "2026-07-03T03:00Z",
+      "venue": "BC Place"
     }
   ]
 }

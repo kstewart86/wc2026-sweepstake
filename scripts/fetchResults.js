@@ -79,16 +79,29 @@ function matchFixtureToResult(homeSlug, awaySlug, fixtures, koMatchups = []) {
 
 // Build a normalised result row. Group games keep the fixture's canonical
 // home/away orientation; knockout games take the feed's real teams as-is.
-function buildRow({ match, homeSlug, awaySlug, feedHome, feedAway, status, winnerId, minute }) {
-  if (match.ko) {
-    return { matchId: match.matchId, homeId: homeSlug, awayId: awaySlug, homeGoals: feedHome, awayGoals: feedAway, status, winnerId, minute };
-  }
-  const orient = homeSlug === match.fix.homeId;
-  return {
-    matchId: match.matchId, homeId: match.fix.homeId, awayId: match.fix.awayId,
-    homeGoals: orient ? feedHome : feedAway, awayGoals: orient ? feedAway : feedHome,
-    status, winnerId, minute,
+// `kickoffUtc`/`venue` come from the feed (authoritative schedule); shootout
+// scores are attached only for a genuine shootout (level score, different pens).
+function buildRow({ match, homeSlug, awaySlug, feedHome, feedAway, feedHomePens, feedAwayPens, status, winnerId, minute, kickoffUtc, venue }) {
+  const extra = {};
+  if (kickoffUtc) extra.kickoffUtc = kickoffUtc;
+  if (venue) extra.venue = venue;
+  const isShootout = feedHome != null && feedHome === feedAway
+    && feedHomePens != null && feedAwayPens != null && feedHomePens !== feedAwayPens;
+
+  const orient = match.ko ? true : homeSlug === match.fix.homeId;
+  const homeId = match.ko ? homeSlug : match.fix.homeId;
+  const awayId = match.ko ? awaySlug : match.fix.awayId;
+  const row = {
+    matchId: match.matchId, homeId, awayId,
+    homeGoals: orient ? feedHome : feedAway,
+    awayGoals: orient ? feedAway : feedHome,
+    status, winnerId, minute, ...extra,
   };
+  if (isShootout) {
+    row.homePens = orient ? feedHomePens : feedAwayPens;
+    row.awayPens = orient ? feedAwayPens : feedHomePens;
+  }
+  return row;
 }
 
 // ---------------------------------------------------------------------------
@@ -112,9 +125,13 @@ async function fetchFromFootballData(apiKey, fixtures, koMatchups) {
     const w = m.score?.winner; // HOME_TEAM | AWAY_TEAM | DRAW | null
     return buildRow({
       match, homeSlug, awaySlug, feedHome, feedAway,
+      feedHomePens: m.score?.penalties?.home ?? null,
+      feedAwayPens: m.score?.penalties?.away ?? null,
       status: statusMap[m.status] || 'scheduled',
       winnerId: w === 'HOME_TEAM' ? homeSlug : w === 'AWAY_TEAM' ? awaySlug : null,
       minute: m.minute || null,
+      kickoffUtc: m.utcDate || null,
+      venue: m.venue || null,
     });
   }).filter(Boolean);
 }
@@ -154,13 +171,19 @@ async function fetchFromESPN(fixtures, koMatchups) {
 
       const hg = parseInt(home.score, 10);
       const ag = parseInt(away.score, 10);
+      const hp = parseInt(home.shootoutScore, 10);
+      const ap = parseInt(away.shootoutScore, 10);
       results.push(buildRow({
         match, homeSlug, awaySlug,
         feedHome: isNaN(hg) ? null : hg,
         feedAway: isNaN(ag) ? null : ag,
+        feedHomePens: isNaN(hp) ? null : hp,
+        feedAwayPens: isNaN(ap) ? null : ap,
         status,
         winnerId: home.winner ? homeSlug : away.winner ? awaySlug : null,
         minute: comp.status?.displayClock || null,
+        kickoffUtc: event.date || null,
+        venue: comp.venue?.fullName || null,
       }));
     }
   }

@@ -608,6 +608,7 @@ function allDisplayMatches() {
       out.push({
         matchId: m.matchId, stage: rd.stage, group: null, venue: m.venue, kickoffUtc: m.kickoffUtc,
         homeId: m.homeId, awayId: m.awayId, homeGoals: m.homeGoals, awayGoals: m.awayGoals,
+        homePens: m.homePens, awayPens: m.awayPens,
         status: m.status, minute: getResult(m.matchId)?.minute ?? null, winnerId: m.winnerId,
       });
     }
@@ -665,6 +666,7 @@ function renderMatchCard(fix, teamToOwner) {
   // A finished knockout tie is decided by its winner (shootouts resolve a level
   // score), so tint by who advanced rather than by the 90-minute score.
   const shootout = fix.stage !== 'group' && finished && fix.winnerId && fix.homeGoals === fix.awayGoals;
+  const pensLabel = (shootout && fix.homePens != null) ? ` (${fix.homePens}–${fix.awayPens})` : '';
   let homeClass = 'match-side', awayClass = 'match-side away';
   if (finished && fix.stage !== 'group' && fix.winnerId) {
     if (fix.winnerId === fix.homeId) { homeClass += ' side-winning'; awayClass += ' side-losing'; }
@@ -681,7 +683,7 @@ function renderMatchCard(fix, teamToOwner) {
     centreStatus = `<div class="match-status live"><span class="live-pip"></span>${fix.minute || 'LIVE'}</div>`;
   } else if (finished) {
     centreScore  = `<div class="match-score">${fix.homeGoals}–${fix.awayGoals}</div>`;
-    centreStatus = `<div class="match-status">${shootout ? 'FT · pens' : 'FT'}</div>`;
+    centreStatus = `<div class="match-status">${shootout ? 'FT · pens' + pensLabel : 'FT'}</div>`;
   } else {
     const t = new Date(fix.kickoffUtc);
     centreScore  = `<div class="match-kickoff">${t.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false })}</div>`;
@@ -746,6 +748,7 @@ function renderBracketMatch(m, teamToOwner) {
 function renderBracketTeam(m, side, teamToOwner) {
   const tid   = side === 'home' ? m.homeId : m.awayId;
   const goals = side === 'home' ? m.homeGoals : m.awayGoals;
+  const pens  = side === 'home' ? m.homePens : m.awayPens;
   if (!tid) return `<div class="bm-team bm-team--tbd"><span class="bm-name">TBD</span></div>`;
 
   const name  = DATA.teams[tid]?.name || tid;
@@ -754,10 +757,13 @@ function renderBracketTeam(m, side, teamToOwner) {
   if (m.status === 'finished' && m.winnerId) cls += m.winnerId === tid ? ' bm-team--winner' : ' bm-team--loser';
   if (owner) cls += ' bm-team--owned';
 
+  const scoreHtml = goals != null
+    ? `<span class="bm-score">${goals}${pens != null ? `<span class="bm-pens">(${pens})</span>` : ''}</span>`
+    : '';
   return `
     <div class="${cls}">
       <span class="bm-name">${flag(tid)}<span class="bm-team-name">${name}</span>${owner ? `<span class="bm-owner">${owner}</span>` : ''}</span>
-      ${goals != null ? `<span class="bm-score">${goals}</span>` : ''}
+      ${scoreHtml}
     </div>`;
 }
 
@@ -776,6 +782,14 @@ function openDetail(participantId) {
   const prize3 = totalPot * 0.20;
 
   const ko = inKnockout();
+  // teamId → owner first name, for rivalry annotations ("beaten by Jeff's …").
+  const ownerOf = {};
+  for (const q of DATA.participants) for (const t of q.teams) ownerOf[t] = q.name;
+  const teamLabel = tid => {
+    const nm = DATA.teams[tid]?.name || tid;
+    return ownerOf[tid] ? `${ownerOf[tid]}'s ${nm}` : nm;
+  };
+
   let html = `<div class="detail-name">${p.name}</div>`;
   html += `<p class="detail-subtitle">Here's the full picture for ${p.name}. What's been played, what's still to come.</p>`;
 
@@ -839,10 +853,13 @@ function openDetail(participantId) {
       for (const { stage, m } of koMs) {
         const opp = m.homeId === teamId ? m.awayId : m.homeId;
         const oppName = opp ? (DATA.teams[opp]?.name || opp) : 'TBD';
+        const oppOwner = opp && ownerOf[opp] ? `<span class="detail-owner-tag">${ownerOf[opp]}</span>` : '';
+        const pens = (m.homePens != null && m.homeGoals === m.awayGoals)
+          ? ` (${m.homeId === teamId ? m.homePens : m.awayPens}–${m.homeId === teamId ? m.awayPens : m.homePens} pens)` : '';
         let resultHtml;
         if (m.status === 'finished') {
           const sc = m.homeId === teamId ? { f: m.homeGoals, a: m.awayGoals } : { f: m.awayGoals, a: m.homeGoals };
-          resultHtml = `${m.winnerId === teamId ? '✅' : '❌'} ${sc.f}–${sc.a}`;
+          resultHtml = `${m.winnerId === teamId ? '✅' : '❌'} ${sc.f}–${sc.a}${pens}`;
         } else if (m.status === 'live') {
           const sc = m.homeId === teamId ? { f: m.homeGoals, a: m.awayGoals } : { f: m.awayGoals, a: m.homeGoals };
           resultHtml = `<span class="live-pip"></span>${sc.f}–${sc.a}`;
@@ -851,11 +868,27 @@ function openDetail(participantId) {
         }
         html += `
           <div class="detail-fixture-row">
-            <div class="detail-fixture-teams">vs ${opp ? flag(opp) : ''}${oppName}
+            <div class="detail-fixture-teams">vs ${opp ? flag(opp) : ''}${oppName} ${oppOwner}
               <div class="detail-fixture-status">${STAGE_LABEL[stage]}</div>
             </div>
             <div class="detail-fixture-result">${resultHtml}</div>
           </div>`;
+      }
+
+      // Rivalry line: who knocked this team out (or who it's beaten so far).
+      if (k && k.eliminated) {
+        const exit = koMs.find(x => x.m.status === 'finished' && x.m.winnerId && x.m.winnerId !== teamId);
+        if (exit) {
+          const victor = exit.m.winnerId;
+          const pens = exit.m.homeGoals === exit.m.awayGoals ? ' on penalties' : '';
+          html += `<p class="detail-rivalry">❌ Knocked out by ${flag(victor)}${teamLabel(victor)} in the ${STAGE_LABEL[exit.stage]}${pens}.</p>`;
+        }
+      } else if (k && !k.champion) {
+        const beaten = koMs.filter(x => x.m.status === 'finished' && x.m.winnerId === teamId)
+          .map(x => x.m.homeId === teamId ? x.m.awayId : x.m.homeId).filter(t => ownerOf[t]);
+        if (beaten.length) {
+          html += `<p class="detail-rivalry">⚔️ Knocked out ${beaten.map(t => `${flag(t)}${teamLabel(t)}`).join(', ')}.</p>`;
+        }
       }
     }
   }
