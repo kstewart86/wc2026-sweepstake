@@ -459,7 +459,6 @@ function renderLeaderboard() {
     const gd  = prob?.currentGroupGd  ?? 0;
     const gf  = prob?.currentGroupGf  ?? 0;
     const gdStr = gd >= 0 ? '+' + gd : '' + gd;
-    const exp = prob?.expectedWinnings ?? 0;
 
     const currRank = p._rank;
     const prevRank = prevRankMap[p.id];
@@ -521,14 +520,8 @@ function renderLeaderboard() {
         </div>`;
     }
 
-    // Footer: expected payout (knockout) or PTS/GD/GF (group).
-    const footerHtml = ko ? `
-        <div class="card-footer">
-          <div class="card-footer-single">
-            <span class="ev-label">Expected payout</span>
-            <span class="ev-value">${fmtCurrency(exp)}</span>
-          </div>
-        </div>` : `
+    // Footer: PTS/GD/GF during the group stage; nothing extra in the knockouts.
+    const footerHtml = ko ? '' : `
         <div class="card-footer">
           <div class="card-footer-stats">
             <div class="footer-stat"><div class="group-pts-label">PTS</div><div class="group-pts-val">${pts}</div></div>
@@ -793,11 +786,11 @@ function openDetail(participantId) {
   let html = `<div class="detail-name">${p.name}</div>`;
   html += `<p class="detail-subtitle">Here's the full picture for ${p.name}. What's been played, what's still to come.</p>`;
 
-  // Prize odds + expected payout summary.
+  // Prize odds summary.
   if (prob) {
     const cells = ko
-      ? [['🥇 Wins Final', fmtPct(prob.pFinalWinner ?? 0)], ['🥈 Runner-up', fmtPct(prob.pRunnerUp ?? 0)], ['Expected payout', fmtCurrency(prob.expectedWinnings ?? 0)]]
-      : [['🏅 Group Prize', fmtPct(prob.pGroupPrize ?? 0)], ['🥇 Wins Final', fmtPct(prob.pFinalWinner ?? 0)], ['Expected payout', fmtCurrency(prob.expectedWinnings ?? 0)]];
+      ? [['🥇 Wins Final', fmtPct(prob.pFinalWinner ?? 0)], ['🥈 Runner-up', fmtPct(prob.pRunnerUp ?? 0)]]
+      : [['🏅 Group Prize', fmtPct(prob.pGroupPrize ?? 0)], ['🥇 Wins Final', fmtPct(prob.pFinalWinner ?? 0)]];
     html += `<div class="detail-odds">${cells.map(([l, v]) => `<div class="detail-odds-cell"><span class="detail-odds-label">${l}</span><span class="detail-odds-val">${v}</span></div>`).join('')}</div>`;
   }
 

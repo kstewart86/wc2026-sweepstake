@@ -781,11 +781,6 @@ h1 { display: flex; align-items: center; justify-content: center; }
 .team-chip--eliminated { opacity: .5; filter: grayscale(0.75); }
 .team-chip--eliminated .team-flag { filter: grayscale(1); }
 
-/* Expected-payout footer (knockout) */
-.card-footer-single { display: flex; align-items: center; justify-content: space-between; }
-.ev-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .5px; color: var(--text2); }
-.ev-value { font-size: 16px; font-weight: 900; color: var(--green); letter-spacing: -.3px; }
-
 /* Detail modal: odds strip, KO tags, run label */
 .detail-odds { display: flex; gap: 8px; margin: 14px 0 4px; }
 .detail-odds-cell {
