@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-02T20:58:13.555Z",
+  "updatedUtc": "2026-07-02T20:59:12.771Z",
   "matches": [
     {
       "matchId": 1,
@@ -817,8 +817,8 @@
       "awayId": "AUT",
       "homeGoals": 3,
       "awayGoals": 0,
-      "status": "live",
-      "winnerId": null,
+      "status": "finished",
+      "winnerId": "ESP",
       "minute": "90'+6'",
       "kickoffUtc": "2026-07-02T19:00Z",
       "venue": "SoFi Stadium"
