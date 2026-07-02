@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-01T22:00:22.723Z",
+  "updatedUtc": "2026-07-02T00:00:22.305Z",
   "matches": [
     {
       "matchId": 1,
@@ -838,6 +838,36 @@
       "awayGoals": null,
       "kickoffUtc": "2026-07-03T03:00Z",
       "venue": "BC Place"
+    },
+    {
+      "matchId": 88,
+      "homeId": "AUS",
+      "awayId": "EGY",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "kickoffUtc": "2026-07-03T18:00Z",
+      "venue": "AT&T Stadium"
+    },
+    {
+      "matchId": 86,
+      "homeId": "ARG",
+      "awayId": "CPV",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "kickoffUtc": "2026-07-03T22:00Z",
+      "venue": "Hard Rock Stadium"
+    },
+    {
+      "matchId": 87,
+      "homeId": "COL",
+      "awayId": "GHA",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "kickoffUtc": "2026-07-04T01:30Z",
+      "venue": "GEHA Field at Arrowhead Stadium"
     }
   ]
 }

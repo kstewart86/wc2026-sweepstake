@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-01T21:53:27.604Z",
+  "updatedUtc": "2026-07-02T00:00:32.698Z",
   "groupStageComplete": true,
   "currentStage": "r32",
   "rounds": [
@@ -185,8 +185,8 @@
           "awayPens": null,
           "status": "scheduled",
           "winnerId": null,
-          "kickoffUtc": "2026-07-05T22:00:00Z",
-          "venue": "TBD"
+          "kickoffUtc": "2026-07-03T22:00Z",
+          "venue": "Hard Rock Stadium"
         },
         {
           "matchId": 87,
@@ -198,8 +198,8 @@
           "awayPens": null,
           "status": "scheduled",
           "winnerId": null,
-          "kickoffUtc": "2026-07-06T19:00:00Z",
-          "venue": "TBD"
+          "kickoffUtc": "2026-07-04T01:30Z",
+          "venue": "GEHA Field at Arrowhead Stadium"
         },
         {
           "matchId": 88,
@@ -211,8 +211,8 @@
           "awayPens": null,
           "status": "scheduled",
           "winnerId": null,
-          "kickoffUtc": "2026-07-06T22:00:00Z",
-          "venue": "TBD"
+          "kickoffUtc": "2026-07-03T18:00Z",
+          "venue": "AT&T Stadium"
         }
       ]
     },
