@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-02T00:00:22.305Z",
+  "updatedUtc": "2026-07-02T00:02:16.943Z",
   "matches": [
     {
       "matchId": 1,
@@ -803,9 +803,11 @@
       "matchId": 81,
       "homeId": "USA",
       "awayId": "BIH",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "status": "live",
+      "winnerId": null,
+      "minute": "1'",
       "kickoffUtc": "2026-07-02T00:00Z",
       "venue": "Levi's Stadium"
     },
