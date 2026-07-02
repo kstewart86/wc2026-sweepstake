@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-02T01:49:21.171Z",
+  "updatedUtc": "2026-07-02T02:07:23.396Z",
   "groupStageComplete": true,
   "currentStage": "r32",
   "rounds": [
@@ -118,8 +118,8 @@
           "awayGoals": 0,
           "homePens": null,
           "awayPens": null,
-          "status": "live",
-          "winnerId": null,
+          "status": "finished",
+          "winnerId": "USA",
           "kickoffUtc": "2026-07-02T00:00Z",
           "venue": "Levi's Stadium"
         },
@@ -273,7 +273,7 @@
         },
         {
           "matchId": 93,
-          "homeId": null,
+          "homeId": "USA",
           "awayId": null,
           "homeGoals": null,
           "awayGoals": null,
