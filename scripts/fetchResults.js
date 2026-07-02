@@ -164,10 +164,13 @@ async function fetchFromESPN(fixtures, koMatchups) {
       const match = matchFixtureToResult(homeSlug, awaySlug, fixtures, koMatchups);
       if (!match) continue;
 
-      const stateType = comp.status?.type?.name || '';
+      // Use ESPN's state ('pre' | 'in' | 'post') and completed flag rather than
+      // enumerating every status name — this covers finals decided in extra time
+      // (STATUS_FINAL_AET) or on penalties (STATUS_FINAL_PEN) without a bespoke case.
+      const type = comp.status?.type || {};
       let status = 'scheduled';
-      if (['STATUS_FINAL', 'STATUS_FULL_TIME', 'STATUS_FULL_PEN', 'STATUS_FINAL_PEN', 'STATUS_POSTPONED'].includes(stateType)) status = 'finished';
-      else if (['STATUS_IN_PROGRESS', 'STATUS_HALFTIME', 'STATUS_FIRST_HALF', 'STATUS_SECOND_HALF', 'STATUS_EXTRA_TIME', 'STATUS_PENALTY'].includes(stateType)) status = 'live';
+      if (type.completed || type.state === 'post') status = 'finished';
+      else if (type.state === 'in') status = 'live';
 
       const hg = parseInt(home.score, 10);
       const ag = parseInt(away.score, 10);
