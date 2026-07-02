@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-02T20:59:23.406Z",
+  "updatedUtc": "2026-07-02T23:01:23.547Z",
   "groupStageComplete": true,
   "currentStage": "r32",
   "rounds": [
@@ -140,11 +140,11 @@
           "matchId": 83,
           "homeId": "POR",
           "awayId": "CRO",
-          "homeGoals": null,
-          "awayGoals": null,
+          "homeGoals": 0,
+          "awayGoals": 0,
           "homePens": null,
           "awayPens": null,
-          "status": "scheduled",
+          "status": "live",
           "winnerId": null,
           "kickoffUtc": "2026-07-02T23:00Z",
           "venue": "BMO Field"
