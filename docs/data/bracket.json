@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-03T20:55:23.252Z",
+  "updatedUtc": "2026-07-03T20:57:22.367Z",
   "groupStageComplete": true,
   "currentStage": "r32",
   "rounds": [
@@ -209,8 +209,8 @@
           "awayGoals": 1,
           "homePens": 2,
           "awayPens": 4,
-          "status": "live",
-          "winnerId": null,
+          "status": "finished",
+          "winnerId": "EGY",
           "kickoffUtc": "2026-07-03T18:00Z",
           "venue": "AT&T Stadium"
         }
@@ -313,7 +313,7 @@
         {
           "matchId": 96,
           "homeId": null,
-          "awayId": null,
+          "awayId": "EGY",
           "homeGoals": null,
           "awayGoals": null,
           "homePens": null,
