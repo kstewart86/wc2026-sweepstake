@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-03T00:00:23.884Z",
+  "updatedUtc": "2026-07-03T00:01:13.610Z",
   "matches": [
     {
       "matchId": 1,
@@ -884,6 +884,16 @@
       "awayGoals": null,
       "kickoffUtc": "2026-07-04T21:00Z",
       "venue": "Lincoln Financial Field"
+    },
+    {
+      "matchId": 90,
+      "homeId": "CAN",
+      "awayId": "MAR",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "kickoffUtc": "2026-07-04T17:00Z",
+      "venue": "NRG Stadium"
     }
   ]
 }

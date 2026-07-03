@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-03T00:00:34.939Z",
+  "updatedUtc": "2026-07-03T00:01:24.394Z",
   "groupStageComplete": true,
   "currentStage": "r32",
   "rounds": [
@@ -234,16 +234,16 @@
         },
         {
           "matchId": 90,
-          "homeId": "MAR",
-          "awayId": "BRA",
+          "homeId": "CAN",
+          "awayId": "MAR",
           "homeGoals": null,
           "awayGoals": null,
           "homePens": null,
           "awayPens": null,
           "status": "scheduled",
           "winnerId": null,
-          "kickoffUtc": "2026-07-08T22:00:00Z",
-          "venue": "TBD"
+          "kickoffUtc": "2026-07-04T17:00Z",
+          "venue": "NRG Stadium"
         },
         {
           "matchId": 91,
