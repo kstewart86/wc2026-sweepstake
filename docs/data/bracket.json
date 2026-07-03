@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-02T23:01:23.547Z",
+  "updatedUtc": "2026-07-03T00:00:34.939Z",
   "groupStageComplete": true,
   "currentStage": "r32",
   "rounds": [
@@ -221,16 +221,16 @@
       "matches": [
         {
           "matchId": 89,
-          "homeId": "CAN",
-          "awayId": "PAR",
+          "homeId": "PAR",
+          "awayId": "FRA",
           "homeGoals": null,
           "awayGoals": null,
           "homePens": null,
           "awayPens": null,
           "status": "scheduled",
           "winnerId": null,
-          "kickoffUtc": "2026-07-08T19:00:00Z",
-          "venue": "TBD"
+          "kickoffUtc": "2026-07-04T21:00Z",
+          "venue": "Lincoln Financial Field"
         },
         {
           "matchId": 90,

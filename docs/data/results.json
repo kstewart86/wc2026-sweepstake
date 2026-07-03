@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-02T23:50:19.930Z",
+  "updatedUtc": "2026-07-03T00:00:23.884Z",
   "matches": [
     {
       "matchId": 1,
@@ -874,6 +874,16 @@
       "awayGoals": null,
       "kickoffUtc": "2026-07-04T01:30Z",
       "venue": "GEHA Field at Arrowhead Stadium"
+    },
+    {
+      "matchId": 89,
+      "homeId": "PAR",
+      "awayId": "FRA",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "kickoffUtc": "2026-07-04T21:00Z",
+      "venue": "Lincoln Financial Field"
     }
   ]
 }
