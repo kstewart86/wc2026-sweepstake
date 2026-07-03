@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-03T01:07:21.623Z",
+  "updatedUtc": "2026-07-03T01:11:24.750Z",
   "groupStageComplete": true,
   "currentStage": "r32",
   "rounds": [
@@ -144,8 +144,8 @@
           "awayGoals": 1,
           "homePens": null,
           "awayPens": null,
-          "status": "live",
-          "winnerId": null,
+          "status": "finished",
+          "winnerId": "POR",
           "kickoffUtc": "2026-07-02T23:00Z",
           "venue": "BMO Field"
         },
@@ -286,7 +286,7 @@
         },
         {
           "matchId": 94,
-          "homeId": null,
+          "homeId": "POR",
           "awayId": "ESP",
           "homeGoals": null,
           "awayGoals": null,

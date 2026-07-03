@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-03T01:10:21.201Z",
+  "updatedUtc": "2026-07-03T01:11:13.658Z",
   "matches": [
     {
       "matchId": 1,
@@ -829,9 +829,9 @@
       "awayId": "CRO",
       "homeGoals": 2,
       "awayGoals": 1,
-      "status": "live",
-      "winnerId": null,
-      "minute": "90'+17'",
+      "status": "finished",
+      "winnerId": "POR",
+      "minute": "90'+19'",
       "kickoffUtc": "2026-07-02T23:00Z",
       "venue": "BMO Field"
     },
