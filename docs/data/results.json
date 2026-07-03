@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-03T04:58:10.848Z",
+  "updatedUtc": "2026-07-03T18:01:18.057Z",
   "matches": [
     {
       "matchId": 1,
@@ -851,9 +851,11 @@
       "matchId": 88,
       "homeId": "AUS",
       "awayId": "EGY",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "status": "live",
+      "winnerId": null,
+      "minute": "1'",
       "kickoffUtc": "2026-07-03T18:00Z",
       "venue": "AT&T Stadium"
     },

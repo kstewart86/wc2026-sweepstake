@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-03T04:58:21.733Z",
+  "updatedUtc": "2026-07-03T18:01:28.549Z",
   "groupStageComplete": true,
   "currentStage": "r32",
   "rounds": [
@@ -205,11 +205,11 @@
           "matchId": 88,
           "homeId": "AUS",
           "awayId": "EGY",
-          "homeGoals": null,
-          "awayGoals": null,
+          "homeGoals": 0,
+          "awayGoals": 0,
           "homePens": null,
           "awayPens": null,
-          "status": "scheduled",
+          "status": "live",
           "winnerId": null,
           "kickoffUtc": "2026-07-03T18:00Z",
           "venue": "AT&T Stadium"
