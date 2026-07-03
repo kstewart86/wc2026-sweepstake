@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-03T19:20:31.881Z",
+  "updatedUtc": "2026-07-03T20:55:23.252Z",
   "groupStageComplete": true,
   "currentStage": "r32",
   "rounds": [
@@ -207,8 +207,8 @@
           "awayId": "EGY",
           "homeGoals": 1,
           "awayGoals": 1,
-          "homePens": null,
-          "awayPens": null,
+          "homePens": 2,
+          "awayPens": 4,
           "status": "live",
           "winnerId": null,
           "kickoffUtc": "2026-07-03T18:00Z",

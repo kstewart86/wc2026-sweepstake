@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-03T20:39:10.692Z",
+  "updatedUtc": "2026-07-03T20:55:12.797Z",
   "matches": [
     {
       "matchId": 1,
@@ -855,9 +855,11 @@
       "awayGoals": 1,
       "status": "live",
       "winnerId": null,
-      "minute": "120'+2'",
+      "minute": "120'",
       "kickoffUtc": "2026-07-03T18:00Z",
-      "venue": "AT&T Stadium"
+      "venue": "AT&T Stadium",
+      "homePens": 2,
+      "awayPens": 4
     },
     {
       "matchId": 86,
