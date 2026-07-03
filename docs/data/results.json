@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-03T01:11:13.658Z",
+  "updatedUtc": "2026-07-03T03:01:11.381Z",
   "matches": [
     {
       "matchId": 1,
@@ -839,9 +839,11 @@
       "matchId": 85,
       "homeId": "SUI",
       "awayId": "DZA",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "status": "live",
+      "winnerId": null,
+      "minute": "1'",
       "kickoffUtc": "2026-07-03T03:00Z",
       "venue": "BC Place"
     },

@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-03T01:11:24.750Z",
+  "updatedUtc": "2026-07-03T03:01:22.362Z",
   "groupStageComplete": true,
   "currentStage": "r32",
   "rounds": [
@@ -166,11 +166,11 @@
           "matchId": 85,
           "homeId": "SUI",
           "awayId": "DZA",
-          "homeGoals": null,
-          "awayGoals": null,
+          "homeGoals": 0,
+          "awayGoals": 0,
           "homePens": null,
           "awayPens": null,
-          "status": "scheduled",
+          "status": "live",
           "winnerId": null,
           "kickoffUtc": "2026-07-03T03:00Z",
           "venue": "BC Place"
