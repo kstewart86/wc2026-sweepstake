@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-04T19:03:12.424Z",
+  "updatedUtc": "2026-07-04T19:05:14.915Z",
   "matches": [
     {
       "matchId": 1,
@@ -901,8 +901,8 @@
       "awayId": "MAR",
       "homeGoals": 0,
       "awayGoals": 3,
-      "status": "live",
-      "winnerId": null,
+      "status": "finished",
+      "winnerId": "MAR",
       "minute": "90'+9'",
       "kickoffUtc": "2026-07-04T17:00Z",
       "venue": "NRG Stadium"

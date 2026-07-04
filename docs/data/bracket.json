@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-04T19:03:23.015Z",
+  "updatedUtc": "2026-07-04T19:05:25.268Z",
   "groupStageComplete": true,
   "currentStage": "r16",
   "rounds": [
@@ -240,8 +240,8 @@
           "awayGoals": 3,
           "homePens": null,
           "awayPens": null,
-          "status": "live",
-          "winnerId": null,
+          "status": "finished",
+          "winnerId": "MAR",
           "kickoffUtc": "2026-07-04T17:00Z",
           "venue": "NRG Stadium"
         },
@@ -331,7 +331,7 @@
         {
           "matchId": 97,
           "homeId": null,
-          "awayId": null,
+          "awayId": "MAR",
           "homeGoals": null,
           "awayGoals": null,
           "homePens": null,
