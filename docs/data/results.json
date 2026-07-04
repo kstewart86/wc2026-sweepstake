@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-04T00:45:13.931Z",
+  "updatedUtc": "2026-07-04T01:31:11.485Z",
   "matches": [
     {
       "matchId": 1,
@@ -877,9 +877,11 @@
       "matchId": 87,
       "homeId": "COL",
       "awayId": "GHA",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "status": "live",
+      "winnerId": null,
+      "minute": "1'",
       "kickoffUtc": "2026-07-04T01:30Z",
       "venue": "GEHA Field at Arrowhead Stadium"
     },
