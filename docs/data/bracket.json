@@ -1,7 +1,7 @@
 {
-  "updatedUtc": "2026-07-04T01:45:24.532Z",
+  "updatedUtc": "2026-07-04T03:33:21.368Z",
   "groupStageComplete": true,
-  "currentStage": "r32",
+  "currentStage": "r16",
   "rounds": [
     {
       "stage": "r32",
@@ -196,8 +196,8 @@
           "awayGoals": 0,
           "homePens": null,
           "awayPens": null,
-          "status": "live",
-          "winnerId": null,
+          "status": "finished",
+          "winnerId": "COL",
           "kickoffUtc": "2026-07-04T01:30Z",
           "venue": "GEHA Field at Arrowhead Stadium"
         },
@@ -312,7 +312,7 @@
         },
         {
           "matchId": 96,
-          "homeId": null,
+          "homeId": "COL",
           "awayId": "EGY",
           "homeGoals": null,
           "awayGoals": null,
