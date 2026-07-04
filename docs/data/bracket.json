@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-04T19:05:25.268Z",
+  "updatedUtc": "2026-07-04T21:05:24.637Z",
   "groupStageComplete": true,
   "currentStage": "r16",
   "rounds": [
@@ -223,11 +223,11 @@
           "matchId": 89,
           "homeId": "PAR",
           "awayId": "FRA",
-          "homeGoals": null,
-          "awayGoals": null,
+          "homeGoals": 0,
+          "awayGoals": 0,
           "homePens": null,
           "awayPens": null,
-          "status": "scheduled",
+          "status": "live",
           "winnerId": null,
           "kickoffUtc": "2026-07-04T21:00Z",
           "venue": "Lincoln Financial Field"
