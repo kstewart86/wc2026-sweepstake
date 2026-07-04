@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-04T22:34:24.941Z",
+  "updatedUtc": "2026-07-04T23:05:24.918Z",
   "groupStageComplete": true,
   "currentStage": "r16",
   "rounds": [
@@ -227,8 +227,8 @@
           "awayGoals": 1,
           "homePens": null,
           "awayPens": null,
-          "status": "live",
-          "winnerId": null,
+          "status": "finished",
+          "winnerId": "FRA",
           "kickoffUtc": "2026-07-04T21:00Z",
           "venue": "Lincoln Financial Field"
         },
@@ -330,7 +330,7 @@
       "matches": [
         {
           "matchId": 97,
-          "homeId": null,
+          "homeId": "FRA",
           "awayId": "MAR",
           "homeGoals": null,
           "awayGoals": null,

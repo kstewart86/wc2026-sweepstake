@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-04T23:04:10.610Z",
+  "updatedUtc": "2026-07-04T23:05:13.932Z",
   "matches": [
     {
       "matchId": 1,
@@ -891,9 +891,9 @@
       "awayId": "FRA",
       "homeGoals": 0,
       "awayGoals": 1,
-      "status": "live",
-      "winnerId": null,
-      "minute": "90'+10'",
+      "status": "finished",
+      "winnerId": "FRA",
+      "minute": "90'+11'",
       "kickoffUtc": "2026-07-04T21:00Z",
       "venue": "Lincoln Financial Field"
     },
