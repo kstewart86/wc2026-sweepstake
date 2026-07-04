@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-03T23:59:10.429Z",
+  "updatedUtc": "2026-07-04T00:00:22.522Z",
   "matches": [
     {
       "matchId": 1,
@@ -902,6 +902,26 @@
       "awayGoals": null,
       "kickoffUtc": "2026-07-04T17:00Z",
       "venue": "NRG Stadium"
+    },
+    {
+      "matchId": 91,
+      "homeId": "BRA",
+      "awayId": "NOR",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "kickoffUtc": "2026-07-05T20:00Z",
+      "venue": "MetLife Stadium"
+    },
+    {
+      "matchId": 92,
+      "homeId": "MEX",
+      "awayId": "ENG",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "kickoffUtc": "2026-07-06T00:00Z",
+      "venue": "Estadio Banorte"
     }
   ]
 }
