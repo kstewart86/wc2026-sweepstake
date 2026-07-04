@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-04T03:33:21.368Z",
+  "updatedUtc": "2026-07-04T17:02:25.582Z",
   "groupStageComplete": true,
   "currentStage": "r16",
   "rounds": [
@@ -236,11 +236,11 @@
           "matchId": 90,
           "homeId": "CAN",
           "awayId": "MAR",
-          "homeGoals": null,
-          "awayGoals": null,
+          "homeGoals": 0,
+          "awayGoals": 0,
           "homePens": null,
           "awayPens": null,
-          "status": "scheduled",
+          "status": "live",
           "winnerId": null,
           "kickoffUtc": "2026-07-04T17:00Z",
           "venue": "NRG Stadium"
