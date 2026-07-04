@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-04T00:33:24.772Z",
+  "updatedUtc": "2026-07-04T00:45:24.969Z",
   "groupStageComplete": true,
   "currentStage": "r32",
   "rounds": [
@@ -183,8 +183,8 @@
           "awayGoals": 2,
           "homePens": null,
           "awayPens": null,
-          "status": "live",
-          "winnerId": null,
+          "status": "finished",
+          "winnerId": "ARG",
           "kickoffUtc": "2026-07-03T22:00Z",
           "venue": "Hard Rock Stadium"
         },
@@ -300,7 +300,7 @@
         {
           "matchId": 95,
           "homeId": "SUI",
-          "awayId": null,
+          "awayId": "ARG",
           "homeGoals": null,
           "awayGoals": null,
           "homePens": null,

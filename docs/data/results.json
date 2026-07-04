@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-04T00:44:11.707Z",
+  "updatedUtc": "2026-07-04T00:45:13.931Z",
   "matches": [
     {
       "matchId": 1,
@@ -867,8 +867,8 @@
       "awayId": "CPV",
       "homeGoals": 3,
       "awayGoals": 2,
-      "status": "live",
-      "winnerId": null,
+      "status": "finished",
+      "winnerId": "ARG",
       "minute": "120'+3'",
       "kickoffUtc": "2026-07-03T22:00Z",
       "venue": "Hard Rock Stadium"
