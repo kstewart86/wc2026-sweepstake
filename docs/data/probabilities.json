@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-05T08:31:21.636Z",
+  "updatedUtc": "2026-07-05T08:32:24.903Z",
   "simulations": 20000,
   "pot": {
     "total": 285,
@@ -70,10 +70,10 @@
     },
     {
       "id": "eleanor-fisher",
-      "pFinalWinner": 0.0046,
-      "pRunnerUp": 0.0198,
+      "pFinalWinner": 0.0042,
+      "pRunnerUp": 0.0177,
       "pGroupPrize": 1,
-      "expectedWinnings": 59.35,
+      "expectedWinnings": 59.12,
       "currentGroupPts": 13,
       "currentGroupGd": 7,
       "currentGroupGf": 12
@@ -90,8 +90,8 @@
     },
     {
       "id": "giji-alex",
-      "pFinalWinner": 0.0191,
-      "pRunnerUp": 0.0357,
+      "pFinalWinner": 0.0189,
+      "pRunnerUp": 0.0359,
       "pGroupPrize": 0,
       "expectedWinnings": 5.76,
       "currentGroupPts": 5,
@@ -100,10 +100,10 @@
     },
     {
       "id": "james-brewer",
-      "pFinalWinner": 0.0014,
-      "pRunnerUp": 0.0092,
+      "pFinalWinner": 0.0015,
+      "pRunnerUp": 0.0085,
       "pGroupPrize": 0,
-      "expectedWinnings": 0.99,
+      "expectedWinnings": 0.94,
       "currentGroupPts": 13,
       "currentGroupGd": 6,
       "currentGroupGf": 8
@@ -111,29 +111,29 @@
     {
       "id": "jason-robinson",
       "pFinalWinner": 0.0053,
-      "pRunnerUp": 0.0158,
+      "pRunnerUp": 0.017,
       "pGroupPrize": 0,
-      "expectedWinnings": 2.11,
+      "expectedWinnings": 2.21,
       "currentGroupPts": 11,
       "currentGroupGd": 4,
       "currentGroupGf": 13
     },
     {
       "id": "jeffrey-stower",
-      "pFinalWinner": 0.1265,
-      "pRunnerUp": 0.2622,
+      "pFinalWinner": 0.1258,
+      "pRunnerUp": 0.2561,
       "pGroupPrize": 0,
-      "expectedWinnings": 40.45,
+      "expectedWinnings": 39.83,
       "currentGroupPts": 11,
       "currentGroupGd": 4,
       "currentGroupGf": 9
     },
     {
       "id": "jemma-green",
-      "pFinalWinner": 0.0274,
+      "pFinalWinner": 0.0264,
       "pRunnerUp": 0.0364,
       "pGroupPrize": 0,
-      "expectedWinnings": 7.01,
+      "expectedWinnings": 6.87,
       "currentGroupPts": 11,
       "currentGroupGd": 7,
       "currentGroupGf": 10
@@ -141,59 +141,59 @@
     {
       "id": "kirsten-walmsley",
       "pFinalWinner": 0.0001,
-      "pRunnerUp": 0.0039,
+      "pRunnerUp": 0.0034,
       "pGroupPrize": 0,
-      "expectedWinnings": 0.35,
+      "expectedWinnings": 0.3,
       "currentGroupPts": 11,
       "currentGroupGd": 2,
       "currentGroupGf": 11
     },
     {
       "id": "kyle-stewart",
-      "pFinalWinner": 0.08,
-      "pRunnerUp": 0.1375,
+      "pFinalWinner": 0.0874,
+      "pRunnerUp": 0.1399,
       "pGroupPrize": 0,
-      "expectedWinnings": 23.16,
+      "expectedWinnings": 24.42,
       "currentGroupPts": 7,
       "currentGroupGd": -6,
       "currentGroupGf": 8
     },
     {
       "id": "neema-griffin",
-      "pFinalWinner": 0.2569,
-      "pRunnerUp": 0.1148,
+      "pFinalWinner": 0.2537,
+      "pRunnerUp": 0.1172,
       "pGroupPrize": 0,
-      "expectedWinnings": 46.43,
+      "expectedWinnings": 46.18,
       "currentGroupPts": 10,
       "currentGroupGd": 4,
       "currentGroupGf": 7
     },
     {
       "id": "sam-story",
-      "pFinalWinner": 0.1693,
-      "pRunnerUp": 0.2077,
+      "pFinalWinner": 0.1696,
+      "pRunnerUp": 0.2056,
       "pGroupPrize": 0,
-      "expectedWinnings": 41.88,
+      "expectedWinnings": 41.76,
       "currentGroupPts": 13,
       "currentGroupGd": 6,
       "currentGroupGf": 15
     },
     {
       "id": "xaria-deosaran",
-      "pFinalWinner": 0.309,
-      "pRunnerUp": 0.1542,
+      "pFinalWinner": 0.3068,
+      "pRunnerUp": 0.1593,
       "pGroupPrize": 0,
-      "expectedWinnings": 57.21,
+      "expectedWinnings": 57.34,
       "currentGroupPts": 12,
       "currentGroupGd": 4,
       "currentGroupGf": 9
     },
     {
       "id": "hannah-penketh",
-      "pFinalWinner": 0.0003,
+      "pFinalWinner": 0.0001,
       "pRunnerUp": 0.0019,
       "pGroupPrize": 0,
-      "expectedWinnings": 0.19,
+      "expectedWinnings": 0.18,
       "currentGroupPts": 10,
       "currentGroupGd": 6,
       "currentGroupGf": 16
