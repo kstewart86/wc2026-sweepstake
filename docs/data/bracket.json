@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-05T22:03:25.050Z",
+  "updatedUtc": "2026-07-05T22:05:30.822Z",
   "groupStageComplete": true,
   "currentStage": "r16",
   "rounds": [
@@ -253,8 +253,8 @@
           "awayGoals": 2,
           "homePens": null,
           "awayPens": null,
-          "status": "live",
-          "winnerId": null,
+          "status": "finished",
+          "winnerId": "NOR",
           "kickoffUtc": "2026-07-05T20:00Z",
           "venue": "MetLife Stadium"
         },
@@ -343,7 +343,7 @@
         },
         {
           "matchId": 98,
-          "homeId": null,
+          "homeId": "NOR",
           "awayId": null,
           "homeGoals": null,
           "awayGoals": null,

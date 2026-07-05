@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-05T22:04:15.560Z",
+  "updatedUtc": "2026-07-05T22:05:20.271Z",
   "matches": [
     {
       "matchId": 1,
@@ -915,8 +915,8 @@
       "awayId": "NOR",
       "homeGoals": 1,
       "awayGoals": 2,
-      "status": "live",
-      "winnerId": null,
+      "status": "finished",
+      "winnerId": "NOR",
       "minute": "90'+11'",
       "kickoffUtc": "2026-07-05T20:00Z",
       "venue": "MetLife Stadium"
