@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-04T23:05:13.932Z",
+  "updatedUtc": "2026-07-05T00:00:27.381Z",
   "matches": [
     {
       "matchId": 1,
@@ -928,6 +928,26 @@
       "awayGoals": null,
       "kickoffUtc": "2026-07-06T00:00Z",
       "venue": "Estadio Banorte"
+    },
+    {
+      "matchId": 94,
+      "homeId": "POR",
+      "awayId": "ESP",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "kickoffUtc": "2026-07-06T19:00Z",
+      "venue": "AT&T Stadium"
+    },
+    {
+      "matchId": 93,
+      "homeId": "USA",
+      "awayId": "BEL",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "kickoffUtc": "2026-07-07T00:00Z",
+      "venue": "Lumen Field"
     }
   ]
 }
