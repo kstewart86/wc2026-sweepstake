@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-05T00:00:38.423Z",
+  "updatedUtc": "2026-07-05T20:01:21.710Z",
   "groupStageComplete": true,
   "currentStage": "r16",
   "rounds": [
@@ -249,11 +249,11 @@
           "matchId": 91,
           "homeId": "BRA",
           "awayId": "NOR",
-          "homeGoals": null,
-          "awayGoals": null,
+          "homeGoals": 0,
+          "awayGoals": 0,
           "homePens": null,
           "awayPens": null,
-          "status": "scheduled",
+          "status": "live",
           "winnerId": null,
           "kickoffUtc": "2026-07-05T20:00Z",
           "venue": "MetLife Stadium"

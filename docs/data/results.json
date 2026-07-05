@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-05T00:00:27.381Z",
+  "updatedUtc": "2026-07-05T20:01:10.919Z",
   "matches": [
     {
       "matchId": 1,
@@ -913,9 +913,11 @@
       "matchId": 91,
       "homeId": "BRA",
       "awayId": "NOR",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "status": "live",
+      "winnerId": null,
+      "minute": "1'",
       "kickoffUtc": "2026-07-05T20:00Z",
       "venue": "MetLife Stadium"
     },
