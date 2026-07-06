@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-06T00:01:13.708Z",
+  "updatedUtc": "2026-07-06T01:01:19.231Z",
   "matches": [
     {
       "matchId": 1,
@@ -925,9 +925,11 @@
       "matchId": 92,
       "homeId": "MEX",
       "awayId": "ENG",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "status": "live",
+      "winnerId": null,
+      "minute": "1'",
       "kickoffUtc": "2026-07-06T01:00Z",
       "venue": "Estadio Banorte"
     },

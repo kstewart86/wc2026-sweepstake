@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-06T00:01:25.035Z",
+  "updatedUtc": "2026-07-06T01:01:29.900Z",
   "groupStageComplete": true,
   "currentStage": "r16",
   "rounds": [
@@ -262,11 +262,11 @@
           "matchId": 92,
           "homeId": "MEX",
           "awayId": "ENG",
-          "homeGoals": null,
-          "awayGoals": null,
+          "homeGoals": 0,
+          "awayGoals": 0,
           "homePens": null,
           "awayPens": null,
-          "status": "scheduled",
+          "status": "live",
           "winnerId": null,
           "kickoffUtc": "2026-07-06T01:00Z",
           "venue": "Estadio Banorte"
