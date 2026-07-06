@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-06T03:06:21.602Z",
+  "updatedUtc": "2026-07-06T19:02:25.214Z",
   "groupStageComplete": true,
   "currentStage": "r16",
   "rounds": [
@@ -288,11 +288,11 @@
           "matchId": 94,
           "homeId": "POR",
           "awayId": "ESP",
-          "homeGoals": null,
-          "awayGoals": null,
+          "homeGoals": 0,
+          "awayGoals": 0,
           "homePens": null,
           "awayPens": null,
-          "status": "scheduled",
+          "status": "live",
           "winnerId": null,
           "kickoffUtc": "2026-07-06T19:00Z",
           "venue": "AT&T Stadium"
