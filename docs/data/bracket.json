@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-06T00:00:39.446Z",
+  "updatedUtc": "2026-07-06T00:01:25.035Z",
   "groupStageComplete": true,
   "currentStage": "r16",
   "rounds": [
@@ -312,7 +312,7 @@
         },
         {
           "matchId": 96,
-          "homeId": "COL",
+          "homeId": "ARG",
           "awayId": "EGY",
           "homeGoals": null,
           "awayGoals": null,
@@ -320,8 +320,8 @@
           "awayPens": null,
           "status": "scheduled",
           "winnerId": null,
-          "kickoffUtc": "2026-07-11T22:00:00Z",
-          "venue": "TBD"
+          "kickoffUtc": "2026-07-07T16:00Z",
+          "venue": "Mercedes-Benz Stadium"
         }
       ]
     },

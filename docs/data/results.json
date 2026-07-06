@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-06T00:00:28.866Z",
+  "updatedUtc": "2026-07-06T00:01:13.708Z",
   "matches": [
     {
       "matchId": 1,
@@ -960,6 +960,16 @@
       "awayGoals": null,
       "kickoffUtc": "2026-07-07T20:00Z",
       "venue": "BC Place"
+    },
+    {
+      "matchId": 96,
+      "homeId": "ARG",
+      "awayId": "EGY",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "kickoffUtc": "2026-07-07T16:00Z",
+      "venue": "Mercedes-Benz Stadium"
     }
   ]
 }
