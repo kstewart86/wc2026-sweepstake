@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-05T23:19:11.625Z",
+  "updatedUtc": "2026-07-06T00:00:28.866Z",
   "matches": [
     {
       "matchId": 1,
@@ -950,6 +950,16 @@
       "awayGoals": null,
       "kickoffUtc": "2026-07-07T00:00Z",
       "venue": "Lumen Field"
+    },
+    {
+      "matchId": 95,
+      "homeId": "SUI",
+      "awayId": "COL",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "kickoffUtc": "2026-07-07T20:00Z",
+      "venue": "BC Place"
     }
   ]
 }
