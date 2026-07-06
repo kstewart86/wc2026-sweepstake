@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-06T02:32:22.383Z",
+  "updatedUtc": "2026-07-06T03:06:21.602Z",
   "groupStageComplete": true,
   "currentStage": "r16",
   "rounds": [
@@ -266,8 +266,8 @@
           "awayGoals": 3,
           "homePens": null,
           "awayPens": null,
-          "status": "live",
-          "winnerId": null,
+          "status": "finished",
+          "winnerId": "ENG",
           "kickoffUtc": "2026-07-06T01:00Z",
           "venue": "Estadio Banorte"
         },
@@ -344,7 +344,7 @@
         {
           "matchId": 98,
           "homeId": "NOR",
-          "awayId": null,
+          "awayId": "ENG",
           "homeGoals": null,
           "awayGoals": null,
           "homePens": null,

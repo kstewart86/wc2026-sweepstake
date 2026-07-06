@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-06T03:05:16.226Z",
+  "updatedUtc": "2026-07-06T03:06:11.050Z",
   "matches": [
     {
       "matchId": 1,
@@ -927,8 +927,8 @@
       "awayId": "ENG",
       "homeGoals": 2,
       "awayGoals": 3,
-      "status": "live",
-      "winnerId": null,
+      "status": "finished",
+      "winnerId": "ENG",
       "minute": "90'+12'",
       "kickoffUtc": "2026-07-06T01:00Z",
       "venue": "Estadio Banorte"
