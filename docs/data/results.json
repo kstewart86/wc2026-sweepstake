@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-07T22:51:10.845Z",
+  "updatedUtc": "2026-07-07T22:59:13.150Z",
   "matches": [
     {
       "matchId": 1,
@@ -963,8 +963,8 @@
       "awayId": "COL",
       "homeGoals": 0,
       "awayGoals": 0,
-      "status": "live",
-      "winnerId": null,
+      "status": "finished",
+      "winnerId": "SUI",
       "minute": "120'",
       "kickoffUtc": "2026-07-07T20:00Z",
       "venue": "BC Place",

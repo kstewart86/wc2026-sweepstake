@@ -1,7 +1,7 @@
 {
-  "updatedUtc": "2026-07-07T22:51:21.385Z",
+  "updatedUtc": "2026-07-07T22:59:24.054Z",
   "groupStageComplete": true,
-  "currentStage": "r16",
+  "currentStage": "qf",
   "rounds": [
     {
       "stage": "r32",
@@ -305,8 +305,8 @@
           "awayGoals": 0,
           "homePens": 4,
           "awayPens": 3,
-          "status": "live",
-          "winnerId": null,
+          "status": "finished",
+          "winnerId": "SUI",
           "kickoffUtc": "2026-07-07T20:00Z",
           "venue": "BC Place"
         },
@@ -369,7 +369,7 @@
         },
         {
           "matchId": 100,
-          "homeId": null,
+          "homeId": "SUI",
           "awayId": "ARG",
           "homeGoals": null,
           "awayGoals": null,
