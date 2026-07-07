@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-07T01:57:22.447Z",
+  "updatedUtc": "2026-07-07T01:59:22.028Z",
   "groupStageComplete": true,
   "currentStage": "r16",
   "rounds": [
@@ -279,8 +279,8 @@
           "awayGoals": 4,
           "homePens": null,
           "awayPens": null,
-          "status": "live",
-          "winnerId": null,
+          "status": "finished",
+          "winnerId": "BEL",
           "kickoffUtc": "2026-07-07T00:00Z",
           "venue": "Lumen Field"
         },
@@ -356,7 +356,7 @@
         },
         {
           "matchId": 99,
-          "homeId": null,
+          "homeId": "BEL",
           "awayId": "ESP",
           "homeGoals": null,
           "awayGoals": null,
