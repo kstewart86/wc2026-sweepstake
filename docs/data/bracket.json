@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-07T17:57:22.460Z",
+  "updatedUtc": "2026-07-07T18:06:25.886Z",
   "groupStageComplete": true,
   "currentStage": "r16",
   "rounds": [
@@ -318,8 +318,8 @@
           "awayGoals": 2,
           "homePens": null,
           "awayPens": null,
-          "status": "live",
-          "winnerId": null,
+          "status": "finished",
+          "winnerId": "ARG",
           "kickoffUtc": "2026-07-07T16:00Z",
           "venue": "Mercedes-Benz Stadium"
         }
@@ -370,7 +370,7 @@
         {
           "matchId": 100,
           "homeId": null,
-          "awayId": null,
+          "awayId": "ARG",
           "homeGoals": null,
           "awayGoals": null,
           "homePens": null,
