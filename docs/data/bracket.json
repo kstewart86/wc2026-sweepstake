@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-06T21:03:24.043Z",
+  "updatedUtc": "2026-07-07T00:01:21.955Z",
   "groupStageComplete": true,
   "currentStage": "r16",
   "rounds": [
@@ -275,11 +275,11 @@
           "matchId": 93,
           "homeId": "USA",
           "awayId": "BEL",
-          "homeGoals": null,
-          "awayGoals": null,
+          "homeGoals": 0,
+          "awayGoals": 0,
           "homePens": null,
           "awayPens": null,
-          "status": "scheduled",
+          "status": "live",
           "winnerId": null,
           "kickoffUtc": "2026-07-07T00:00Z",
           "venue": "Lumen Field"

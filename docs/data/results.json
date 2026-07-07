@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-06T21:03:13.121Z",
+  "updatedUtc": "2026-07-07T00:01:10.982Z",
   "matches": [
     {
       "matchId": 1,
@@ -949,9 +949,11 @@
       "matchId": 93,
       "homeId": "USA",
       "awayId": "BEL",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "status": "live",
+      "winnerId": null,
+      "minute": "1'",
       "kickoffUtc": "2026-07-07T00:00Z",
       "venue": "Lumen Field"
     },
