@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-07T22:47:10.803Z",
+  "updatedUtc": "2026-07-07T22:51:10.845Z",
   "matches": [
     {
       "matchId": 1,
@@ -967,7 +967,9 @@
       "winnerId": null,
       "minute": "120'",
       "kickoffUtc": "2026-07-07T20:00Z",
-      "venue": "BC Place"
+      "venue": "BC Place",
+      "homePens": 4,
+      "awayPens": 3
     },
     {
       "matchId": 96,
