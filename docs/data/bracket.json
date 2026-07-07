@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-07T01:59:22.028Z",
+  "updatedUtc": "2026-07-07T16:03:23.126Z",
   "groupStageComplete": true,
   "currentStage": "r16",
   "rounds": [
@@ -314,11 +314,11 @@
           "matchId": 96,
           "homeId": "ARG",
           "awayId": "EGY",
-          "homeGoals": null,
-          "awayGoals": null,
+          "homeGoals": 0,
+          "awayGoals": 0,
           "homePens": null,
           "awayPens": null,
-          "status": "scheduled",
+          "status": "live",
           "winnerId": null,
           "kickoffUtc": "2026-07-07T16:00Z",
           "venue": "Mercedes-Benz Stadium"

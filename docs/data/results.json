@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-07T01:59:11.431Z",
+  "updatedUtc": "2026-07-07T16:03:12.081Z",
   "matches": [
     {
       "matchId": 1,
@@ -971,9 +971,11 @@
       "matchId": 96,
       "homeId": "ARG",
       "awayId": "EGY",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "status": "live",
+      "winnerId": null,
+      "minute": "2'",
       "kickoffUtc": "2026-07-07T16:00Z",
       "venue": "Mercedes-Benz Stadium"
     }
