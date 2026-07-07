@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-07T04:29:22.125Z",
+  "updatedUtc": "2026-07-07T04:30:41.784Z",
   "simulations": 20000,
   "pot": {
     "total": 285,
@@ -60,17 +60,17 @@
     },
     {
       "id": "david-brady",
-      "pFinalWinner": 0.0003,
+      "pFinalWinner": 0.0001,
       "pRunnerUp": 0.0008,
       "pGroupPrize": 0,
-      "expectedWinnings": 0.1,
+      "expectedWinnings": 0.08,
       "currentGroupPts": 8,
       "currentGroupGd": 0,
       "currentGroupGf": 8
     },
     {
       "id": "eleanor-fisher",
-      "pFinalWinner": 0.0017,
+      "pFinalWinner": 0.0018,
       "pRunnerUp": 0.008,
       "pGroupPrize": 1,
       "expectedWinnings": 57.93,
@@ -90,10 +90,10 @@
     },
     {
       "id": "giji-alex",
-      "pFinalWinner": 0.0256,
-      "pRunnerUp": 0.0401,
+      "pFinalWinner": 0.0244,
+      "pRunnerUp": 0.0411,
       "pGroupPrize": 0,
-      "expectedWinnings": 7.09,
+      "expectedWinnings": 6.99,
       "currentGroupPts": 5,
       "currentGroupGd": 0,
       "currentGroupGf": 6
@@ -110,20 +110,20 @@
     },
     {
       "id": "jason-robinson",
-      "pFinalWinner": 0.0043,
-      "pRunnerUp": 0.0128,
+      "pFinalWinner": 0.0047,
+      "pRunnerUp": 0.0135,
       "pGroupPrize": 0,
-      "expectedWinnings": 1.7,
+      "expectedWinnings": 1.82,
       "currentGroupPts": 11,
       "currentGroupGd": 4,
       "currentGroupGf": 13
     },
     {
       "id": "jeffrey-stower",
-      "pFinalWinner": 0.1399,
-      "pRunnerUp": 0.306,
+      "pFinalWinner": 0.1404,
+      "pRunnerUp": 0.308,
       "pGroupPrize": 0,
-      "expectedWinnings": 46.1,
+      "expectedWinnings": 46.35,
       "currentGroupPts": 11,
       "currentGroupGd": 4,
       "currentGroupGf": 9
@@ -140,30 +140,30 @@
     },
     {
       "id": "kirsten-walmsley",
-      "pFinalWinner": 0.0003,
-      "pRunnerUp": 0.0066,
+      "pFinalWinner": 0.0001,
+      "pRunnerUp": 0.0063,
       "pGroupPrize": 0,
-      "expectedWinnings": 0.6,
+      "expectedWinnings": 0.56,
       "currentGroupPts": 11,
       "currentGroupGd": 2,
       "currentGroupGf": 11
     },
     {
       "id": "kyle-stewart",
-      "pFinalWinner": 0.1925,
-      "pRunnerUp": 0.3346,
+      "pFinalWinner": 0.1896,
+      "pRunnerUp": 0.3371,
       "pGroupPrize": 0,
-      "expectedWinnings": 56.03,
+      "expectedWinnings": 55.84,
       "currentGroupPts": 7,
       "currentGroupGd": -6,
       "currentGroupGf": 8
     },
     {
       "id": "neema-griffin",
-      "pFinalWinner": 0.3429,
-      "pRunnerUp": 0.1409,
+      "pFinalWinner": 0.3465,
+      "pRunnerUp": 0.1389,
       "pGroupPrize": 0,
-      "expectedWinnings": 60.92,
+      "expectedWinnings": 61.26,
       "currentGroupPts": 10,
       "currentGroupGd": 4,
       "currentGroupGf": 7
@@ -181,19 +181,19 @@
     {
       "id": "xaria-deosaran",
       "pFinalWinner": 0.2914,
-      "pRunnerUp": 0.131,
+      "pRunnerUp": 0.1289,
       "pGroupPrize": 0,
-      "expectedWinnings": 52.73,
+      "expectedWinnings": 52.55,
       "currentGroupPts": 12,
       "currentGroupGd": 4,
       "currentGroupGf": 9
     },
     {
       "id": "hannah-penketh",
-      "pFinalWinner": 0.0012,
-      "pRunnerUp": 0.019,
+      "pFinalWinner": 0.001,
+      "pRunnerUp": 0.0174,
       "pGroupPrize": 0,
-      "expectedWinnings": 1.79,
+      "expectedWinnings": 1.63,
       "currentGroupPts": 10,
       "currentGroupGd": 6,
       "currentGroupGf": 16
