@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-07T20:01:26.133Z",
+  "updatedUtc": "2026-07-07T22:46:25.564Z",
   "groupStageComplete": true,
   "currentStage": "r16",
   "rounds": [
@@ -303,8 +303,8 @@
           "awayId": "COL",
           "homeGoals": 0,
           "awayGoals": 0,
-          "homePens": null,
-          "awayPens": null,
+          "homePens": 2,
+          "awayPens": 1,
           "status": "live",
           "winnerId": null,
           "kickoffUtc": "2026-07-07T20:00Z",
