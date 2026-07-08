@@ -194,7 +194,7 @@ function compareThirds(a, b) {
 // One full tournament simulation
 // Returns { finalWinner, finalLoser, groupPrize: {id, pts, gd, gf} }
 // ---------------------------------------------------------------------------
-function runSim(fixtures, results, teams, participants) {
+function runSim(fixtures, results, teams, participants, knownKO = {}) {
   // Lock in all matches with known scores (finished + live current score).
   // Live matches are treated as if the current score is final so that
   // participants' already-accumulated points count toward the simulation.
@@ -264,29 +264,28 @@ function runSim(fixtures, results, teams, participants) {
   const knockoutWinner = {}; // matchId → teamId
 
   function simKnockoutMatch(fix) {
-    let homeTeam, awayTeam;
-    if (fix.homeSlot && fix.homeSlot.startsWith('W')) {
-      homeTeam = knockoutWinner[parseInt(fix.homeSlot.slice(1))];
-    } else {
-      homeTeam = resolveSlot(fix.homeSlot);
-    }
-    if (fix.awaySlot && fix.awaySlot.startsWith('W')) {
-      awayTeam = knockoutWinner[parseInt(fix.awaySlot.slice(1))];
-    } else if (fix.awaySlot === '3rd') {
-      const assignedGroup = annexAssign[fix.matchId];
-      awayTeam = thirdTeamByGroup[assignedGroup];
-    } else {
-      awayTeam = resolveSlot(fix.awaySlot);
-    }
+    const real = knownKO[fix.matchId];
+    // Prefer the real bracket's teams; fall back to this sim's own winners
+    // (W-slots) and, before the group stage is decided, the simulated seeding.
+    const homeTeam = (real && real.homeId)
+      || (fix.homeSlot && fix.homeSlot.startsWith('W')
+            ? knockoutWinner[parseInt(fix.homeSlot.slice(1))]
+            : resolveSlot(fix.homeSlot));
+    const awayTeam = (real && real.awayId)
+      || (fix.awaySlot && fix.awaySlot.startsWith('W')
+            ? knockoutWinner[parseInt(fix.awaySlot.slice(1))]
+            : fix.awaySlot === '3rd'
+              ? thirdTeamByGroup[annexAssign[fix.matchId]]
+              : resolveSlot(fix.awaySlot));
 
     if (!homeTeam || !awayTeam) return null;
 
+    // A completed tie is fixed to its real winner (respects extra time / pens);
+    // eliminated teams therefore never advance in the simulation.
+    if (real && real.status === 'finished' && real.winnerId) return real.winnerId;
+
     const eloH = teams[homeTeam]?.elo || 1500;
     const eloA = teams[awayTeam]?.elo  || 1500;
-    const doneResult = finished[fix.matchId];
-    if (doneResult) {
-      return doneResult.homeGoals > doneResult.awayGoals ? homeTeam : awayTeam;
-    }
     const res = simKnockout(eloH, eloA, 0);
     return res.winner === 'A' ? homeTeam : awayTeam;
   }
@@ -347,8 +346,17 @@ function simulate(fixtures, results, teamsObj, participants, N = 20000) {
   const teamToParticipant = {};
   for (const p of participants) for (const t of p.teams) teamToParticipant[t] = p.id;
 
+  // Resolve the real knockout bracket once: real matchups (correct third-place
+  // seeding from the feed) and real winners for played ties. The simulation is
+  // seeded from this so eliminated teams can never re-enter the draw.
+  const realBracket = resolveBracket(fixtures, results, teamsObj);
+  const knownKO = {};
+  for (const rd of realBracket.rounds) for (const m of rd.matches) {
+    knownKO[m.matchId] = { homeId: m.homeId, awayId: m.awayId, status: m.status, winnerId: m.winnerId };
+  }
+
   for (let i = 0; i < N; i++) {
-    const { finalWinner, finalLoser, groupPrize } = runSim(fixtures, results, teams, participants);
+    const { finalWinner, finalLoser, groupPrize } = runSim(fixtures, results, teams, participants, knownKO);
 
     if (finalWinner && teamToParticipant[finalWinner]) counts.finalWinner[teamToParticipant[finalWinner]]++;
     if (finalLoser  && teamToParticipant[finalLoser])  counts.runnerUp[teamToParticipant[finalLoser]]++;
