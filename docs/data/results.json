@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-07T22:59:13.150Z",
+  "updatedUtc": "2026-07-08T00:00:42.790Z",
   "matches": [
     {
       "matchId": 1,
@@ -982,6 +982,16 @@
       "minute": "90'+11'",
       "kickoffUtc": "2026-07-07T16:00Z",
       "venue": "Mercedes-Benz Stadium"
+    },
+    {
+      "matchId": 97,
+      "homeId": "FRA",
+      "awayId": "MAR",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "kickoffUtc": "2026-07-09T20:00Z",
+      "venue": "Gillette Stadium"
     }
   ]
 }
