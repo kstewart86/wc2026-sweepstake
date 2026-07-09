@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-09T21:31:22.493Z",
+  "updatedUtc": "2026-07-09T22:02:24.448Z",
   "groupStageComplete": true,
   "currentStage": "qf",
   "rounds": [
@@ -336,8 +336,8 @@
           "awayGoals": 0,
           "homePens": null,
           "awayPens": null,
-          "status": "live",
-          "winnerId": null,
+          "status": "finished",
+          "winnerId": "FRA",
           "kickoffUtc": "2026-07-09T20:00Z",
           "venue": "Gillette Stadium"
         },
@@ -387,7 +387,7 @@
       "matches": [
         {
           "matchId": 101,
-          "homeId": null,
+          "homeId": "FRA",
           "awayId": null,
           "homeGoals": null,
           "awayGoals": null,
