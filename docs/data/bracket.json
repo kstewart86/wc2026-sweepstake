@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-09T00:00:52.426Z",
+  "updatedUtc": "2026-07-09T20:02:25.397Z",
   "groupStageComplete": true,
   "currentStage": "qf",
   "rounds": [
@@ -332,11 +332,11 @@
           "matchId": 97,
           "homeId": "FRA",
           "awayId": "MAR",
-          "homeGoals": null,
-          "awayGoals": null,
+          "homeGoals": 0,
+          "awayGoals": 0,
           "homePens": null,
           "awayPens": null,
-          "status": "scheduled",
+          "status": "live",
           "winnerId": null,
           "kickoffUtc": "2026-07-09T20:00Z",
           "venue": "Gillette Stadium"
