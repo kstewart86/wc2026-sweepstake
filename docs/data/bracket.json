@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-08T00:00:53.522Z",
+  "updatedUtc": "2026-07-09T00:00:52.426Z",
   "groupStageComplete": true,
   "currentStage": "qf",
   "rounds": [
@@ -356,16 +356,16 @@
         },
         {
           "matchId": 99,
-          "homeId": "BEL",
-          "awayId": "ESP",
+          "homeId": "ESP",
+          "awayId": "BEL",
           "homeGoals": null,
           "awayGoals": null,
           "homePens": null,
           "awayPens": null,
           "status": "scheduled",
           "winnerId": null,
-          "kickoffUtc": "2026-07-15T19:00:00Z",
-          "venue": "TBD"
+          "kickoffUtc": "2026-07-10T19:00Z",
+          "venue": "SoFi Stadium"
         },
         {
           "matchId": 100,

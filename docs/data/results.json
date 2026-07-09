@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-08T00:00:42.790Z",
+  "updatedUtc": "2026-07-09T00:00:41.496Z",
   "matches": [
     {
       "matchId": 1,
@@ -992,6 +992,16 @@
       "awayGoals": null,
       "kickoffUtc": "2026-07-09T20:00Z",
       "venue": "Gillette Stadium"
+    },
+    {
+      "matchId": 99,
+      "homeId": "ESP",
+      "awayId": "BEL",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "kickoffUtc": "2026-07-10T19:00Z",
+      "venue": "SoFi Stadium"
     }
   ]
 }
