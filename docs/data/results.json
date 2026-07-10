@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-10T00:00:35.845Z",
+  "updatedUtc": "2026-07-10T19:02:11.575Z",
   "matches": [
     {
       "matchId": 1,
@@ -999,9 +999,11 @@
       "matchId": 99,
       "homeId": "ESP",
       "awayId": "BEL",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "status": "live",
+      "winnerId": null,
+      "minute": "1'",
       "kickoffUtc": "2026-07-10T19:00Z",
       "venue": "SoFi Stadium"
     },

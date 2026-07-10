@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-10T00:00:46.713Z",
+  "updatedUtc": "2026-07-10T19:02:22.375Z",
   "groupStageComplete": true,
   "currentStage": "qf",
   "rounds": [
@@ -358,11 +358,11 @@
           "matchId": 99,
           "homeId": "ESP",
           "awayId": "BEL",
-          "homeGoals": null,
-          "awayGoals": null,
+          "homeGoals": 0,
+          "awayGoals": 0,
           "homePens": null,
           "awayPens": null,
-          "status": "scheduled",
+          "status": "live",
           "winnerId": null,
           "kickoffUtc": "2026-07-10T19:00Z",
           "venue": "SoFi Stadium"
