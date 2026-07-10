@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-09T22:02:13.493Z",
+  "updatedUtc": "2026-07-10T00:00:35.845Z",
   "matches": [
     {
       "matchId": 1,
@@ -1004,6 +1004,26 @@
       "awayGoals": null,
       "kickoffUtc": "2026-07-10T19:00Z",
       "venue": "SoFi Stadium"
+    },
+    {
+      "matchId": 98,
+      "homeId": "NOR",
+      "awayId": "ENG",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "kickoffUtc": "2026-07-11T21:00Z",
+      "venue": "Hard Rock Stadium"
+    },
+    {
+      "matchId": 100,
+      "homeId": "ARG",
+      "awayId": "SUI",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "kickoffUtc": "2026-07-12T01:00Z",
+      "venue": "GEHA Field at Arrowhead Stadium"
     }
   ]
 }

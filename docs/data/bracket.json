@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-09T22:02:24.448Z",
+  "updatedUtc": "2026-07-10T00:00:46.713Z",
   "groupStageComplete": true,
   "currentStage": "qf",
   "rounds": [
@@ -351,8 +351,8 @@
           "awayPens": null,
           "status": "scheduled",
           "winnerId": null,
-          "kickoffUtc": "2026-07-14T22:00:00Z",
-          "venue": "TBD"
+          "kickoffUtc": "2026-07-11T21:00Z",
+          "venue": "Hard Rock Stadium"
         },
         {
           "matchId": 99,
@@ -369,16 +369,16 @@
         },
         {
           "matchId": 100,
-          "homeId": "SUI",
-          "awayId": "ARG",
+          "homeId": "ARG",
+          "awayId": "SUI",
           "homeGoals": null,
           "awayGoals": null,
           "homePens": null,
           "awayPens": null,
           "status": "scheduled",
           "winnerId": null,
-          "kickoffUtc": "2026-07-15T22:00:00Z",
-          "venue": "TBD"
+          "kickoffUtc": "2026-07-12T01:00Z",
+          "venue": "GEHA Field at Arrowhead Stadium"
         }
       ]
     },
