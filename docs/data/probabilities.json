@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-11T20:10:38.409Z",
+  "updatedUtc": "2026-07-11T20:11:20.393Z",
   "simulations": 20000,
   "pot": {
     "total": 285,
@@ -110,10 +110,10 @@
     },
     {
       "id": "jason-robinson",
-      "pFinalWinner": 0.0044,
-      "pRunnerUp": 0.0148,
+      "pFinalWinner": 0.0032,
+      "pRunnerUp": 0.0138,
       "pGroupPrize": 0,
-      "expectedWinnings": 1.89,
+      "expectedWinnings": 1.63,
       "currentGroupPts": 11,
       "currentGroupGd": 4,
       "currentGroupGf": 13
@@ -150,40 +150,40 @@
     },
     {
       "id": "kyle-stewart",
-      "pFinalWinner": 0.1275,
-      "pRunnerUp": 0.2544,
+      "pFinalWinner": 0.125,
+      "pRunnerUp": 0.2567,
       "pGroupPrize": 0,
-      "expectedWinnings": 39.92,
+      "expectedWinnings": 39.76,
       "currentGroupPts": 7,
       "currentGroupGd": -6,
       "currentGroupGf": 8
     },
     {
       "id": "neema-griffin",
-      "pFinalWinner": 0.3728,
-      "pRunnerUp": 0.1995,
+      "pFinalWinner": 0.3651,
+      "pRunnerUp": 0.2059,
       "pGroupPrize": 0,
-      "expectedWinnings": 70.18,
+      "expectedWinnings": 69.63,
       "currentGroupPts": 10,
       "currentGroupGd": 4,
       "currentGroupGf": 7
     },
     {
       "id": "sam-story",
-      "pFinalWinner": 0.2394,
-      "pRunnerUp": 0.37,
+      "pFinalWinner": 0.2487,
+      "pRunnerUp": 0.3608,
       "pGroupPrize": 0,
-      "expectedWinnings": 65.76,
+      "expectedWinnings": 66.29,
       "currentGroupPts": 13,
       "currentGroupGd": 6,
       "currentGroupGf": 15
     },
     {
       "id": "xaria-deosaran",
-      "pFinalWinner": 0.2555,
-      "pRunnerUp": 0.153,
+      "pFinalWinner": 0.2577,
+      "pRunnerUp": 0.1543,
       "pGroupPrize": 0,
-      "expectedWinnings": 49.49,
+      "expectedWinnings": 49.91,
       "currentGroupPts": 12,
       "currentGroupGd": 4,
       "currentGroupGf": 9
@@ -191,9 +191,9 @@
     {
       "id": "hannah-penketh",
       "pFinalWinner": 0.0003,
-      "pRunnerUp": 0.0083,
+      "pRunnerUp": 0.0086,
       "pGroupPrize": 0,
-      "expectedWinnings": 0.75,
+      "expectedWinnings": 0.77,
       "currentGroupPts": 10,
       "currentGroupGd": 6,
       "currentGroupGf": 16
