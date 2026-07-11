@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-10T21:00:38.482Z",
+  "updatedUtc": "2026-07-11T21:02:04.362Z",
   "matches": [
     {
       "matchId": 1,
@@ -1011,9 +1011,11 @@
       "matchId": 98,
       "homeId": "NOR",
       "awayId": "ENG",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "status": "live",
+      "winnerId": null,
+      "minute": "1'",
       "kickoffUtc": "2026-07-11T21:00Z",
       "venue": "Hard Rock Stadium"
     },

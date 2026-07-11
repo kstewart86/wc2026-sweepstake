@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-10T21:00:48.761Z",
+  "updatedUtc": "2026-07-11T21:02:15.341Z",
   "groupStageComplete": true,
   "currentStage": "qf",
   "rounds": [
@@ -345,11 +345,11 @@
           "matchId": 98,
           "homeId": "NOR",
           "awayId": "ENG",
-          "homeGoals": null,
-          "awayGoals": null,
+          "homeGoals": 0,
+          "awayGoals": 0,
           "homePens": null,
           "awayPens": null,
-          "status": "scheduled",
+          "status": "live",
           "winnerId": null,
           "kickoffUtc": "2026-07-11T21:00Z",
           "venue": "Hard Rock Stadium"
