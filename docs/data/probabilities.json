@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-11T23:12:22.431Z",
+  "updatedUtc": "2026-07-11T23:13:21.907Z",
   "simulations": 20000,
   "pot": {
     "total": 285,
@@ -110,8 +110,8 @@
     },
     {
       "id": "jason-robinson",
-      "pFinalWinner": 0.0037,
-      "pRunnerUp": 0.015,
+      "pFinalWinner": 0.0042,
+      "pRunnerUp": 0.0143,
       "pGroupPrize": 0,
       "expectedWinnings": 1.81,
       "currentGroupPts": 11,
@@ -150,40 +150,40 @@
     },
     {
       "id": "kyle-stewart",
-      "pFinalWinner": 0.1253,
-      "pRunnerUp": 0.2576,
+      "pFinalWinner": 0.1263,
+      "pRunnerUp": 0.2614,
       "pGroupPrize": 0,
-      "expectedWinnings": 39.89,
+      "expectedWinnings": 40.35,
       "currentGroupPts": 7,
       "currentGroupGd": -6,
       "currentGroupGf": 8
     },
     {
       "id": "neema-griffin",
-      "pFinalWinner": 0.3689,
-      "pRunnerUp": 0.2034,
+      "pFinalWinner": 0.3667,
+      "pRunnerUp": 0.201,
       "pGroupPrize": 0,
-      "expectedWinnings": 69.95,
+      "expectedWinnings": 69.44,
       "currentGroupPts": 10,
       "currentGroupGd": 4,
       "currentGroupGf": 7
     },
     {
       "id": "sam-story",
-      "pFinalWinner": 0.2466,
-      "pRunnerUp": 0.3618,
+      "pFinalWinner": 0.2459,
+      "pRunnerUp": 0.3597,
       "pGroupPrize": 0,
-      "expectedWinnings": 66.07,
+      "expectedWinnings": 65.79,
       "currentGroupPts": 13,
       "currentGroupGd": 6,
       "currentGroupGf": 15
     },
     {
       "id": "xaria-deosaran",
-      "pFinalWinner": 0.2552,
-      "pRunnerUp": 0.1538,
+      "pFinalWinner": 0.2566,
+      "pRunnerUp": 0.1572,
       "pGroupPrize": 0,
-      "expectedWinnings": 49.52,
+      "expectedWinnings": 50.01,
       "currentGroupPts": 12,
       "currentGroupGd": 4,
       "currentGroupGf": 9
@@ -191,9 +191,9 @@
     {
       "id": "hannah-penketh",
       "pFinalWinner": 0.0003,
-      "pRunnerUp": 0.0083,
+      "pRunnerUp": 0.0065,
       "pGroupPrize": 0,
-      "expectedWinnings": 0.76,
+      "expectedWinnings": 0.59,
       "currentGroupPts": 10,
       "currentGroupGd": 6,
       "currentGroupGf": 16
