@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-11T23:11:22.462Z",
+  "updatedUtc": "2026-07-11T23:48:23.762Z",
   "groupStageComplete": true,
   "currentStage": "qf",
   "rounds": [
@@ -349,8 +349,8 @@
           "awayGoals": 2,
           "homePens": null,
           "awayPens": null,
-          "status": "live",
-          "winnerId": null,
+          "status": "finished",
+          "winnerId": "ENG",
           "kickoffUtc": "2026-07-11T21:00Z",
           "venue": "Hard Rock Stadium"
         },
@@ -388,7 +388,7 @@
         {
           "matchId": 101,
           "homeId": "FRA",
-          "awayId": null,
+          "awayId": "ENG",
           "homeGoals": null,
           "awayGoals": null,
           "homePens": null,
