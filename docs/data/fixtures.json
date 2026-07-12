@@ -123,8 +123,8 @@
     { "matchId": 99, "stage": "qf",  "homeSlot": "W93", "awaySlot": "W94",          "kickoffUtc": "2026-07-15T19:00:00Z", "venue": "TBD" },
     { "matchId":100, "stage": "qf",  "homeSlot": "W95", "awaySlot": "W96",          "kickoffUtc": "2026-07-15T22:00:00Z", "venue": "TBD" },
 
-    { "matchId":101, "stage": "sf",  "homeSlot": "W97", "awaySlot": "W98",          "kickoffUtc": "2026-07-17T22:00:00Z", "venue": "TBD" },
-    { "matchId":102, "stage": "sf",  "homeSlot": "W99", "awaySlot": "W100",         "kickoffUtc": "2026-07-18T22:00:00Z", "venue": "TBD" },
+    { "matchId":101, "stage": "sf",  "homeSlot": "W97", "awaySlot": "W99",          "kickoffUtc": "2026-07-17T22:00:00Z", "venue": "TBD" },
+    { "matchId":102, "stage": "sf",  "homeSlot": "W98", "awaySlot": "W100",         "kickoffUtc": "2026-07-18T22:00:00Z", "venue": "TBD" },
 
     { "matchId":103, "stage": "final","homeSlot": "W101","awaySlot": "W102",         "kickoffUtc": "2026-07-19T22:00:00Z", "venue": "MetLife Stadium, East Rutherford" }
   ]
