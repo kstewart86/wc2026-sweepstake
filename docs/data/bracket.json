@@ -1,7 +1,7 @@
 {
-  "updatedUtc": "2026-07-12T03:42:22.614Z",
+  "updatedUtc": "2026-07-12T03:45:25.374Z",
   "groupStageComplete": true,
-  "currentStage": "qf",
+  "currentStage": "sf",
   "rounds": [
     {
       "stage": "r32",
@@ -375,8 +375,8 @@
           "awayGoals": 1,
           "homePens": null,
           "awayPens": null,
-          "status": "live",
-          "winnerId": null,
+          "status": "finished",
+          "winnerId": "ARG",
           "kickoffUtc": "2026-07-12T01:00Z",
           "venue": "GEHA Field at Arrowhead Stadium"
         }
@@ -401,7 +401,7 @@
         {
           "matchId": 102,
           "homeId": "ESP",
-          "awayId": null,
+          "awayId": "ARG",
           "homeGoals": null,
           "awayGoals": null,
           "homePens": null,
