@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-11T23:48:12.921Z",
+  "updatedUtc": "2026-07-12T01:02:14.283Z",
   "matches": [
     {
       "matchId": 1,
@@ -1023,9 +1023,11 @@
       "matchId": 100,
       "homeId": "ARG",
       "awayId": "SUI",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "status": "live",
+      "winnerId": null,
+      "minute": "1'",
       "kickoffUtc": "2026-07-12T01:00Z",
       "venue": "GEHA Field at Arrowhead Stadium"
     }

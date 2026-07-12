@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-11T23:48:23.762Z",
+  "updatedUtc": "2026-07-12T01:02:24.262Z",
   "groupStageComplete": true,
   "currentStage": "qf",
   "rounds": [
@@ -371,11 +371,11 @@
           "matchId": 100,
           "homeId": "ARG",
           "awayId": "SUI",
-          "homeGoals": null,
-          "awayGoals": null,
+          "homeGoals": 0,
+          "awayGoals": 0,
           "homePens": null,
           "awayPens": null,
-          "status": "scheduled",
+          "status": "live",
           "winnerId": null,
           "kickoffUtc": "2026-07-12T01:00Z",
           "venue": "GEHA Field at Arrowhead Stadium"
