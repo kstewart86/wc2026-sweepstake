@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-12T03:45:14.134Z",
+  "updatedUtc": "2026-07-13T00:00:39.585Z",
   "matches": [
     {
       "matchId": 1,
@@ -1030,6 +1030,16 @@
       "minute": "120'+4'",
       "kickoffUtc": "2026-07-12T01:00Z",
       "venue": "GEHA Field at Arrowhead Stadium"
+    },
+    {
+      "matchId": 101,
+      "homeId": "FRA",
+      "awayId": "ESP",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "kickoffUtc": "2026-07-14T19:00Z",
+      "venue": "AT&T Stadium"
     }
   ]
 }
