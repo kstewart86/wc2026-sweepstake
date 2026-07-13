@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-13T18:10:50.102Z",
+  "updatedUtc": "2026-07-13T18:11:22.979Z",
   "simulations": 20000,
   "pot": {
     "total": 285,
@@ -150,40 +150,40 @@
     },
     {
       "id": "kyle-stewart",
-      "pFinalWinner": 0.1268,
-      "pRunnerUp": 0.2172,
+      "pFinalWinner": 0.1221,
+      "pRunnerUp": 0.22,
       "pGroupPrize": 0,
-      "expectedWinnings": 36.63,
+      "expectedWinnings": 36.21,
       "currentGroupPts": 7,
       "currentGroupGd": -6,
       "currentGroupGf": 8
     },
     {
       "id": "neema-griffin",
-      "pFinalWinner": 0.3598,
-      "pRunnerUp": 0.2525,
+      "pFinalWinner": 0.3591,
+      "pRunnerUp": 0.2591,
       "pGroupPrize": 0,
-      "expectedWinnings": 72.86,
+      "expectedWinnings": 73.33,
       "currentGroupPts": 10,
       "currentGroupGd": 4,
       "currentGroupGf": 7
     },
     {
       "id": "sam-story",
-      "pFinalWinner": 0.1749,
-      "pRunnerUp": 0.2128,
+      "pFinalWinner": 0.1777,
+      "pRunnerUp": 0.204,
       "pGroupPrize": 0,
-      "expectedWinnings": 43.12,
+      "expectedWinnings": 42.77,
       "currentGroupPts": 13,
       "currentGroupGd": 6,
       "currentGroupGf": 15
     },
     {
       "id": "xaria-deosaran",
-      "pFinalWinner": 0.3386,
-      "pRunnerUp": 0.3175,
+      "pFinalWinner": 0.3411,
+      "pRunnerUp": 0.3168,
       "pGroupPrize": 0,
-      "expectedWinnings": 75.4,
+      "expectedWinnings": 75.69,
       "currentGroupPts": 12,
       "currentGroupGd": 4,
       "currentGroupGf": 9
