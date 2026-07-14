@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-14T20:59:12.264Z",
+  "updatedUtc": "2026-07-14T21:00:40.760Z",
   "matches": [
     {
       "matchId": 1,
@@ -1037,8 +1037,8 @@
       "awayId": "ESP",
       "homeGoals": 0,
       "awayGoals": 2,
-      "status": "live",
-      "winnerId": null,
+      "status": "finished",
+      "winnerId": "ESP",
       "minute": "90'+7'",
       "kickoffUtc": "2026-07-14T19:00Z",
       "venue": "AT&T Stadium"

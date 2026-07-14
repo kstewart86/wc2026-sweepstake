@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-14T20:20:50.293Z",
+  "updatedUtc": "2026-07-14T21:00:51.665Z",
   "groupStageComplete": true,
   "currentStage": "sf",
   "rounds": [
@@ -393,8 +393,8 @@
           "awayGoals": 2,
           "homePens": null,
           "awayPens": null,
-          "status": "live",
-          "winnerId": null,
+          "status": "finished",
+          "winnerId": "ESP",
           "kickoffUtc": "2026-07-14T19:00Z",
           "venue": "AT&T Stadium"
         },
@@ -418,7 +418,7 @@
       "matches": [
         {
           "matchId": 103,
-          "homeId": null,
+          "homeId": "ESP",
           "awayId": null,
           "homeGoals": null,
           "awayGoals": null,
