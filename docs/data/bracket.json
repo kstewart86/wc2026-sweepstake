@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-14T00:00:49.881Z",
+  "updatedUtc": "2026-07-14T19:01:21.500Z",
   "groupStageComplete": true,
   "currentStage": "sf",
   "rounds": [
@@ -389,11 +389,11 @@
           "matchId": 101,
           "homeId": "FRA",
           "awayId": "ESP",
-          "homeGoals": null,
-          "awayGoals": null,
+          "homeGoals": 0,
+          "awayGoals": 0,
           "homePens": null,
           "awayPens": null,
-          "status": "scheduled",
+          "status": "live",
           "winnerId": null,
           "kickoffUtc": "2026-07-14T19:00Z",
           "venue": "AT&T Stadium"

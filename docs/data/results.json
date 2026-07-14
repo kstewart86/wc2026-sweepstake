@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-14T00:00:39.565Z",
+  "updatedUtc": "2026-07-14T19:01:11.095Z",
   "matches": [
     {
       "matchId": 1,
@@ -1035,9 +1035,11 @@
       "matchId": 101,
       "homeId": "FRA",
       "awayId": "ESP",
-      "status": "scheduled",
-      "homeGoals": null,
-      "awayGoals": null,
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "status": "live",
+      "winnerId": null,
+      "minute": "1'",
       "kickoffUtc": "2026-07-14T19:00Z",
       "venue": "AT&T Stadium"
     },
