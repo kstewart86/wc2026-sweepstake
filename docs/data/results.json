@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-15T21:03:11.074Z",
+  "updatedUtc": "2026-07-15T21:04:18.349Z",
   "matches": [
     {
       "matchId": 1,
@@ -1049,8 +1049,8 @@
       "awayId": "ARG",
       "homeGoals": 1,
       "awayGoals": 2,
-      "status": "live",
-      "winnerId": null,
+      "status": "finished",
+      "winnerId": "ARG",
       "minute": "90'+12'",
       "kickoffUtc": "2026-07-15T19:00Z",
       "venue": "Mercedes-Benz Stadium"

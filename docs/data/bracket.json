@@ -1,7 +1,7 @@
 {
-  "updatedUtc": "2026-07-15T20:53:23.169Z",
+  "updatedUtc": "2026-07-15T21:04:26.327Z",
   "groupStageComplete": true,
-  "currentStage": "sf",
+  "currentStage": "final",
   "rounds": [
     {
       "stage": "r32",
@@ -406,8 +406,8 @@
           "awayGoals": 2,
           "homePens": null,
           "awayPens": null,
-          "status": "live",
-          "winnerId": null,
+          "status": "finished",
+          "winnerId": "ARG",
           "kickoffUtc": "2026-07-15T19:00Z",
           "venue": "Mercedes-Benz Stadium"
         }
@@ -419,7 +419,7 @@
         {
           "matchId": 103,
           "homeId": "ESP",
-          "awayId": null,
+          "awayId": "ARG",
           "homeGoals": null,
           "awayGoals": null,
           "homePens": null,
