@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-14T21:00:51.665Z",
+  "updatedUtc": "2026-07-15T19:01:23.458Z",
   "groupStageComplete": true,
   "currentStage": "sf",
   "rounds": [
@@ -402,11 +402,11 @@
           "matchId": 102,
           "homeId": "ENG",
           "awayId": "ARG",
-          "homeGoals": null,
-          "awayGoals": null,
+          "homeGoals": 0,
+          "awayGoals": 0,
           "homePens": null,
           "awayPens": null,
-          "status": "scheduled",
+          "status": "live",
           "winnerId": null,
           "kickoffUtc": "2026-07-15T19:00Z",
           "venue": "Mercedes-Benz Stadium"
