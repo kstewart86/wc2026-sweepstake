@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-18T22:46:25.544Z",
+  "updatedUtc": "2026-07-18T22:47:23.188Z",
   "simulations": 20000,
   "pot": {
     "total": 285,
@@ -160,10 +160,10 @@
     },
     {
       "id": "neema-griffin",
-      "pFinalWinner": 0.5245,
-      "pRunnerUp": 0.4755,
+      "pFinalWinner": 0.5306,
+      "pRunnerUp": 0.4694,
       "pGroupPrize": 0,
-      "expectedWinnings": 115.4,
+      "expectedWinnings": 115.74,
       "currentGroupPts": 10,
       "currentGroupGd": 4,
       "currentGroupGf": 7
@@ -180,10 +180,10 @@
     },
     {
       "id": "xaria-deosaran",
-      "pFinalWinner": 0.4755,
-      "pRunnerUp": 0.5245,
+      "pFinalWinner": 0.4694,
+      "pRunnerUp": 0.5306,
       "pGroupPrize": 0,
-      "expectedWinnings": 112.6,
+      "expectedWinnings": 112.26,
       "currentGroupPts": 12,
       "currentGroupGd": 4,
       "currentGroupGf": 9
