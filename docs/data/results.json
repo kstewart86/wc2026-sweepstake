@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-15T21:04:18.349Z",
+  "updatedUtc": "2026-07-18T00:00:24.408Z",
   "matches": [
     {
       "matchId": 1,
@@ -1054,6 +1054,16 @@
       "minute": "90'+12'",
       "kickoffUtc": "2026-07-15T19:00Z",
       "venue": "Mercedes-Benz Stadium"
+    },
+    {
+      "matchId": 103,
+      "homeId": "ESP",
+      "awayId": "ARG",
+      "status": "scheduled",
+      "homeGoals": null,
+      "awayGoals": null,
+      "kickoffUtc": "2026-07-19T19:00Z",
+      "venue": "MetLife Stadium"
     }
   ]
 }
