@@ -1,7 +1,7 @@
 {
-  "updatedUtc": "2026-07-19T21:44:25.223Z",
+  "updatedUtc": "2026-07-19T22:03:22.476Z",
   "groupStageComplete": true,
-  "currentStage": "final",
+  "currentStage": "complete",
   "rounds": [
     {
       "stage": "r32",
@@ -424,8 +424,8 @@
           "awayGoals": 0,
           "homePens": null,
           "awayPens": null,
-          "status": "live",
-          "winnerId": null,
+          "status": "finished",
+          "winnerId": "ESP",
           "kickoffUtc": "2026-07-19T19:00Z",
           "venue": "MetLife Stadium"
         }

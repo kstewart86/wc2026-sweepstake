@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-19T22:02:13.386Z",
+  "updatedUtc": "2026-07-19T22:03:12.188Z",
   "matches": [
     {
       "matchId": 1,
@@ -1061,8 +1061,8 @@
       "awayId": "ARG",
       "homeGoals": 1,
       "awayGoals": 0,
-      "status": "live",
-      "winnerId": null,
+      "status": "finished",
+      "winnerId": "ESP",
       "minute": "120'+5'",
       "kickoffUtc": "2026-07-19T19:00Z",
       "venue": "MetLife Stadium"
