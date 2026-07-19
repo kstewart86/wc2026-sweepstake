@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-07-18T00:00:35.179Z",
+  "updatedUtc": "2026-07-19T19:07:24.795Z",
   "groupStageComplete": true,
   "currentStage": "final",
   "rounds": [
@@ -420,11 +420,11 @@
           "matchId": 103,
           "homeId": "ESP",
           "awayId": "ARG",
-          "homeGoals": null,
-          "awayGoals": null,
+          "homeGoals": 0,
+          "awayGoals": 0,
           "homePens": null,
           "awayPens": null,
-          "status": "scheduled",
+          "status": "live",
           "winnerId": null,
           "kickoffUtc": "2026-07-19T19:00Z",
           "venue": "MetLife Stadium"
